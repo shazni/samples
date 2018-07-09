@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Demo Application{% endblock %}
+
+{% block content %}
+	<div class="jumbotron">
+		<p class="text-info">{{ initial_message }}</p>
+		<p class="text-danger">{{ message }}</p>
+	</div>
+
+	<div class="col-md-12">
+		<form class="form-horizontal" enctype="multipart/form-data" action="/{{ context_prefix }}validatePIN" method="post">
+			{% csrf_token %}
+
+			<div class="col-md-7">
+				<div class="form-group">
+					<label for="UserName" class="col-sm-3 control-label">Enter PIN</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="PIN" placeholder="PIN Number" name="PIN" autofocus>
+					</div>
+				</div>
+			</div>
+
+			<div class="clearfix">&nbsp;</div>
+				<div class="col-sm-6 text-center">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			<div class="clearfix">&nbsp;</div>
+		</form>
+
+		<div class="clearfix">&nbsp;</div>
+			<div class="col-sm-6 text-center">
+				<button onclick="window.location.href='/{{ context_prefix }}/oauth2token'" class="btn btn-primary">Click here to login</button>
+			</div>
+		<div class="clearfix">&nbsp;</div>
+	</div>
+{% endblock %}

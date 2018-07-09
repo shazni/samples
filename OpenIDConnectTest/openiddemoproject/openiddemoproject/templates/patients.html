@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Demo Application{% endblock %}
+
+{% block content %}
+	{% if status != None %}
+		<div id="notify-holder"></div>
+	{% endif %}
+
+	<h3>All Patients</h3>
+
+	<div class="well well-sm">
+	    <table id="patients-data-table" class="table table-striped table-hover table-bordered display data-table" cellspacing="0" style="width:100%">
+		    <thead class="thead-inverse">
+		        <tr>
+		            <th>First Name</th>
+		            <th>Last Name</th>
+		            <th>Id</th>
+		            <th>Date of birth</th>
+                    <th>Gender</th>
+		            <th>Contact Number</th>
+		            <th>Action</th>
+		        </tr>
+		    </thead>
+		</table>
+	</div>
+
+	<form>
+		{% csrf_token %}
+		<input type="hidden" id="context_prefix" name="context_prefix" value="{{ context_prefix }}">
+	</form>
+
+	<div class="well well-sm">
+		<div class="clearfix">&nbsp;</div>
+		<div class="col-sm-6 text-center">
+			<button onclick="window.location.href='/openiddemoproject'" class="btn btn-primary">Home</button>
+		</div>
+		<div class="clearfix">&nbsp;</div>
+	</div>
+{% endblock %}
+
+{% block scriptings %}
+	<script type="text/javascript" src="{% static 'js/patients.js' %}"></script>
+{% endblock %}

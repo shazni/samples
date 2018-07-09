@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Demo Application{% endblock %}
+
+{% block content %}
+	<div class="jumbotron">
+		<p>Welcome to patient monitoring application</p>
+	</div>
+
+	<div class="clearfix">&nbsp;</div>
+		<div class="col-sm-6 text-center">
+			<button onclick="window.location.href='/{{ context_prefix }}patients/'" class="btn btn-primary">Get all patients</button>
+		</div>
+	<div class="clearfix">&nbsp;</div>
+{% endblock %}

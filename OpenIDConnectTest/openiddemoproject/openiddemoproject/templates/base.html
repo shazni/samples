@@ -1,0 +1,52 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% block title %}{% endblock %}</title>
+
+		<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap-theme.min.css' %}">
+
+		<script type="text/javascript" src="{% static 'js/jquery/jquery-3.1.0.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+
+		<link rel="stylesheet" href="{% static 'js/jquery/jquery-ui/jquery-ui.css' %}">
+		<script type="text/javascript" src="{% static 'js/jquery/jquery-ui/jquery-ui.js' %}"></script>
+
+		<link rel="stylesheet" href="{% static 'js/jquery/datatable/css/jquery.dataTables.min.css' %}">
+		<script type="text/javascript" src="{% static 'js/jquery/datatable/js/jquery.dataTables.min.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'js/bootstrap/bootstrap-multiselect.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap-multiselect.css' %}" type="text/css"/>
+
+{#        <link href="{% static 'js/google-code-prettify/prettify.css' %}" rel="stylesheet">#}
+
+{#        <link href="{% static 'css/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet">#}
+{#        <script type="text/javascript" src="{% static 'js/google-code-prettify/prettify.js' %}"></script>#}
+
+		<link rel="stylesheet" href="{% static 'css/main.css' %}">
+		<link rel="stylesheet" href="{% static 'css/override.css' %}">
+
+        <script type="text/javascript" src="{% static 'js/initial.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.hotkeys.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap-wysiwyg.js' %}"></script>
+
+	</head>
+
+	<body>
+		<div class="container-fluid">
+			{% block content %}
+			{% endblock content %}
+		</div>
+
+		<script type="text/javascript" src="{% static 'js/openiddemoproject.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/looks.js' %}"></script>
+
+		{% block scriptings %}
+		{% endblock scriptings %}
+	</body>
+</html>
