@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="AccountInfo" groupId="com.wso2.Integration.demo.esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/AccountInfo.xml</file>
+    </artifact>
+    <artifact name="AccountInfoEp" groupId="com.wso2.Integration.demo.esb.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/AccountInfoEp.xml</file>
+    </artifact>
+    <artifact name="AccountInfoBackendAPI" groupId="com.wso2.Integration.demo.esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/AccountInfoBackendAPI.xml</file>
+    </artifact>
+    <artifact name="OrderStatus" groupId="com.wso2.Integration.demo.esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/OrderStatus.xml</file>
+    </artifact>
+    <artifact name="SendToQueue" groupId="com.wso2.Integration.demo.esb.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/SendToQueue.xml</file>
+    </artifact>
+</artifacts>

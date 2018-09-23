@@ -1,0 +1,4 @@
+org/cep/test/service/RequestLoggerInterceptor.class
+org/cep/test/service/CEPTestService.class
+org/cep/test/service/StockEvent.class
+org/cep/test/service/Application.class

@@ -1,0 +1,12 @@
+13/07/2018 14:34:07 - Event date = {shazni:Nazeer}
+13/07/2018 14:34:53 - Event date = {shazni:Nazeer,
+13/07/2018 14:35:11 - Event date = {shazni:Nazeer,
+13/07/2018 14:44:20 - Event date = {shazni:Nazeer,
+13/07/2018 14:44:49 - Event date = {shazni:Nazeer, this
+13/07/2018 14:51:03 - Event date = {"symbol" : "MSFT", "openPrice" : 99.99, "closePrice": 101.01, "highPrice" : 101.75, "lowPrice" : 99.97}
+13/07/2018 14:59:17 - Event date = {"symbol" : "MSFT", "openPrice" : 99.99, "closePrice": 101.01, "highPrice" : 101.75, "lowPrice" : 99.97}
+13/07/2018 14:59:31 - Event date = {"symbol" : "MSFT", "openPrice" : 99.99, "closePrice": 101.01, "highPrice" : 101.75, "lowPrice" : 99.97}
+13/07/2018 15:04:40 - Event date = SEQUENCE_ID:123,
+NAME:HOT
+13/07/2018 15:27:04 - Event date = SEQUENCE_ID:786,
+NAME:THis is crazy
