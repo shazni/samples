@@ -23,7 +23,7 @@
                 <case regex="456">
                     <payloadFactory media-type="xml">
                         <format>
-                            <account_details>
+                            <account_details xmlns="">
                                 <first_name>Steve</first_name>
                                 <last_name>Balmer</last_name>
                                 <account_type>Checking</account_type>

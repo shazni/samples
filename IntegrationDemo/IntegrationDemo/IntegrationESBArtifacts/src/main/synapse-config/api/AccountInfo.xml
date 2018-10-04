@@ -21,7 +21,7 @@
                 <endpoint key="AccountInfoEp"/>
             </call>
             <enrich>
-                <source type="inline">
+                <source clone="true" type="inline">
                     <country>USA</country>
                 </source>
                 <target action="child" xpath="//account_details"/>

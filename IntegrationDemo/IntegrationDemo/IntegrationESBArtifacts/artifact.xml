@@ -14,4 +14,7 @@
     <artifact name="SendToQueue" groupId="com.wso2.Integration.demo.esb.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/SendToQueue.xml</file>
     </artifact>
+    <artifact name="ConvertAccountDetails" groupId="com.wso2.Integration.demo.esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ConvertAccountDetails.xml</file>
+    </artifact>
 </artifacts>
