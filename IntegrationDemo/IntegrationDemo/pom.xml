@@ -12,6 +12,7 @@
     <module>IntegrationESBArtifacts</module>
     <module>IntegrationRegistryArtifacts</module>
     <module>IntegrationDataService</module>
+    <module>IntegrationConnectors</module>
     <module>IntegrationESBCompositeApp</module>
   </modules>
   <build>

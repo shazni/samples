@@ -6,4 +6,25 @@
             <mediaType>application/xslt+xml</mediaType>
         </item>
     </artifact>
+    <artifact name="ConvertAccountConfig" groupId="com.wso2.Integration.registry.artifacts.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ConvertAccountConfig.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="ConvertAccountConfig_inputSchema" groupId="com.wso2.Integration.registry.artifacts.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ConvertAccountConfig_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="ConvertAccountConfig_outputSchema" groupId="com.wso2.Integration.registry.artifacts.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ConvertAccountConfig_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
 </artifacts>

@@ -1,3 +1,11 @@
+Integration Demo
+
+mvn clean install -Dmicroservice.host.port="http://localhost:9090" -Ddb.url="jdbc:mysql://localhost:3306/integration_demo" -Ddb.user="root" -Ddb.pwd="root" -Daccountdetails.host.port="http://localhost:8282/accountinfo"
+
+mvn clean install -Dmicroservice.host.port="https://wso2demo4574-ceppublish.wso2apps.com" -Ddb.url="jdbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="sha_rACKhawA" -Ddb.pwd="20071558_Nazeer" -Daccountdetails.host.port="https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo"
+
+mvn clean install -Dmicroservice.host.port="wso2demo4574-ceppublish.wso2apps.com"
+
 http://localhost:9090/ceppublish
 
 curl -v -k http://localhost:9090/ceppublish/event -d "text=shazni"
@@ -44,6 +52,13 @@ Micro Integrator
 
 curl http://localhost:8290/account/info/123
 curl -v http://localhost:8290/healthcare/querydoctor/surgery
+
+
+curl https://wso2demo4574-madewell-order-service.wso2apps.com/orderservice/order/pending
+
+curl https://wso2demo4574-ceppublish.wso2apps.com/ceppublish
+
+
 
 
 

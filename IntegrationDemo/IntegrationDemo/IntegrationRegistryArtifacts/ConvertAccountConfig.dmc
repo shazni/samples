@@ -1,0 +1,30 @@
+map_S_AccountDetails_S_account_detail = function(){ 
+var outputaccount_detail={};
+var STRING_TO_NUMBER_5_0 = '';
+var STRING_TO_NUMBER_7_0 = '';
+
+STRING_TO_NUMBER_5_0 = Number(inputAccountDetails.ledger_balance);
+STRING_TO_NUMBER_7_0 = Number(inputAccountDetails.account_balance);
+outputaccount_detail =  {};
+outputaccount_detail.account_owner =  {};
+outputaccount_detail.account_owner.first_name = inputAccountDetails.first_name.toString().toUpperCase();
+outputaccount_detail.account_owner.last_name = inputAccountDetails.last_name.toString().toLowerCase();
+outputaccount_detail.account_owner.contact_number = inputAccountDetails.contact_number;
+outputaccount_detail.account_info =  {};
+outputaccount_detail.account_info.account_number = inputAccountDetails.account_number;
+outputaccount_detail.account_info.ledger_balance = STRING_TO_NUMBER_5_0;
+outputaccount_detail.account_info.account_balance = STRING_TO_NUMBER_7_0;
+outputaccount_detail.account_info.available_balance = STRING_TO_NUMBER_7_0-STRING_TO_NUMBER_5_0;
+return outputaccount_detail;
+};
+
+
+
+
+
+
+
+
+
+
+

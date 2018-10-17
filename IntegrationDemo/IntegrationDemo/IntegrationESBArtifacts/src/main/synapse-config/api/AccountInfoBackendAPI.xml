@@ -35,7 +35,7 @@
                 <default>
                     <payloadFactory media-type="xml">
                         <format>
-                            <account_details>
+                            <account_details xmlns="">
                                 <message>No account found</message>
                             </account_details>
                         </format>

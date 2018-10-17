@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="AddToSFTP" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <payloadFactory media-type="json">
+        <format>
+			{
+				"message" : "service is inaccsessible";
+			}		
+		</format>
+        <args/>
+    </payloadFactory>
+    <property expression="$body" name="BODY" scope="default" type="STRING"/>
+    <enrich>
+        <source clone="false" type="body"/>
+        <target property="ORIGINAL_PAYLOAD" type="property"/>
+    </enrich>
+    <fileconnector.create>
+        <source>sftp://newyorkunidev:XzKbMdnkVrhds#wso2@ftp.support.wso2.com:22/newyorkunidev/demo/unavailable_service.txt</source>
+        <inputContent>{$ctx:BODY}</inputContent>
+    </fileconnector.create>
+    <enrich>
+        <source clone="false" property="ORIGINAL_PAYLOAD" type="property"/>
+        <target type="body"/>
+    </enrich>
+    <respond/>
+</sequence>

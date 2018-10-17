@@ -17,4 +17,13 @@
     <artifact name="ConvertAccountDetails" groupId="com.wso2.Integration.demo.esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/ConvertAccountDetails.xml</file>
     </artifact>
+    <artifact name="StockInfo" groupId="com.wso2.Integration.demo.esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/StockInfo.xml</file>
+    </artifact>
+    <artifact name="StockInfoEp" groupId="com.wso2.Integration.demo.esb.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/StockInfoEp.xml</file>
+    </artifact>
+    <artifact name="AddToSFTP" groupId="com.wso2.Integration.demo.esb.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/AddToSFTP.xml</file>
+    </artifact>
 </artifacts>
