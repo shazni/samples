@@ -1,0 +1,75 @@
+python3 api/api.py
+
+[shazni@shazniAtWSO2 FlaskAPI]$ curl -iX POST -H "Content-Type: application/json" -d '{"name":"Modern Spy Glass", "durability":5, "category": "houshold"}' http://localhost:5000/api/products/
+HTTP/1.0 201 CREATED
+Content-Type: application/json
+Content-Length: 245
+Server: Werkzeug/0.14.1 Python/3.7.1
+Date: Wed, 05 Dec 2018 18:36:41 GMT
+
+{
+    "id": 1,
+    "uri": "/api/products/1",
+    "name": "Modern Spy Glass",
+    "durability": 5,
+    "manufacture_date": "Wed, 05 Dec 2018 18:36:41 -0000",
+    "category": "houshold",
+    "available_count": 0,
+    "is_material_scarce": false
+}
+
+[shazni@shazniAtWSO2 FlaskAPI]$ curl -iX http://localhost:5000/api/products/
+[
+    {
+        "id": 1,
+        "uri": "/api/products/1",
+        "name": "Modern Spy Glass",
+        "durability": 5,
+        "manufacture_date": "Wed, 05 Dec 2018 18:36:41 -0000",
+        "category": "houshold",
+        "available_count": 0,
+        "is_material_scarce": false
+    },
+    {
+        "id": 2,
+        "uri": "/api/products/2",
+        "name": "Industrial worker Glass",
+        "durability": 10,
+        "manufacture_date": "Wed, 05 Dec 2018 18:43:35 -0000",
+        "category": "industrial",
+        "available_count": 0,
+        "is_material_scarce": false
+    }
+]
+
+[shazni@shazniAtWSO2 FlaskAPI]$ curl -iX GET http://localhost:5000/api/products/500
+{
+    "message": "Product 500 doesn't exist. You have requested this URI [/api/products/500] but did you mean /api/products/<int:id> ?"
+}
+
+[shazni@shazniAtWSO2 FlaskAPI]$ curl -iX GET http://localhost:5000/api/products/2
+{
+    "id": 2,
+    "uri": "/api/products/2",
+    "name": "Industrial worker Glass",
+    "durability": 10,
+    "manufacture_date": "Wed, 05 Dec 2018 18:43:35 -0000",
+    "category": "industrial",
+    "available_count": 0,
+    "is_material_scarce": false
+}
+
+[shazni@shazniAtWSO2 FlaskAPI]$ curl -iX PATCH -H "Content-Type: application/json" -d '{"is_material_scarce":"true", "available_count":10}' http://localhost:5000/api/products/1
+{
+    "id": 1,
+    "uri": "/api/products/1",
+    "name": null,
+    "durability": 0,
+    "manufacture_date": "Wed, 05 Dec 2018 19:01:10 -0000",
+    "category": "industrial",
+    "available_count": 10,
+    "is_material_scarce": true
+}
+
+[shazni@shazniAtWSO2 FlaskAPI]$ curl -iX DELETE http://localhost:5000/api/products/1
+
