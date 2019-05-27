@@ -35,6 +35,10 @@ product_fields = {
 
 product_manager = ProductManager()
 
+class Company(Resource):
+        def get(self):
+            return 'Company name is ProductMasters'
+
 class Product(Resource):
 	def abort_if_product_doesnt_exist(self, id):
 		if id not in product_manager.products:
@@ -101,6 +105,7 @@ class ProductList(Resource):
 app = Flask(__name__)
 api = Api(app)
 api.add_resource(ProductList, '/api/products/')
+api.add_resource(Company, '/api/company')
 api.add_resource(Product, '/api/products/<int:id>', endpoint='product_endpoint')
 
 if __name__ == '__main__':

@@ -1,5 +1,7 @@
 python3 api/api.py
 
+Sample runs with curl
+
 [shazni@shazniAtWSO2 FlaskAPI]$ curl -iX POST -H "Content-Type: application/json" -d '{"name":"Modern Spy Glass", "durability":5, "category": "houshold"}' http://localhost:5000/api/products/
 HTTP/1.0 201 CREATED
 Content-Type: application/json
@@ -18,7 +20,7 @@ Date: Wed, 05 Dec 2018 18:36:41 GMT
     "is_material_scarce": false
 }
 
-[shazni@shazniAtWSO2 FlaskAPI]$ curl -iX http://localhost:5000/api/products/
+[shazni@shazniAtWSO2 FlaskAPI]$ curl -iX GET http://localhost:5000/api/products/
 [
     {
         "id": 1,
