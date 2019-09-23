@@ -5,7 +5,7 @@ services:
     ports:
     - "5000:5000"
     volumes:
-    - .:/api
+    - ./api:/app/api
     links:
     - redis
   redis:

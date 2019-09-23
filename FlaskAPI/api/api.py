@@ -58,7 +58,7 @@ class Company(Resource):
 	def get(self):
 		count = 1
 		# count = get_product_count()
-		return 'Company ProductMaster has {} products.'.format(count)
+		return 'Company ProductMasters has {} products.'.format(count)
 
 class Product(Resource):
 	def abort_if_product_doesnt_exist(self, id):
