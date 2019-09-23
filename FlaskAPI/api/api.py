@@ -5,6 +5,12 @@ from models import ProductModel
 import status
 from pytz import utc
 
+# import time
+# import redis
+
+# cache = redis.Redis(host='redis', port=6379)
+# cache.flushdb()
+
 class ProductManager():
 	last_id = 0
 
@@ -15,12 +21,14 @@ class ProductManager():
 		self.__class__.last_id += 1
 		product.id = self.__class__.last_id
 		self.products[self.__class__.last_id] = product
+		# cache.incr('product_count')
 
 	def get_product(self, id):
 		return self.products[id]
 
 	def delete_product(self, id):
 		del self.products[id]
+		# cache.decr('product_count')
 
 product_fields = {
 	'id': fields.Integer,
@@ -35,9 +43,22 @@ product_fields = {
 
 product_manager = ProductManager()
 
+# def get_product_count():
+#     retries = 5
+#     while True:
+#         try:
+#             return cache.get('product_count')
+#         except redis.exceptions.ConnectionError as exc:
+#             if retries == 0:
+#                 raise exc
+#             retries -= 1
+#             time.sleep(0.5)
+
 class Company(Resource):
-        def get(self):
-            return 'Company name is ProductMasters'
+	def get(self):
+		count = 1
+		# count = get_product_count()
+		return 'Company ProductMaster has {} products.'.format(count)
 
 class Product(Resource):
 	def abort_if_product_doesnt_exist(self, id):

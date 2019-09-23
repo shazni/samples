@@ -75,3 +75,5 @@ Date: Wed, 05 Dec 2018 18:36:41 GMT
 
 [shazni@shazniAtWSO2 FlaskAPI]$ curl -iX DELETE http://localhost:5000/api/products/1
 
+[shazni@shazniAtWSO2 FlaskAPI]$ curl -iX GET http://localhost:5000/api/company
+
