@@ -19,3 +19,5 @@ class CurrentSession(models.Model):
     currentPINNumber = models.CharField(max_length=10)
     accessToken = models.CharField(max_length=40)
     lastAccessTime = models.IntegerField()
+    refreshToken = models.CharField(max_length=40)
+    id_token = models.TextField()

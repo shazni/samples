@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Demo Application{% endblock %}
+
+{% block content %}
+	{% if status != None %}
+		<div id="notify-holder"></div>
+	{% endif %}
+
+	<div class="col-md-12 top-heading-operation page-header">
+		<h2>Add User</h2>
+
+		<a href="/{{ context_prefix }}listUsers" class="top-heading-button pull-right btn btn-primary btn-lg">
+				<span class="glyphicon glyphicon-th-list"></span> List Users</a>
+
+		<a href="/{{ context_prefix }}" class="top-heading-button pull-right btn btn-primary btn-lg">
+			<span class="glyphicon glyphicon-th-list"></span> Home</a>
+	</div>
+
+
+		<div class="col-md-12" id="modal">
+			<form class="form-horizontal" enctype="multipart/form-data" action="/{{ context_prefix }}addUser/" method="post">
+				{% csrf_token %}
+
+				<div class="col-md-8">
+					<div class="form-group">
+						<label for="UserName" class="col-sm-3 control-label">User Name</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="userName" placeholder="User name" name="userName" value="{{ form.userName.value }}" autofocus required>
+						</div>
+					</div>
+
+                    <div class="form-group">
+                        <label for="Password" class="col-sm-3 control-label">Password</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="User password" autocomplete="off" value="{{ form.password.value }}" required {{ readonly }}>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ConfirmPassword" class="col-sm-3 control-label">Re-enter password</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" autocomplete="off" value="{{ form.password.value }}" required {{ readonly }}>
+                        </div>
+                    </div>
+
+					<div class="form-group">
+						<label for="FirstName" class="col-sm-3 control-label">First Name</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="firstName" name="firstName" placeholder="e.g: Mark" value="{{ form.firstName.value }}">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="LastName" class="col-sm-3 control-label">Last Name</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="lastName" name="lastName" placeholder="e.g: Edward" value="{{ form.lastName.value }}">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="email" class="col-sm-3 control-label">Email Address</label>
+						<div class="col-sm-6">
+							<input type="email" class="form-control" id="email" name="email" placeholder="somebody@example.com" value="{{ form.email.value }}" {{ readonly }}>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="ContactNumber" class="col-sm-3 control-label">Contact Number</label>
+						<div class="col-sm-6">
+							<input type="text" class="form-control" id="contactNumber" name="contactNumber" placeholder="User contact" value="{{ form.contactNumber.value }}">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="col-sm-6 text-center">
+							<button type="submit" class="btn btn-primary">Add User</button>
+							<!-- <button type="clear" class="btn btn-warning">Reset</button> -->
+						</div>
+					</div>
+					<div class="clearfix">&nbsp;</div>
+				</div>
+			</form>
+		</div>
+		
+		<div class="clearfix">&nbsp;</div>
+{% endblock %}

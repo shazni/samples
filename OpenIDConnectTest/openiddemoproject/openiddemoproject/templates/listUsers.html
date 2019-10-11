@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project_display_name }}{% endblock %}
+
+{% block content %}
+{% if status != None %}
+<div id="notify-holder"></div>
+{% endif %}
+
+<div class="col-md-12 top-heading-operation">
+  <h2>Users</h2>
+  
+  <a href="/{{ context_prefix }}addUser" class="top-heading-button pull-right btn btn-info btn-lg">
+    <span class="glyphicon glyphicon-plus"></span> Add User</a>
+  <a href="/{{ context_prefix }}" class="top-heading-button pull-right btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-th-list"></span> Home</a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Username</th>
+            <th>First name</th>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for user in user_list %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.family_name }}</td>
+            <td>{{ user.id }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <form style="display:inline">
+                    <button class="btn btn-xs btn-danger" type="button" data-toggle="modal" 
+                        data-target="#confirmDelete" data-title="Delete User" 
+                        target-url="/{{context_prefix}}deleteUser/{{ user.id }}" redirect-url="/{{context_prefix}}listUsers/" 
+                        data-message="Are you sure you want to delete user {{ user.username }}?">
+                        <i class="glyphicon glyphicon-trash"></i>Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% include 'paginationSnippet.html' %}
+
+{% endblock %}

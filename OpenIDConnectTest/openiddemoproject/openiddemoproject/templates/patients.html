@@ -36,6 +36,15 @@
 		<div class="clearfix">&nbsp;</div>
 		<div class="col-sm-6 text-center">
 			<button onclick="window.location.href='/openiddemoproject'" class="btn btn-primary">Home</button>
+			<!-- <button onclick="window.location.href='/openiddemoproject/logout'" class="btn btn-secondary">Sign Out</button> -->
+			<p>{{ id_token }}</p>
+			<p>{{ callback }}</p>
+			<p>{{ oidc_logout_url }}</p>
+			<form class="form-horizontal" enctype="multipart/form-data" id="logout" action="{{ oidc_logout_url }}" method="post">
+				<input type="hidden" name="id_token_hint" value="{{ id_token }}"/>
+				<input type="hidden" name="post_logout_redirect_uri" value="{{ callback }}"/>
+				<button type='submit'>Sign Out</button>
+			</form>
 		</div>
 		<div class="clearfix">&nbsp;</div>
 	</div>

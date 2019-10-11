@@ -8,8 +8,16 @@
 	</div>
 
 	<div class="clearfix">&nbsp;</div>
-		<div class="col-sm-6 text-center">
+		<div class="col-sm-3 text-center">
 			<button onclick="window.location.href='/{{ context_prefix }}patients/'" class="btn btn-primary">Get all patients</button>
+		</div>
+
+		<div class="col-sm-3 text-center">
+			<button onclick="window.location.href='/{{ context_prefix }}listUsers/'" class="btn btn-primary">All users</button>
+		</div>
+
+		<div class="col-sm-3 text-center">
+			<button onclick="window.location.href='/{{ context_prefix }}addUser/'" class="btn btn-primary">Add new user</button>
 		</div>
 	<div class="clearfix">&nbsp;</div>
 {% endblock %}

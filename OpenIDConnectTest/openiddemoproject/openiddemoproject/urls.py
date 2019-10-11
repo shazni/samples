@@ -25,5 +25,12 @@ urlpatterns = [
     url(r'^' + settings.CONTEXT_PREFIX + 'oauth2client/?$', views.oauth2client, name='oauth2client'),
     url(r'^' + settings.CONTEXT_PREFIX + 'validatePIN/?$', views.validatePIN, name='validatePIN'),
     url(r'^' + settings.CONTEXT_PREFIX + 'patients/$', views.patients, name='patients'),
+    url(r'^' + settings.CONTEXT_PREFIX + 'logout$', views.logout, name='logout'),
+    url(r'^' + settings.CONTEXT_PREFIX + 'signout$', views.logout, name='signout'),
     url(r'^' + settings.CONTEXT_PREFIX + 'getPatients/$', views.getPatients),   # Only POST
+
+        # User processing
+    url(r'^' + settings.CONTEXT_PREFIX + 'addUser/$', views.addUser, name='addUser'),
+    url(r'^' + settings.CONTEXT_PREFIX + 'listUsers/$', views.listUsers, name='listUsers'),
+    url(r'^' + settings.CONTEXT_PREFIX + 'deleteUser/(?P<user_id>\w+)/$', views.deleteUser, name='deleteUser'),
 ]

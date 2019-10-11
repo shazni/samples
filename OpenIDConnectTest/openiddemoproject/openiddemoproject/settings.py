@@ -132,7 +132,5 @@ STATICFILES_DIRS = (
     # os.path.join(BASE_DIR, 'doctorplus', 'js'),
 )
 
-CLIENT_ID = "6Oo5_Bq18JnlQZJyUpVs5cccxgIa"
-CLIENT_SECRET = "0MM4xYZAXNmbC7vdG5FaHrFON5Ya"
-
-
+CLIENT_ID = "ofJH76eGU15Yd0PIpk289xOfcfga"
+CLIENT_SECRET = "yfCTgn5MOGAqW2otkfsUUMCnf1ga"
