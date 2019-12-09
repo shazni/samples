@@ -1,0 +1,32 @@
+map_S_PaymentServiceRequest_S_TransformedData = function(){ 
+var outputTransformedData={};
+
+outputTransformedData =  {};
+outputTransformedData.desc = inputPaymentServiceRequest.PaymentRequest.Description;
+outputTransformedData.name = inputPaymentServiceRequest.PaymentRequest.SystemName;
+outputTransformedData.txnId = inputPaymentServiceRequest.PaymentRequest.TransactionID;
+outputTransformedData.nullPayment =  {};
+if( (inputPaymentServiceRequest.PaymentRequest.NilPayment) ){
+outputTransformedData.nullPayment.currency = inputPaymentServiceRequest.PaymentRequest.NilPayment.CurrencyCode;
+}
+if( (inputPaymentServiceRequest.PaymentRequest.NilPayment) ){
+outputTransformedData.nullPayment.order_total = inputPaymentServiceRequest.PaymentRequest.NilPayment.OrderTotal;
+}
+if( (inputPaymentServiceRequest.PaymentRequest.NilPayment) ){
+outputTransformedData.nullPayment.key = inputPaymentServiceRequest.PaymentRequest.NilPayment.LastModifiedKey;
+}
+outputTransformedData.card_payment =  {};
+if( (inputPaymentServiceRequest.PaymentRequest.CardPayment) ){
+outputTransformedData.card_payment.card_number = inputPaymentServiceRequest.PaymentRequest.CardPayment.CV2;
+}
+return outputTransformedData;
+};
+
+
+
+
+
+
+
+
+

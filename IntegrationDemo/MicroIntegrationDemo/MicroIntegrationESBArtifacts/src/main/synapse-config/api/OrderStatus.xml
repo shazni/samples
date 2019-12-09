@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/status" name="OrderStatus" xmlns="http://ws.apache.org/ns/synapse">
+    <resource faultSequence="SendToQueue" methods="POST" url-mapping="/order">
+        <inSequence>
+            <log level="full"/>
+            <call>
+                <endpoint>
+                    <address uri="http://localhost:8753/invalid"/>
+                </endpoint>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+    </resource>
+</api>

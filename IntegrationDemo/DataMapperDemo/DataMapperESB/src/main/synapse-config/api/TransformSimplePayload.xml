@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/transpay" name="TransformSimplePayload" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <log>
+                <property expression="$body" name="PAYLOAD"/>
+            </log>
+            <datamapper config="gov:datamapper/simplepayloadtransform.dmc" inputSchema="gov:datamapper/simplepayloadtransform_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/simplepayloadtransform_outputSchema.json" outputType="XML"/>
+            <log>
+                <property expression="$body" name="ABOUT_TO_RESPONSE###############"/>
+            </log>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

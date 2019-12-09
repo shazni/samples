@@ -40,9 +40,12 @@
 			<p>{{ id_token }}</p>
 			<p>{{ callback }}</p>
 			<p>{{ oidc_logout_url }}</p>
-			<form class="form-horizontal" enctype="multipart/form-data" id="logout" action="{{ oidc_logout_url }}" method="post">
+			<form class="form-horizontal" enctype="multipart/form-data" id="logout" 
+			action="{{ oidc_logout_url }}/?id_token_hint={{ id_token }}&post_logout_redirect_uri={{ callback }}" 
+			method="post">
 				<input type="hidden" name="id_token_hint" value="{{ id_token }}"/>
 				<input type="hidden" name="post_logout_redirect_uri" value="{{ callback }}"/>
+				<input type='hidden' name='state' value='logged_out'/>
 				<button type='submit'>Sign Out</button>
 			</form>
 		</div>

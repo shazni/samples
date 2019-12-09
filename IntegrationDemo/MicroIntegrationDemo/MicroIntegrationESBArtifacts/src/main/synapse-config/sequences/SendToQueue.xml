@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="SendToQueue" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log>
+        <property name="Storing message in JMS in raw form" value="Redelivery will be attempted"/>
+    </log>
+    <property name="OUT_ONLY" scope="default" type="STRING" value="true"/>
+    <call>
+        <endpoint>
+            <address uri="jms:/IntegrationQueue?transport.jms.ConnectionFactoryJNDIName=QueueConnectionFactory&amp;java.naming.factory.initial=org.wso2.andes.jndi.PropertiesFileInitialContextFactory&amp;java.naming.provider.url=conf/jndi.properties&amp;transport.jms.DestinationType=queue"/>
+        </endpoint>
+    </call>
+    <respond/>
+</sequence>

@@ -39,10 +39,18 @@
 
 	<body>
 		<div class="container-fluid">
+			{% include 'confirmDelete.html' %}
+			
 			{% block content %}
 			{% endblock content %}
 		</div>
 
+		<form>
+            <input type="hidden" id="context_prefix" name="context_prefix" value="{{ context_prefix }}">
+            <input type="hidden" id="status" name="status" value="{{ status }}">
+            <input type="hidden" id="status_message" name="status_message" value="{{ status_message }}">
+		</form>
+		
 		<script type="text/javascript" src="{% static 'js/openiddemoproject.js' %}"></script>
 		<script type="text/javascript" src="{% static 'js/looks.js' %}"></script>
 

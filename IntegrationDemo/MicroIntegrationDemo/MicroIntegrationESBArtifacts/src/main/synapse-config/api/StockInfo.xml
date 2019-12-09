@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/stock" name="StockInfo" xmlns="http://ws.apache.org/ns/synapse">
+    <resource faultSequence="AddToSFTP" methods="GET" uri-template="/info/{symbol}">
+        <inSequence>
+            <property description="uri.var.symbol" expression="translate($ctx:uri.var.symbol, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" name="uri.var.symbol" scope="default" type="STRING"/>
+            <call>
+                <endpoint key="StockInfoEp"/>
+            </call>
+            <script language="js"><![CDATA[var body = mc.getPayloadJSON();
+            	body.exchange = "NYSE";
+            	mc.setPayloadJSON(body);]]></script>
+            <property name="COPY_TO_DIRECTORY" scope="default" type="STRING" value="@FTPCopyEnabled"/>
+            <filter regex="true" source="$ctx:COPY_TO_DIRECTORY">
+                <then>
+                    <log>
+                        <property name="File copy to SFTP" value="Processing..."/>
+                    </log>
+                    <property expression="$body" name="BODY" scope="default" type="STRING"/>
+                    <enrich>
+                        <source clone="false" type="body"/>
+                        <target property="ORIGINAL_PAYLOAD" type="property"/>
+                    </enrich>
+                    <fileconnector.create>
+                        <source>smb://shazni:shazni_nazeer@localhost/inboundFiles/stock_data.txt</source>
+                        <inputContent>{$ctx:BODY}</inputContent>
+                    </fileconnector.create>
+                    <log>
+                        <property name="File copy to SFTP" value="######## DONE ###########"/>
+                    </log>
+                    <enrich>
+                        <source clone="false" property="ORIGINAL_PAYLOAD" type="property"/>
+                        <target type="body"/>
+                    </enrich>
+                </then>
+                <else/>
+            </filter>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/add">
+        <inSequence>
+            <call>
+                <endpoint>
+                    <http method="post" uri-template="@MicroServiceHostPort/ceppublish/event/stock">
+                        <suspendOnFailure>
+                            <initialDuration>-1</initialDuration>
+                            <progressionFactor>1</progressionFactor>
+                        </suspendOnFailure>
+                        <markForSuspension>
+                            <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                        </markForSuspension>
+                    </http>
+                </endpoint>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamapper:DataMapperRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper">
+  <input>
+    <treeNode name="tns:PaymentServiceRequest" schemaDataType="OBJECT" level="1">
+      <node name="tns:PaymentRequest" schemaDataType="OBJECT" level="2">
+        <node name="Description" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/Description"/>
+          <properties key="nullable" value="false"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.0/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="SystemName" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/SystemName"/>
+          <properties key="nullable" value="false"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.1/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="TransactionID" schemaDataType="STRING" level="3">
+          <properties key="type" value="string"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/TransactionID"/>
+          <properties key="nullable" value="false"/>
+          <outNode>
+            <outgoingLink inNode="//@output/@treeNode.0/@node.2/@inNode"/>
+          </outNode>
+          <inNode/>
+        </node>
+        <node name="tns:NilPayment" schemaDataType="OBJECT" level="3">
+          <node name="CurrencyCode" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment/CurrencyCode"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.3/@node.0/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="LastModifiedKey" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment/LastModifiedKey"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.3/@node.2/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="OrderTotal" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment/OrderTotal"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.3/@node.1/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <properties key="added_properties_id" value="hasProperties"/>
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="true"/>
+          <properties key="objectNamespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment"/>
+          <properties key="type" value="object"/>
+          <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="tns:CardPayment" schemaDataType="OBJECT" level="3">
+          <node name="CV2" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CV2"/>
+            <properties key="nullable" value="false"/>
+            <outNode>
+              <outgoingLink inNode="//@output/@treeNode.0/@node.4/@node.0/@inNode"/>
+            </outNode>
+            <inNode/>
+          </node>
+          <node name="CardNumber" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CardNumber"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="CardType" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CardType"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="CurrencyCode" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CurrencyCode"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="ExpiryMonth" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/ExpiryMonth"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="ExpiryYear" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/ExpiryYear"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="IssueNumber" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/IssueNumber"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="LastModifiedKey" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/LastModifiedKey"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="NameOnCard" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/NameOnCard"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="OrderTotal" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/OrderTotal"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="StartMonth" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/StartMonth"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="StartYear" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/StartYear"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="added_properties_id" value="hasProperties"/>
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="true"/>
+          <properties key="objectNamespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment"/>
+          <properties key="type" value="object"/>
+          <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="tns:AuthenticatedCardPayment" schemaDataType="OBJECT" level="3">
+          <node name="CardType" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/CardType"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="CurrencyCode" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/CurrencyCode"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="LastModifiedKey" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/LastModifiedKey"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="OrderTotal" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/OrderTotal"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="ResponseData" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/ResponseData"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="added_properties_id" value="hasProperties"/>
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="true"/>
+          <properties key="objectNamespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment"/>
+          <properties key="type" value="object"/>
+          <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="tns:PledgedPayment" schemaDataType="OBJECT" level="3">
+          <node name="CurrencyCode" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/CurrencyCode"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="LastModifiedKey" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/LastModifiedKey"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="OrderTotal" schemaDataType="NUMBER" level="4">
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/OrderTotal"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="PaymentMethod" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/PaymentMethod"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="added_properties_id" value="hasProperties"/>
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="true"/>
+          <properties key="objectNamespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment"/>
+          <properties key="type" value="object"/>
+          <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="tns:WebOriginator" schemaDataType="OBJECT" level="3">
+          <node name="HttpAccept" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/HttpAccept"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="IpAddress" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/IpAddress"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="SessionID" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/SessionID"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="UserAgent" schemaDataType="STRING" level="4">
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/UserAgent"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="added_properties_id" value="hasProperties"/>
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="true"/>
+          <properties key="objectNamespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator"/>
+          <properties key="type" value="object"/>
+          <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="tns:Originator" schemaDataType="OBJECT" level="3">
+          <node name="xsi:type" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=xsi, url=http://www.w3.org/2001/XMLSchema-instance}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:Originator/xsi:type"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="added_properties_id" value="hasProperties"/>
+          <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+          <properties key="nullable" value="true"/>
+          <properties key="objectNamespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:Originator"/>
+          <properties key="type" value="object"/>
+          <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="tns:ContactDetails" schemaDataType="OBJECT" level="3">
+          <node name="tns:Name" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails/tns:Name"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="tns:EmailAddress" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails/tns:EmailAddress"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="tns:PhoneNumber" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails/tns:PhoneNumber"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <node name="tns:TelephoneData" schemaDataType="OBJECT" level="3">
+          <node name="tns:Operator" schemaDataType="NUMBER" level="4">
+            <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+            <properties key="type" value="number"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData/tns:Operator"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="tns:TelephoneNumber" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData/tns:TelephoneNumber"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <node name="tns:Comments" schemaDataType="STRING" level="4">
+            <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+            <properties key="type" value="string"/>
+            <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData/tns:Comments"/>
+            <properties key="nullable" value="false"/>
+            <outNode/>
+            <inNode/>
+          </node>
+          <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+          <properties key="type" value="object"/>
+          <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData"/>
+          <properties key="nullable" value="false"/>
+          <properties key="properties_id" value="{CurrencyCode={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment/CurrencyCode, type=string}, LastModifiedKey={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment/LastModifiedKey, type=number}, OrderTotal={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment/OrderTotal, type=number}}"/>
+          <properties key="properties_id" value="{CV2={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CV2, type=string}, CardNumber={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CardNumber, type=string}, CardType={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CardType, type=number}, CurrencyCode={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CurrencyCode, type=string}, ExpiryMonth={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/ExpiryMonth, type=number}, ExpiryYear={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/ExpiryYear, type=number}, IssueNumber={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/IssueNumber, type=string}, LastModifiedKey={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/LastModifiedKey, type=number}, NameOnCard={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/NameOnCard, type=string}, OrderTotal={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/OrderTotal, type=number}, StartMonth={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/StartMonth, type=number}, StartYear={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/StartYear, type=number}}"/>
+          <properties key="properties_id" value="{CardType={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/CardType, type=number}, CurrencyCode={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/CurrencyCode, type=string}, LastModifiedKey={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/LastModifiedKey, type=number}, OrderTotal={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/OrderTotal, type=number}, ResponseData={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/ResponseData, type=string}}"/>
+          <properties key="properties_id" value="{CurrencyCode={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/CurrencyCode, type=string}, LastModifiedKey={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/LastModifiedKey, type=number}, OrderTotal={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/OrderTotal, type=number}, PaymentMethod={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/PaymentMethod, type=string}}"/>
+          <properties key="properties_id" value="{HttpAccept={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/HttpAccept, type=string}, IpAddress={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/IpAddress, type=string}, SessionID={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/SessionID, type=string}, UserAgent={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/UserAgent, type=string}}"/>
+          <properties key="properties_id" value="{xsi:type={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:Originator/xsi:type, type=string}}"/>
+          <properties key="properties_id" value="{tns:Name={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails/tns:Name, type=string}, tns:EmailAddress={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails/tns:EmailAddress, type=string}, tns:PhoneNumber={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails/tns:PhoneNumber, type=string}}"/>
+          <properties key="properties_id" value="{tns:Operator={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData/tns:Operator, type=number}, tns:TelephoneNumber={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData/tns:TelephoneNumber, type=string}, tns:Comments={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData/tns:Comments, type=string}}"/>
+          <outNode/>
+          <inNode/>
+        </node>
+        <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+        <properties key="type" value="object"/>
+        <properties key="id" value="http://wso2jsonschema.org/tns:PaymentRequest"/>
+        <properties key="nullable" value="false"/>
+        <properties key="properties_id" value="{Description={id=http://wso2jsonschema.org/tns:PaymentRequest/Description, type=string}, SystemName={id=http://wso2jsonschema.org/tns:PaymentRequest/SystemName, type=string}, TransactionID={id=http://wso2jsonschema.org/tns:PaymentRequest/TransactionID, type=string}, tns:NilPayment={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment, type=object, properties={CurrencyCode={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment/CurrencyCode, type=string}, LastModifiedKey={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment/LastModifiedKey, type=number}, OrderTotal={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:NilPayment/OrderTotal, type=number}}}, tns:CardPayment={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment, type=object, properties={CV2={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CV2, type=string}, CardNumber={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CardNumber, type=string}, CardType={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CardType, type=number}, CurrencyCode={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/CurrencyCode, type=string}, ExpiryMonth={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/ExpiryMonth, type=number}, ExpiryYear={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/ExpiryYear, type=number}, IssueNumber={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/IssueNumber, type=string}, LastModifiedKey={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/LastModifiedKey, type=number}, NameOnCard={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/NameOnCard, type=string}, OrderTotal={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/OrderTotal, type=number}, StartMonth={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/StartMonth, type=number}, StartYear={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:CardPayment/StartYear, type=number}}}, tns:AuthenticatedCardPayment={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment, type=object, properties={CardType={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/CardType, type=number}, CurrencyCode={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/CurrencyCode, type=string}, LastModifiedKey={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/LastModifiedKey, type=number}, OrderTotal={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/OrderTotal, type=number}, ResponseData={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:AuthenticatedCardPayment/ResponseData, type=string}}}, tns:PledgedPayment={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment, type=object, properties={CurrencyCode={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/CurrencyCode, type=string}, LastModifiedKey={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/LastModifiedKey, type=number}, OrderTotal={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/OrderTotal, type=number}, PaymentMethod={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:PledgedPayment/PaymentMethod, type=string}}}, tns:WebOriginator={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator, type=object, properties={HttpAccept={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/HttpAccept, type=string}, IpAddress={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/IpAddress, type=string}, SessionID={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/SessionID, type=string}, UserAgent={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:WebOriginator/UserAgent, type=string}}}, tns:Originator={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:Originator, type=object, properties={xsi:type={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:Originator/xsi:type, type=string}}}, tns:TelephoneOriginator={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneOriginator, type=null}, tns:ContactDetails={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails, type=object, properties={tns:Name={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails/tns:Name, type=string}, tns:EmailAddress={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails/tns:EmailAddress, type=string}, tns:PhoneNumber={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:ContactDetails/tns:PhoneNumber, type=string}}}, tns:TelephoneData={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData, type=object, properties={tns:Operator={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData/tns:Operator, type=number}, tns:TelephoneNumber={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData/tns:TelephoneNumber, type=string}, tns:Comments={id=http://wso2jsonschema.org/tns:PaymentRequest/tns:TelephoneData/tns:Comments, type=string}}}}"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest},{prefix=xsi, url=http://www.w3.org/2001/XMLSchema-instance}"/>
+      <properties key="namespaces" value="{prefix=tns, url=http://PaymentServiceRequest}"/>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="id" value="http://wso2jsonschema.org"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </input>
+  <output>
+    <treeNode name="TransformedData" level="1">
+      <node name="desc" level="2">
+        <properties key="type" value="string"/>
+        <properties key="items_id" value="/0"/>
+        <properties key="items_type" value="string"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.0/@outNode/@outgoingLink.0"/>
+      </node>
+      <node name="name" level="2">
+        <properties key="type" value="string"/>
+        <properties key="items_id" value="/0"/>
+        <properties key="items_type" value="string"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.1/@outNode/@outgoingLink.0"/>
+      </node>
+      <node name="txnId" level="2">
+        <properties key="type" value="string"/>
+        <properties key="items_id" value="/0"/>
+        <properties key="items_type" value="string"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.2/@outNode/@outgoingLink.0"/>
+      </node>
+      <node name="nullPayment" level="2">
+        <node name="currency" level="3">
+          <properties key="type" value="string"/>
+          <properties key="items_id" value="/0"/>
+          <properties key="items_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.3/@node.0/@outNode/@outgoingLink.0"/>
+        </node>
+        <node name="order_total" level="3">
+          <properties key="type" value="string"/>
+          <properties key="items_id" value="/0"/>
+          <properties key="items_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.3/@node.2/@outNode/@outgoingLink.0"/>
+        </node>
+        <node name="key" level="3">
+          <properties key="type" value="string"/>
+          <properties key="items_id" value="/0"/>
+          <properties key="items_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.3/@node.1/@outNode/@outgoingLink.0"/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="items_id" value="/0"/>
+        <properties key="items_type" value="object"/>
+        <properties key="added_properties_id" value="hasProperties"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="card_payment" level="2">
+        <node name="card_number" level="3">
+          <properties key="type" value="string"/>
+          <properties key="items_id" value="/0"/>
+          <properties key="items_type" value="string"/>
+          <properties key="nullable" value="false"/>
+          <outNode/>
+          <inNode incomingLink="//@input/@treeNode.0/@node.0/@node.4/@node.0/@outNode/@outgoingLink.0"/>
+        </node>
+        <properties key="type" value="object"/>
+        <properties key="items_id" value="/0"/>
+        <properties key="items_type" value="object"/>
+        <properties key="added_properties_id" value="hasProperties"/>
+        <properties key="nullable" value="false"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <node name="@empty" level="2">
+        <properties key="type" value="string"/>
+        <properties key="added_attribute_id"/>
+        <properties key="added_attribute_type" value="string"/>
+        <properties key="items_id" value="/0"/>
+        <properties key="items_type" value="string"/>
+        <properties key="nullable" value="true"/>
+        <outNode/>
+        <inNode/>
+      </node>
+      <properties key="type" value="object"/>
+      <properties key="$schema" value="http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#"/>
+      <properties key="nullable" value="false"/>
+      <outNode/>
+      <inNode/>
+    </treeNode>
+  </output>
+</datamapper:DataMapperRoot>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/account" name="AccountInfo" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/info/{account_id}">
+        <inSequence>
+            <property name="messageType" scope="axis2" type="STRING" value="application/xml"/>
+            <property name="ContentType" scope="axis2" type="STRING" value="application/xml"/>
+            <payloadFactory media-type="xml">
+                <format>
+                    <data_request>
+                        <account_id>$1</account_id>
+                    </data_request>
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:uri.var.account_id"/>
+                </args>
+            </payloadFactory>
+            <log>
+                <property expression="$body" name="MESSAGE_BODY"/>
+            </log>
+            <call>
+                <endpoint key="AccountInfoEp"/>
+            </call>
+            <enrich>
+                <source clone="true" type="inline">
+                    <country>USA</country>
+                </source>
+                <target action="child" xpath="//account_details"/>
+            </enrich>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

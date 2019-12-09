@@ -21,3 +21,4 @@ class CurrentSession(models.Model):
     lastAccessTime = models.IntegerField()
     refreshToken = models.CharField(max_length=40)
     id_token = models.TextField()
+    username = models.CharField(max_length=10)

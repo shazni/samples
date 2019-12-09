@@ -1,0 +1,55 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "attributes" : {
+    "empty" : {
+      "id" : "default/@empty",
+      "type" : "string",
+      "nullable" : "true"
+    }
+  },
+  "id" : "",
+  "title" : "TransformedData",
+  "type" : "object",
+  "properties" : {
+    "desc" : {
+      "id" : "null/0",
+      "type" : "string"
+    },
+    "name" : {
+      "id" : "null/0",
+      "type" : "string"
+    },
+    "txnId" : {
+      "id" : "null/0",
+      "type" : "string"
+    },
+    "nullPayment" : {
+      "id" : "",
+      "type" : "object",
+      "properties" : {
+        "currency" : {
+          "id" : "null/0",
+          "type" : "string"
+        },
+        "order_total" : {
+          "id" : "null/0",
+          "type" : "string"
+        },
+        "key" : {
+          "id" : "null/0",
+          "type" : "string"
+        }
+      }
+    },
+    "card_payment" : {
+      "id" : "",
+      "type" : "object",
+      "properties" : {
+        "card_number" : {
+          "id" : "null/0",
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

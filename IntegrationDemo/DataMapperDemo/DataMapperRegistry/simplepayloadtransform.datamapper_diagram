@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:datamapper="http:///org/wso2/developerstudio/eclipse/gmf/datamapper" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_e8GQMPbVEeiVHZqZbgt1rw" type="DataMapper" name="simplepayloadtransform.datamapper_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_fCXQQPbVEeiVHZqZbgt1rw" type="2002" fontName="Cantarell">
+    <children xmi:type="notation:Shape" xmi:id="_g6i54PbVEeiVHZqZbgt1rw" type="3002" fontName="Cantarell">
+      <children xmi:type="notation:DecorationNode" xmi:id="_g6i54vbVEeiVHZqZbgt1rw" type="5002"/>
+      <children xmi:type="notation:Shape" xmi:id="_g6kIAPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+        <children xmi:type="notation:DecorationNode" xmi:id="_g6kIAvbVEeiVHZqZbgt1rw" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_g6lWIPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6lWIvbVEeiVHZqZbgt1rw" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_g6nLUPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+            <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6nLUfbVEeiVHZqZbgt1rw" x="-11" y="-9"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6nLUvbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+            <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6nLU_bVEeiVHZqZbgt1rw"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6lWIfbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6lWI_bVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6lWJfbVEeiVHZqZbgt1rw" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_g6oZcPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+            <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.1/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6pAgPbVEeiVHZqZbgt1rw" x="-11" y="-9"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6pAgfbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+            <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.1/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6pAgvbVEeiVHZqZbgt1rw"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6lWJPbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6lWJvbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6lWKPbVEeiVHZqZbgt1rw" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_g6qOoPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+            <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.2/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6qOofbVEeiVHZqZbgt1rw" x="-11" y="-9"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6qOovbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+            <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.2/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6qOo_bVEeiVHZqZbgt1rw"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.2"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6lWJ_bVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6lWKfbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6lWK_bVEeiVHZqZbgt1rw" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_g6sD0PbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g6sD0vbVEeiVHZqZbgt1rw" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_g6tR8PbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+              <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.0/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6tR8fbVEeiVHZqZbgt1rw" x="-11" y="-9"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_g6tR8vbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+              <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.0/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6tR8_bVEeiVHZqZbgt1rw"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6sD0fbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6sD0_bVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g6sD1fbVEeiVHZqZbgt1rw" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_g6ugEPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+              <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.1/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6ugEfbVEeiVHZqZbgt1rw" x="-11" y="-9"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_g6ugEvbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+              <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.1/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6ugE_bVEeiVHZqZbgt1rw"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6sD1PbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6sD1vbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g6sD2PbVEeiVHZqZbgt1rw" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_g6wVQPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+              <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.2/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6wVQfbVEeiVHZqZbgt1rw" x="-11" y="-9"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_g6wVQvbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+              <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.2/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6wVQ_bVEeiVHZqZbgt1rw"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.2"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6sD1_bVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6sD2fbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+            <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6sD2vbVEeiVHZqZbgt1rw" x="-1" y="-11"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6sD2_bVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+            <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6sD3PbVEeiVHZqZbgt1rw"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6lWKvbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6lWLPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6lWLvbVEeiVHZqZbgt1rw" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_g6z_oPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g6z_ovbVEeiVHZqZbgt1rw" type="5001"/>
+            <children xmi:type="notation:Shape" xmi:id="_g61NwPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+              <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.0/@inNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g61NwfbVEeiVHZqZbgt1rw" x="-11" y="-9"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_g6100PbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+              <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.0/@outNode"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6100fbVEeiVHZqZbgt1rw"/>
+            </children>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6z_ofbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6z_o_bVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g6z_pfbVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6z_pPbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6z_pvbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g6z_qPbVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.2"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6z_p_bVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6z_qfbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g6z_q_bVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6z_qvbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g6z_rPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g6z_rvbVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.4"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6z_rfbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g60msPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g60msvbVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.5"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g60msfbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g60ms_bVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g60mtfbVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.6"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g60mtPbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g60mtvbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g60muPbVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.7"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g60mt_bVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g60mufbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g60mu_bVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g60muvbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g60mvPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g60mvvbVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.9"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g60mvfbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g60mv_bVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g60mwfbVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g60mwPbVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g60mwvbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+            <children xmi:type="notation:DecorationNode" xmi:id="_g60mxPbVEeiVHZqZbgt1rw" type="5001"/>
+            <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.11"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g60mw_bVEeiVHZqZbgt1rw"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g60mxfbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+            <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g60mxvbVEeiVHZqZbgt1rw" x="-1" y="-11"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_g60mx_bVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+            <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g60myPbVEeiVHZqZbgt1rw"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6lWLfbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6lWL_bVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6l9MPbVEeiVHZqZbgt1rw" type="5001"/>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.5"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6lWMPbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6l9MfbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6l9M_bVEeiVHZqZbgt1rw" type="5001"/>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.6"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6l9MvbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6l9NPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6l9NvbVEeiVHZqZbgt1rw" type="5001"/>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.7"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6l9NfbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6l9N_bVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6l9OfbVEeiVHZqZbgt1rw" type="5001"/>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6l9OPbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6l9PfbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6l9P_bVEeiVHZqZbgt1rw" type="5001"/>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.9"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6l9PvbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6l9QPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_g6l9QvbVEeiVHZqZbgt1rw" type="5001"/>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6l9QfbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6l9Q_bVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+          <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6l9RPbVEeiVHZqZbgt1rw" x="-1" y="-11"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_g6l9RfbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+          <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6l9RvbVEeiVHZqZbgt1rw"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6kIAfbVEeiVHZqZbgt1rw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_g6kIA_bVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+        <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@inNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6kIBPbVEeiVHZqZbgt1rw" x="-1" y="-11"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_g6kIBfbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+        <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@outNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6kIBvbVEeiVHZqZbgt1rw"/>
+      </children>
+      <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@input/@treeNode.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_g6i54fbVEeiVHZqZbgt1rw"/>
+    </children>
+    <element xmi:type="datamapper:Input" href="simplepayloadtransform.datamapper#//@input"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fCXQQfbVEeiVHZqZbgt1rw" x="24" y="108" width="320" height="980"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_fCXQQvbVEeiVHZqZbgt1rw" type="2003" fontName="Cantarell">
+    <children xmi:type="notation:Shape" xmi:id="_jXSCEPbVEeiVHZqZbgt1rw" type="3011" fontName="Cantarell">
+      <children xmi:type="notation:DecorationNode" xmi:id="_jXSCEvbVEeiVHZqZbgt1rw" type="5003"/>
+      <children xmi:type="notation:Shape" xmi:id="_jXTQMPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+        <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@inNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jXTQMfbVEeiVHZqZbgt1rw" x="-11" y="-9"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_jXTQMvbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+        <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@outNode"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jXTQM_bVEeiVHZqZbgt1rw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_lL5aUPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+        <children xmi:type="notation:DecorationNode" xmi:id="_lL5aUvbVEeiVHZqZbgt1rw" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_lL6BYPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+          <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.0/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lL6BYfbVEeiVHZqZbgt1rw" x="-5" y="4"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_lL6ocPbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+          <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.0/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lL6ocfbVEeiVHZqZbgt1rw"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lL5aUfbVEeiVHZqZbgt1rw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_mT8ngPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+        <children xmi:type="notation:DecorationNode" xmi:id="_mT8ngvbVEeiVHZqZbgt1rw" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_mT91oPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+          <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.1/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mT91ofbVEeiVHZqZbgt1rw" x="-5" y="4"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_mT91ovbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+          <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.1/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mT91o_bVEeiVHZqZbgt1rw"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mT8ngfbVEeiVHZqZbgt1rw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_oNFTYPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oNFTYvbVEeiVHZqZbgt1rw" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_oNGhgPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+          <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.2/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oNGhgfbVEeiVHZqZbgt1rw" x="-5" y="4"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_oNGhgvbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+          <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.2/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oNGhg_bVEeiVHZqZbgt1rw"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oNFTYfbVEeiVHZqZbgt1rw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_qmwggPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+        <children xmi:type="notation:DecorationNode" xmi:id="_qmxHkPbVEeiVHZqZbgt1rw" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_qmxuoPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+          <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qmxuofbVEeiVHZqZbgt1rw" x="-11" y="-9"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_qmxuovbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+          <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qmxuo_bVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_viCHsPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_viCuwPbVEeiVHZqZbgt1rw" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_viDV0PbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+            <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@node.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_viDV0fbVEeiVHZqZbgt1rw" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_viDV0vbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+            <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@node.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_viDV0_bVEeiVHZqZbgt1rw"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@node.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_viCHsfbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_1kc9IPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_1kc9IvbVEeiVHZqZbgt1rw" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_1keLQPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+            <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@node.1/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1keLQfbVEeiVHZqZbgt1rw" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_1keLQvbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+            <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@node.1/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1keLQ_bVEeiVHZqZbgt1rw"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@node.1"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1kc9IfbVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_3BsXMPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_3Bs-QPbVEeiVHZqZbgt1rw" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_3BtlUPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+            <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@node.2/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3BtlUfbVEeiVHZqZbgt1rw" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_3BtlUvbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+            <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@node.2/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3BtlU_bVEeiVHZqZbgt1rw"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3/@node.2"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3BsXMfbVEeiVHZqZbgt1rw"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qmwggfbVEeiVHZqZbgt1rw"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_5nSgcPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+        <children xmi:type="notation:DecorationNode" xmi:id="_5nSgcvbVEeiVHZqZbgt1rw" type="5001"/>
+        <children xmi:type="notation:Shape" xmi:id="_5nTukPbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+          <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.4/@inNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5nTukfbVEeiVHZqZbgt1rw" x="-11" y="-9"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_5nTukvbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+          <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.4/@outNode"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5nTuk_bVEeiVHZqZbgt1rw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_7YPgsPbVEeiVHZqZbgt1rw" type="3003" fontName="Cantarell">
+          <children xmi:type="notation:DecorationNode" xmi:id="_7YPgsvbVEeiVHZqZbgt1rw" type="5001"/>
+          <children xmi:type="notation:Shape" xmi:id="_7YQu0PbVEeiVHZqZbgt1rw" type="3020" fontName="Cantarell">
+            <element xmi:type="datamapper:InNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.4/@node.0/@inNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7YQu0fbVEeiVHZqZbgt1rw" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Shape" xmi:id="_7YQu0vbVEeiVHZqZbgt1rw" type="3019" fontName="Cantarell">
+            <element xmi:type="datamapper:OutNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.4/@node.0/@outNode"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7YQu0_bVEeiVHZqZbgt1rw"/>
+          </children>
+          <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.4/@node.0"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7YPgsfbVEeiVHZqZbgt1rw"/>
+        </children>
+        <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0/@node.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5nSgcfbVEeiVHZqZbgt1rw"/>
+      </children>
+      <element xmi:type="datamapper:TreeNode" href="simplepayloadtransform.datamapper#//@output/@treeNode.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jXSCEfbVEeiVHZqZbgt1rw"/>
+    </children>
+    <element xmi:type="datamapper:Output" href="simplepayloadtransform.datamapper#//@output"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fCXQQ_bVEeiVHZqZbgt1rw" x="492" y="156" width="250" height="100"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_e8GQMfbVEeiVHZqZbgt1rw"/>
+  <element xmi:type="datamapper:DataMapperRoot" href="simplepayloadtransform.datamapper#/"/>
+  <edges xmi:type="notation:Connector" xmi:id="_8CKncPbVEeiVHZqZbgt1rw" type="4001" source="_g6nLUvbVEeiVHZqZbgt1rw" target="_lL6BYPbVEeiVHZqZbgt1rw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_8CKncfbVEeiVHZqZbgt1rw" fontName="Cantarell"/>
+    <element xmi:type="datamapper:DataMapperLink" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.0/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8CKncvbVEeiVHZqZbgt1rw" points="[-1, 0, -149, -15]$[147, 15, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8ChMwPbVEeiVHZqZbgt1rw" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8ChMwfbVEeiVHZqZbgt1rw" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_8odycPbVEeiVHZqZbgt1rw" type="4001" source="_g6pAgfbVEeiVHZqZbgt1rw" target="_mT91oPbVEeiVHZqZbgt1rw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_8odycfbVEeiVHZqZbgt1rw" fontName="Cantarell"/>
+    <element xmi:type="datamapper:DataMapperLink" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.1/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8odycvbVEeiVHZqZbgt1rw" points="[-1, 0, -149, -12]$[147, 12, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8oeZgPbVEeiVHZqZbgt1rw" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8oeZgfbVEeiVHZqZbgt1rw" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_9D-pwPbVEeiVHZqZbgt1rw" type="4001" source="_g6qOovbVEeiVHZqZbgt1rw" target="_oNGhgPbVEeiVHZqZbgt1rw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_9D-pwfbVEeiVHZqZbgt1rw" fontName="Cantarell"/>
+    <element xmi:type="datamapper:DataMapperLink" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.2/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9D-pwvbVEeiVHZqZbgt1rw" points="[-1, 0, -149, -9]$[147, 9, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9D_Q0PbVEeiVHZqZbgt1rw" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9D_Q0fbVEeiVHZqZbgt1rw" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_9klccPbVEeiVHZqZbgt1rw" type="4001" source="_g6tR8vbVEeiVHZqZbgt1rw" target="_viDV0PbVEeiVHZqZbgt1rw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_9klccfbVEeiVHZqZbgt1rw" fontName="Cantarell"/>
+    <element xmi:type="datamapper:DataMapperLink" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.0/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9klccvbVEeiVHZqZbgt1rw" points="[-1, 0, -149, -4]$[147, 4, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9kmqkPbVEeiVHZqZbgt1rw" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9kmqkfbVEeiVHZqZbgt1rw" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_BAWYsPbWEeiVHZqZbgt1rw" type="4001" source="_g6ugEvbVEeiVHZqZbgt1rw" target="_3BtlUPbVEeiVHZqZbgt1rw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_BAWYsfbWEeiVHZqZbgt1rw" fontName="Cantarell"/>
+    <element xmi:type="datamapper:DataMapperLink" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.1/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BAWYsvbWEeiVHZqZbgt1rw" points="[-1, 0, -149, -18]$[147, 18, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BAW_wPbWEeiVHZqZbgt1rw" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BAW_wfbWEeiVHZqZbgt1rw" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_BjjzcPbWEeiVHZqZbgt1rw" type="4001" source="_g6wVQvbVEeiVHZqZbgt1rw" target="_1keLQPbVEeiVHZqZbgt1rw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_BjjzcfbWEeiVHZqZbgt1rw" fontName="Cantarell"/>
+    <element xmi:type="datamapper:DataMapperLink" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.3/@node.2/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BjjzcvbWEeiVHZqZbgt1rw" points="[-1, 0, -149, 17]$[147, -17, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BjkagPbWEeiVHZqZbgt1rw" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BjkagfbWEeiVHZqZbgt1rw" id="CENTER"/>
+  </edges>
+  <edges xmi:type="notation:Connector" xmi:id="_CGdFIPbWEeiVHZqZbgt1rw" type="4001" source="_g6100PbVEeiVHZqZbgt1rw" target="_7YQu0PbVEeiVHZqZbgt1rw">
+    <styles xmi:type="notation:FontStyle" xmi:id="_CGdFIfbWEeiVHZqZbgt1rw" fontName="Cantarell"/>
+    <element xmi:type="datamapper:DataMapperLink" href="simplepayloadtransform.datamapper#//@input/@treeNode.0/@node.0/@node.4/@node.0/@outNode/@outgoingLink.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CGdFIvbWEeiVHZqZbgt1rw" points="[-1, 0, -149, 7]$[147, -7, -1, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CGeTQPbWEeiVHZqZbgt1rw" id="CENTER"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CGeTQfbWEeiVHZqZbgt1rw" id="CENTER"/>
+  </edges>
+</notation:Diagram>

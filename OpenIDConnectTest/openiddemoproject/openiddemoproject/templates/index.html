@@ -3,6 +3,9 @@
 {% block title %}Demo Application{% endblock %}
 
 {% block content %}
+	{% if status != None %}
+	<div id="notify-holder"></div>
+	{% endif %}
 	<div class="jumbotron">
 		<p>Welcome to patient monitoring application</p>
 	</div>

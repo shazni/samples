@@ -86,10 +86,10 @@ def callUserInfoEp(token):
 
     if "PIN" in json_response.keys():
         print("PIN Number = " + str(json_response["PIN"]))
-        return json_response["PIN"]
+        return (json_response["PIN"], json_response.get("sub", ""))
     else:
         # Returning a default PIN
-        return "1234"
+        return ("1234", json_response.get("sub", ""))
 
 def promptPIN(request):
     return render(request, 'promtTokenOrLogin.html', {
@@ -116,16 +116,19 @@ def checkSession(code=None):
         accessToken = tokens[0]
         id_token = tokens[1]
         refresh_token = tokens[2]
-        currentActivePIN = callUserInfoEp(accessToken)
+        user_info = callUserInfoEp(accessToken)
+        currentActivePIN = user_info[0]
         if len(current_session) > 0:
             CurrentSession.objects.all().delete()
         new_session = CurrentSession(currentPINNumber=currentActivePIN, accessToken=accessToken,
-            lastAccessTime=int(time.time()), refreshToken=refresh_token, id_token=id_token)
+            lastAccessTime=int(time.time()), refreshToken=refresh_token, 
+            id_token=id_token, username=user_info[1])
         new_session.save()
         return (currentActivePIN, accessToken)
 
     # identity_server_url = "https://localhost:9443/oauth2/authorize?scope=openid%20pin&response_type=code&client_id=" + settings.CLIENT_ID + "&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fopeniddemoproject%2Foauth2client/"
-    identity_server_url = IDENTITY_BASE + "oauth2/authorize?scope=openid%20pin&response_type=code&client_id=" + settings.CLIENT_ID + "&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fopeniddemoproject%2Foauth2client/"
+    # identity_server_url = IDENTITY_BASE + "oauth2/authorize?scope=openid%20pin&response_type=code&client_id=" + settings.CLIENT_ID + "&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fopeniddemoproject%2Foauth2client/"
+    identity_server_url = IDENTITY_BASE + "oauth2/authorize?scope=openid%20pin&response_type=code&client_id=" + settings.CLIENT_ID + "&product_type=product1&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fopeniddemoproject%2Foauth2client/"
 
     if len(current_session) == 0:
         print("No sessions found. Trying to redirect to " + identity_server_url)
@@ -165,6 +168,7 @@ def logout(request):
         print("This can't be the case")
     print("deleting all the sessions")
     CurrentSession.objects.all().delete()
+    cache.clear()
 
     # logoutRedirectURL = "http://localhost:8000/openiddemoproject/signout";
     # # logoutRedirectURL = urllib.parse.quote("http://localhost:8000/openiddemoproject/signout")
@@ -195,7 +199,8 @@ def revokeToken(token):
 
     data = "token=" + token + "&token_type_hint=access_token"
     # url = "https://localhost:9443/oauth2endpoints/revoke"
-    url = IDENTITY_BASE + "oauth2endpoints/revoke"
+    # url = IDENTITY_BASE + "oauth2endpoints/revoke"
+    url = IDENTITY_BASE + "oauth2/revoke"
 
     response = requests.post(url, data=data, headers=headers, verify=False)
 
@@ -338,6 +343,8 @@ def addUser(request):
         current_session = CurrentSession.objects.all()
         credential = "Bearer " + current_session[0].accessToken
 
+        print("Credential = " + credential)
+
         headers = {
             "Authorization" : credential,
             "Content-Type" : "application/json"
@@ -351,15 +358,59 @@ def addUser(request):
                 "\",\"type\":\"mobile\"}],\"emails\":[{\"primary\":true,\"value\":\"" + request.POST.get('email', '') + 
                 "\",\"type\":\"home\"},{\"value\":\"" + request.POST.get('email', '') + "\",\"type\":\"work\"}]}")
 
+        # data = ("{\"schemas\":[],\"name\":{\"familyName\":\"" + request.POST.get('lastName', '') + 
+        #         "\",\"givenName\":\"" + request.POST.get('firstName', '') + 
+        #         "\"},\"userName\":\"" + request.POST.get('userName', '') + 
+        #         "\",\"password\":\"" + request.POST.get('password', '') + 
+        #         "\",\"phoneNumbers\":[{\"value\":\"" + request.POST.get('contactNumber', '') + 
+        #         "\",\"type\":\"mobile\"}],\"emails\":[{\"primary\":true,\"value\":\"" + request.POST.get('email', '') + 
+        #         "\",\"type\":\"home\"}]}")
+
+        print("User provisioning data = " + data)
+
         url = IDENTITY_BASE + "scim2/Users"
 
         response = requests.post(url, data=data, headers=headers, verify=False)
+
         json_response = response.json()
         print("Add User response = " + str(json_response))
 
         return redirect('listUsers')
     else:
-        return render(request, 'addUser.html', {
+        credential = "Basic " + base64.encodestring(b"admin:admin").decode('utf-8')[0:-1]
+
+        headers = {
+            "Authorization" : credential,
+            "Content-Type" : "application/json"
+        }
+
+        current_session = CurrentSession.objects.all()
+        print("Current user = " + current_session[0].username)
+
+        data = ("{\"Request\":{\"Action\":{\"Attribute\":[{\"AttributeId\":" + 
+        "\"urn:oasis:names:tc:xacml:1.0:action:action-id\",\"Value\":\"add_user\"}]}," + 
+        "\"Resource\":{\"Attribute\":[{\"AttributeId\":" + 
+        "\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\",\"Value\":\"user\"}]}," +
+        "\"AccessSubject\":{\"Attribute\":[{\"AttributeId\":" + 
+        "\"urn:oasis:names:tc:xacml:1.0:subject:subject-id\",\"Value\":\"" + 
+        current_session[0].username + "\"}]}," +
+        "\"Environment\":{\"Attribute\":[{\"AttributeId\":" +
+        "\"urn:oasis:names:tc:xacml:1.0:environment:environment-id\",\"Value\":\"m\"}]}}}")
+
+        url = IDENTITY_BASE + "api/identity/entitlement/decision/pdp"
+
+        response = requests.post(url, data=data, headers=headers, verify=False)
+        json_response = response.json()
+        print("XACML response = " + str(json_response))
+        if json_response['Response'][0]['Decision'] == "Permit":
+            return render(request, 'addUser.html', {
+                })
+
+        # return render(request, 'addUser.html', {
+        #         })
+
+        return render(request, 'index.html', {
+            'status':'danger', 'status_message':'You do not have permission to add users'
         })
 
 def listUsers(request):

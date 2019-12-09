@@ -1,0 +1,48 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "account_detail",
+  "title" : "account_detail",
+  "type" : "object",
+  "properties" : {
+    "account_owner" : {
+      "id" : "account_owner",
+      "type" : "object",
+      "properties" : {
+        "first_name" : {
+          "id" : "first_name",
+          "type" : "string"
+        },
+        "last_name" : {
+          "id" : "last_name",
+          "type" : "string"
+        },
+        "contact_number" : {
+          "id" : "contact_number",
+          "type" : "string"
+        }
+      }
+    },
+    "account_info" : {
+      "id" : "account_info",
+      "type" : "object",
+      "properties" : {
+        "account_number" : {
+          "id" : "account_number",
+          "type" : "string"
+        },
+        "ledger_balance" : {
+          "id" : "ledger_balance",
+          "type" : "number"
+        },
+        "account_balance" : {
+          "id" : "account_balance",
+          "type" : "number"
+        },
+        "available_balance" : {
+          "id" : "available_balance",
+          "type" : "number"
+        }
+      }
+    }
+  }
+}

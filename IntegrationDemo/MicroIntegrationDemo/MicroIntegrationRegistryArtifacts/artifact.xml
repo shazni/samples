@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="remove-namespace_xslt" groupId="com.wso2.Integration.registry.artifacts.resource" version="1.0.0" type="registry/resource" serverRole="GovernanceRegistry">
+        <item>
+            <file>remove-namespace.xslt</file>
+            <path>/_system/config/integration_demo/xslts</path>
+            <mediaType>application/xslt+xml</mediaType>
+        </item>
+    </artifact>
+    <artifact name="ConvertAccountConfig" groupId="com.wso2.Integration.registry.artifacts.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ConvertAccountConfig.dmc</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="ConvertAccountConfig_inputSchema" groupId="com.wso2.Integration.registry.artifacts.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ConvertAccountConfig_inputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="ConvertAccountConfig_outputSchema" groupId="com.wso2.Integration.registry.artifacts.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseServiceBus">
+        <item>
+            <file>ConvertAccountConfig_outputSchema.json</file>
+            <path>/_system/governance/datamapper</path>
+            <mediaType>text/plain</mediaType>
+        </item>
+    </artifact>
+    <artifact name="payload_transform_xslt" groupId="com.wso2.Integration.registry.artifacts.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseIntegrator">
+        <item>
+            <file>payload_transform.xslt</file>
+            <path>/_system/config/integration_demo/xslts</path>
+            <mediaType>application/xslt+xml</mediaType>
+        </item>
+    </artifact>
+    <artifact name="integration_sec_policy" groupId="com.wso2.Integration.registry.artifacts.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseIntegrator">
+        <item>
+            <file>integration_sec_policy.xml</file>
+            <path>/_system/governance/ws-policy</path>
+            <mediaType>application/wspolicy+xml</mediaType>
+        </item>
+    </artifact>
+    <artifact name="integration_saml_policy.xml" groupId="com.wso2.Integration.registry.artifacts.resource" version="1.0.0" type="registry/resource" serverRole="EnterpriseIntegrator">
+        <item>
+            <file>integration_saml_policy.xml.xml</file>
+            <path>/_system/governance/ws-policy</path>
+            <mediaType>application/wspolicy+xml</mediaType>
+        </item>
+    </artifact>
+</artifacts>

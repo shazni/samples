@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/easyTransform" name="EasyTransformXSLT" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <log>
+                <property expression="$body" name="TEST"/>
+            </log>
+            <xslt key="conf:/integration_demo/xslts/payload_transform.xslt"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

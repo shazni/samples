@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/convert" name="ConvertAccountDetails" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <datamapper config="gov:datamapper/ConvertAccountConfig.dmc" inputSchema="gov:datamapper/ConvertAccountConfig_inputSchema.json" inputType="XML" outputSchema="gov:datamapper/ConvertAccountConfig_outputSchema.json" outputType="XML"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

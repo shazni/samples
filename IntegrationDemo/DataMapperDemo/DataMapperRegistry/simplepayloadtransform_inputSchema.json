@@ -1,0 +1,220 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "PaymentServiceRequest",
+  "type" : "object",
+  "properties" : {
+    "PaymentRequest" : {
+      "id" : "http://wso2jsonschema.org/PaymentRequest",
+      "type" : "object",
+      "properties" : {
+        "Description" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/Description",
+          "type" : "string"
+        },
+        "SystemName" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/SystemName",
+          "type" : "string"
+        },
+        "TransactionID" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/TransactionID",
+          "type" : "string"
+        },
+        "NilPayment" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/NilPayment",
+          "type" : "object",
+          "nullable" : "true",
+          "properties" : {
+            "CurrencyCode" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/NilPayment/CurrencyCode",
+              "type" : "string"
+            },
+            "LastModifiedKey" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/NilPayment/LastModifiedKey",
+              "type" : "number"
+            },
+            "OrderTotal" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/NilPayment/OrderTotal",
+              "type" : "number"
+            }
+          }
+        },
+        "CardPayment" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment",
+          "type" : "object",
+          "nullable" : "true",
+          "properties" : {
+            "CV2" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/CV2",
+              "type" : "string"
+            },
+            "CardNumber" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/CardNumber",
+              "type" : "string"
+            },
+            "CardType" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/CardType",
+              "type" : "number"
+            },
+            "CurrencyCode" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/CurrencyCode",
+              "type" : "string"
+            },
+            "ExpiryMonth" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/ExpiryMonth",
+              "type" : "number"
+            },
+            "ExpiryYear" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/ExpiryYear",
+              "type" : "number"
+            },
+            "IssueNumber" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/IssueNumber",
+              "type" : "string"
+            },
+            "LastModifiedKey" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/LastModifiedKey",
+              "type" : "number"
+            },
+            "NameOnCard" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/NameOnCard",
+              "type" : "string"
+            },
+            "OrderTotal" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/OrderTotal",
+              "type" : "number"
+            },
+            "StartMonth" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/StartMonth",
+              "type" : "number"
+            },
+            "StartYear" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/CardPayment/StartYear",
+              "type" : "number"
+            }
+          }
+        },
+        "AuthenticatedCardPayment" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/AuthenticatedCardPayment",
+          "type" : "object",
+          "nullable" : "true",
+          "properties" : {
+            "CardType" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/AuthenticatedCardPayment/CardType",
+              "type" : "number"
+            },
+            "CurrencyCode" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/AuthenticatedCardPayment/CurrencyCode",
+              "type" : "string"
+            },
+            "LastModifiedKey" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/AuthenticatedCardPayment/LastModifiedKey",
+              "type" : "number"
+            },
+            "OrderTotal" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/AuthenticatedCardPayment/OrderTotal",
+              "type" : "number"
+            },
+            "ResponseData" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/AuthenticatedCardPayment/ResponseData",
+              "type" : "string"
+            }
+          }
+        },
+        "PledgedPayment" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/PledgedPayment",
+          "type" : "object",
+          "nullable" : "true",
+          "properties" : {
+            "CurrencyCode" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/PledgedPayment/CurrencyCode",
+              "type" : "string"
+            },
+            "LastModifiedKey" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/PledgedPayment/LastModifiedKey",
+              "type" : "number"
+            },
+            "OrderTotal" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/PledgedPayment/OrderTotal",
+              "type" : "number"
+            },
+            "PaymentMethod" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/PledgedPayment/PaymentMethod",
+              "type" : "string"
+            }
+          }
+        },
+        "WebOriginator" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/WebOriginator",
+          "type" : "object",
+          "nullable" : "true",
+          "properties" : {
+            "HttpAccept" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/WebOriginator/HttpAccept",
+              "type" : "string"
+            },
+            "IpAddress" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/WebOriginator/IpAddress",
+              "type" : "string"
+            },
+            "SessionID" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/WebOriginator/SessionID",
+              "type" : "string"
+            },
+            "UserAgent" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/WebOriginator/UserAgent",
+              "type" : "string"
+            }
+          }
+        },
+        "Originator" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/Originator",
+          "type" : "object",
+          "nullable" : "true",
+          "properties" : {
+            "xsi:type" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/Originator/xsi:type",
+              "type" : "string"
+            }
+          }
+        },
+        "ContactDetails" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/ContactDetails",
+          "type" : "object",
+          "properties" : {
+            "Name" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/ContactDetails/Name",
+              "type" : "string"
+            },
+            "EmailAddress" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/ContactDetails/EmailAddress",
+              "type" : "string"
+            },
+            "PhoneNumber" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/ContactDetails/PhoneNumber",
+              "type" : "string"
+            }
+          }
+        },
+        "TelephoneData" : {
+          "id" : "http://wso2jsonschema.org/PaymentRequest/TelephoneData",
+          "type" : "object",
+          "properties" : {
+            "Operator" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/TelephoneData/Operator",
+              "type" : "number"
+            },
+            "TelephoneNumber" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/TelephoneData/TelephoneNumber",
+              "type" : "string"
+            },
+            "Comments" : {
+              "id" : "http://wso2jsonschema.org/PaymentRequest/TelephoneData/Comments",
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

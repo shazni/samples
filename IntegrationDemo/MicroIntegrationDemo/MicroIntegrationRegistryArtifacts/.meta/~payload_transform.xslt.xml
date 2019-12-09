@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><resource name="payload_transform.xslt" isCollection="false" path="/_system/config/integration_demo/xslts/IntegrationRegistryArtifacts/payload_transform.xslt" registryUrl="https://localhost:9443/registry" status="added">
+    <mediaType>application/xslt+xml</mediaType>
+</resource>

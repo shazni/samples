@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/accountinfo" name="AccountInfoBackendAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST">
+        <inSequence>
+            <property expression="//*[local-name() = 'account_id']" name="account_id" scope="default" type="STRING"/>
+            <log>
+                <property expression="$body" name="BODY"/>
+                <property expression="$ctx:account_id" name="account_id"/>
+            </log>
+            <switch source="$ctx:account_id">
+                <case regex="123">
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <account_details xmlns="">
+                                <first_name>Mark</first_name>
+                                <last_name>Hammington</last_name>
+                                <account_type>Savings</account_type>
+                            </account_details>
+                        </format>
+                        <args/>
+                    </payloadFactory>
+                </case>
+                <case regex="456">
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <account_details xmlns="">
+                                <first_name>Steve</first_name>
+                                <last_name>Balmer</last_name>
+                                <account_type>Checking</account_type>
+                            </account_details>
+                        </format>
+                        <args/>
+                    </payloadFactory>
+                </case>
+                <case regex="786">
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <account_details xmlns="">
+                                <first_name>Ted</first_name>
+                                <last_name>Mark</last_name>
+                                <account_type>Checking</account_type>
+                            </account_details>
+                        </format>
+                        <args/>
+                    </payloadFactory>
+                </case>
+                <case regex="999">
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <account_details xmlns="">
+                                <first_name>Tim</first_name>
+                                <last_name>Cook</last_name>
+                                <account_type>Savings</account_type>
+                            </account_details>
+                        </format>
+                        <args/>
+                    </payloadFactory>
+                </case>
+                <default>
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <account_details xmlns="">
+                                <message>No account found</message>
+                            </account_details>
+                        </format>
+                        <args/>
+                    </payloadFactory>
+                </default>
+            </switch>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
