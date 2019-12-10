@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="RuleMediatorTest" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <property expression="//ir:facts" name="INPUT" scope="default" type="OM" xmlns:ir="http://example.com/rulemediator"/>
+            <brs:rule xmlns:brs="http://wso2.org/carbon/rules">
+                <brs:source>$INPUT</brs:source>
+                <brs:target action="replace" resultXpath="" xpath="">$OUTPUT</brs:target>
+                <brs:ruleSet>
+                    <brs:properties/>
+                    <brs:rule resourceType="regular" sourceType="inline"><![CDATA[
+	                    package com.example.rule
+						//list any import classes here.
+						import com.example.rulemediator.Student;
+						import com.example.rulemediator.Subject;
+						//import com.example.rulemediator.ResultSheet;
+						
+						//declare any global variables here
+						
+						rule "check for pass subjects"
+						when $student: Student()
+						$subj: Subject(score >= 50) from $student.getSubjects()
+						then
+						System.out.println($student.getName()+" passed "+$subj.getSubjectName()+".");
+						end
+						
+						rule "check for failed subjects"
+						when $student: Student()
+						$subj: Subject(!(score >= 50)) from $student.getSubjects()
+						then
+						System.out.println($student.getName()+" failed "+$subj.getSubjectName()+".");
+						end
+                    ]]></brs:rule>
+                </brs:ruleSet>
+                <brs:input namespace="http://example.com/rulemediator" wrapperElementName="facts">
+                    <brs:fact elementName="Student" namespace="http://example.com/rulemediator" type="com.example.rulemediator.Student" xmlns:ir="http://example.com/rulemediator" xpath="//ir:Student"/>
+                    <brs:fact elementName="Subject" namespace="http://example.com/rulemediator" type="com.example.rulemediator.Subject" xmlns:ir="http://example.com/rulemediator" xpath="//ir:Student/ir:Subjects"/>
+                </brs:input>
+                <brs:output namespace="http://example.com/rulemediator" wrapperElementName="out"/>
+            </brs:rule>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+</proxy>

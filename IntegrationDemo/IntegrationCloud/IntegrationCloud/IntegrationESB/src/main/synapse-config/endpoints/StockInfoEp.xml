@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="StockInfoEp" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="get" uri-template="https://wso2demo4574-ceppublish.wso2apps.com/ceppublish/{uri.var.symbo}"/>
+</endpoint>

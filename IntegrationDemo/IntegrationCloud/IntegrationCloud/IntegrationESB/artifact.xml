@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="StockInfo" groupId="com.Integration.cloud.esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/StockInfo.xml</file>
+    </artifact>
+    <artifact name="StockInfoEp" groupId="com.Integration.cloud.esb.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/StockInfoEp.xml</file>
+    </artifact>
+</artifacts>

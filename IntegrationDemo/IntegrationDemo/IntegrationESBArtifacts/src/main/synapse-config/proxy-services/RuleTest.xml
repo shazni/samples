@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="RuleTest" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log>
+                <property name="TEST" value="TEST######"/>
+            </log>
+            <brs:rule xmlns:brs="http://wso2.org/carbon/rules">
+                <brs:source>soapBody</brs:source>
+                <brs:target action="replace" resultXpath="//m0:symbol" xmlns:m0="http://services.samples" xpath="//m0:getQuote/m0:request/m0:symbol">soapBody</brs:target>
+                <brs:ruleSet>
+                    <brs:properties/>
+                    <brs:rule resourceType="regular" sourceType="inline"><![CDATA[
+                         package SimpleRoutingRules;
+          
+                        rule "Invoke IBM" no-loop true
+                        when
+                        symbol: String()eval( symbol.equals("IBM") )
+                        then
+                         System.out.println("IBM Match"); 
+                         update(drools.getWorkingMemory().getFactHandle(symbol),"ibmEndPoint");
+                        end
+
+                        rule "Invoke SUN" no-loop true
+                        when
+                        symbol: String()eval( symbol.equals("SUN") )
+                        then
+                         update(drools.getWorkingMemory().getFactHandle(symbol),"sunEndPoint");
+                        end
+
+                        rule "Invoke MFST" no-loop true
+                        when
+                        symbol: String()eval( symbol.equals("MFST") )
+                        then
+                         update(drools.getWorkingMemory().getFactHandle(symbol),"mfstEndPoint");
+                        end
+                        
+                    ]]></brs:rule>
+                </brs:ruleSet>
+                <brs:input namespace="http://services.samples" wrapperElementName="getQuote">
+                    <brs:fact elementName="symbol" namespace="http://services.samples" type="java.lang.String" xmlns:m0="http://services.samples" xpath="//m0:getQuote/m0:request/m0:symbol/child::text()"/>
+                </brs:input>
+                <brs:output namespace="http://services.samples" wrapperElementName="getQuoteRespone">
+                    <brs:fact elementName="symbol" namespace="http://services.samples" type="java.lang.String"/>
+                </brs:output>
+            </brs:rule>
+            <switch source="//m0:getQuote/m0:request/m0:symbol" xmlns:m0="http://services.samples">
+                <case regex="ibmEndPoint">
+                    <payloadFactory media-type="xml">
+                        <format>
+                            <test xmlns="">
+IBM
+</test>
+                        </format>
+                        <args/>
+                    </payloadFactory>
+                </case>
+                <case regex="sunEndPoint">
+                    <sequence key="nonExistentService"/>
+                </case>
+                <case regex="mfstEndPoint">
+                    <sequence key="nonExistentService"/>
+                </case>
+                <default/>
+            </switch>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+</proxy>

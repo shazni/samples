@@ -26,4 +26,19 @@
     <artifact name="AddToSFTP" groupId="com.wso2.Integration.demo.esb.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/AddToSFTP.xml</file>
     </artifact>
+    <artifact name="EasyTransformXSLT" groupId="com.wso2.Integration.demo.esb.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/EasyTransformXSLT.xml</file>
+    </artifact>
+    <artifact name="Calculator" groupId="com.wso2.Integration.demo.esb.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/Calculator.xml</file>
+    </artifact>
+    <artifact name="RuleMediatorTest" groupId="com.wso2.Integration.demo.esb.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/RuleMediatorTest.xml</file>
+    </artifact>
+    <artifact name="RuleTest" groupId="com.wso2.Integration.demo.esb.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/RuleTest.xml</file>
+    </artifact>
+    <artifact name="CalculatorUnsecured" groupId="com.wso2.Integration.demo.esb.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/CalculatorUnsecured.xml</file>
+    </artifact>
 </artifacts>

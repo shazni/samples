@@ -9,7 +9,7 @@
             <script language="js"><![CDATA[var body = mc.getPayloadJSON();
             	body.exchange = "NYSE";
             	mc.setPayloadJSON(body);]]></script>
-            <property name="COPY_TO_DIRECTORY" scope="default" type="STRING" value="@FTPCopyEnabled"/>
+            <property name="COPY_TO_DIRECTORY" scope="default" type="STRING" value="true"/>
             <filter regex="true" source="$ctx:COPY_TO_DIRECTORY">
                 <then>
                     <log>
@@ -21,7 +21,7 @@
                         <target property="ORIGINAL_PAYLOAD" type="property"/>
                     </enrich>
                     <fileconnector.create>
-                        <source>smb://shazni:shazni_nazeer@localhost/inboundFiles/stock_data.txt</source>
+                        <source>sftp://newyorkunidev:XzKbMdnkVrhds#wso2@ftp.support.wso2.com:22/newyorkunidev/demo/stock_data.txt</source>
                         <inputContent>{$ctx:BODY}</inputContent>
                     </fileconnector.create>
                     <log>
@@ -40,17 +40,9 @@
     </resource>
     <resource methods="POST" uri-template="/add">
         <inSequence>
-            <call>
+            <call description="">
                 <endpoint>
-                    <http method="post" uri-template="@MicroServiceHostPort/ceppublish/event/stock">
-                        <suspendOnFailure>
-                            <initialDuration>-1</initialDuration>
-                            <progressionFactor>1</progressionFactor>
-                        </suspendOnFailure>
-                        <markForSuspension>
-                            <retriesBeforeSuspension>0</retriesBeforeSuspension>
-                        </markForSuspension>
-                    </http>
+                    <http method="post" uri-template="https://wso2demo4574-ceppublish.wso2apps.com/ceppublish/event/stock"/>
                 </endpoint>
             </call>
             <respond/>

@@ -1,0 +1,113 @@
+Integration Demo
+
+mvn clean install -Dmicroservice.host.port="http://localhost:9090" -Ddb.url="jdbc:mysql://localhost:3306/integration_demo" -Ddb.user="your_db_user_name" -Ddb.pwd="your_db_pwd" -Daccountdetails.host.port="http://localhost:8280/accountinfo" -Dftp.copy.enabled="false"
+
+mvn clean install -Dmicroservice.host.port="https://wso2demo4574-ceppublish.wso2apps.com" -Ddb.url="jdbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="db_cloud_user_name" -Ddb.pwd="db_cloud_pwd" -Daccountdetails.host.port="https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo" -Dftp.copy.enabled="false"
+
+Integration Demo project
+
+mvn clean install -Dmicroservice.host.port="http://localhost:9090" -Daccountdetails.host.port="http://localhost:8280/accountinfo" -Dftp.copy.enabled="false"
+
+mvn clean install -Dmicroservice.host.port="https://wso2demo4574-ceppublish.wso2apps.com" -Daccountdetails.host.port="https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo" -Dftp.copy.enabled="false"
+
+data service project
+
+mvn clean install -Ddb.url="jdbc:mysql://localhost:3306/integration_demo" -Ddb.user="db_user_name" -Ddb.pwd="db_pwd"
+
+mvn clean install -Ddb.url="jdbc:mysql://mysql.storage.cloud.wso2.com:3306/integration_demo_wso2demo4574" -Ddb.user="cloud_db_username" -Ddb.pwd="cloud_db_pwd"
+
+mvn clean deploy -Dmaven.deploy.skip=true -Dmaven.car.deploy.skip=false
+
+
+/// SFTP and SAMBA
+
+<source>smb://shazni:shazni_nazeer@localhost/inboundFiles/stock_data.txt</source>
+
+                    <fileconnector.create>
+                        <!-- <source>sftp://newyorkunidev:XzKbMdnkVrhds#wso2@ftp.support.wso2.com:22/newyorkunidev/demo/stock_data.txt</source>-->
+                        <source>sftp://newyorkunidev:XzKbMdnkVrhds%23wso2@ftp.support.wso2.com:22/newyorkunidev/demo/stock_data.txt</source>
+                        <!-- <source>smb://shazni:shazni_nazeer@localhost/inboundFiles/stock_data.txt</source>-->
+                        <inputContent>{$ctx:BODY}</inputContent>
+                    </fileconnector.create>
+
+--------------------------------------------------------------------------------------------------------------------
+
+mvn clean install -Dmicroservice.host.port="wso2demo4574-ceppublish.wso2apps.com"
+
+http://localhost:9090/ceppublish
+
+curl -v -k http://localhost:9090/ceppublish/event -d "text=shazni"
+
+curl -v -k http://localhost:9090/ceppublish
+
+echo -n yfPeh6ElXQGatYQqOETLMZUvEK8a:SnwTVAuWfbdF1TGhWhJWYe4SBfoa | base64
+
+curl -k -d "grant_type=password&username=david&password=david&scope=api_post" -H "Authorization: Basic eWZQZWg2RWxYUUdhdFlRcU9FVExNWlV2RUs4YTpTbndUVkF1V2ZiZEYxVEdoV2hKV1llNFNCZm9h" -H "Content-Type: application/x-www-form-urlencoded" https://localhost:8243/token
+
+
+
+Microgateway
+
+./micro-gw setup MicroTestProject -a MicroTest -v 1.0.0
+
+./micro-gw build MicroTestProject
+
+----------------------------------------------
+
+curl -k https://localhost:9095/micro/1.0.0 -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IlVCX0JReTJIRlYzRU1UZ3E2NFEtMVZpdFliRSJ9.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJkYXZpZCIsImFwcGxpY2F0aW9uIjp7ImlkIjo3LCJuYW1lIjoibWljcm9BUElBcHAiLCJ0aWVyIjoiVW5saW1pdGVkIn0sInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6ODI0M1wvdG9rZW4iLCJrZXl0eXBlIjoiUFJPRFVDVElPTiIsInN1YnNjcmliZWRBUElzIjpbeyJuYW1lIjoiTWljcm9UZXN0IiwiY29udGV4dCI6IlwvbWljcm9cLzEuMC4wIiwidmVyc2lvbiI6IjEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJzdWJzY3JpcHRpb25UaWVyIjoiVW5saW1pdGVkIiwic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciJ9XSwiZXhwIjoxNTM3NDU0NDUxMzcyLCJpYXQiOjE1Mzc0NTA4NTEzNzIsImp0aSI6IjA2YmQ1MTM4LTRlNTQtNDY1Yy1hYzY3LTNmNTlmNGU2NDhhNCJ9.KjOb5O3msAFraHxFXBddvXuNMYhnyt45VeszcmchsuLzXmy-f-XhKqH2LfPhTlH8j2nZR3doU46IV2oKiIaeM7-wGgFYOuoZny6y-eRtCi2TuRQo90h7I9Wqk3CDMe96KMgt8Y-HsmUtlbIi9x_0K2sKC9lF1_hCFwdmW7NtkrS0Ohylaam0zHLtsXdvcSjFLPQIeabQ3Z0JQuUY1_b5OR8Ndu7sJ2MCK6jWXXM-e6u6PGd51S1yYijSIXYvyDzrZ2niKMBEhWs_911_I9_KpmhkSUJKcMz0Ra5AdnFs_WgqrESuguiM9QsE9BPaug-wOgwTqBQFmis7dgV4P6zYMw=="
+
+
+Create an application of type JWT.
+
+
+if the application type is JWT following will send a JWT token
+
+curl -k -d "grant_type=password&username=david&password=david&scope=api_post" -H "Authorization: Basic S2ZBZjdBdVBwTWZGdTA5TGVjZ3ZWMGp2a2FRYTpIMUxJUFYyTHE2SU5RWHlENVlaZGl1SVdLcjRh" -H "Content-Type: application/x-www-form-urlencoded" https://localhost:8243/token
+
+{"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IlVCX0JReTJIRlYzRU1UZ3E2NFEtMVZpdFliRSJ9.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJkYXZpZCIsImFwcGxpY2F0aW9uIjp7ImlkIjo3LCJuYW1lIjoibWljcm9BUElBcHAiLCJ0aWVyIjoiVW5saW1pdGVkIn0sInNjb3BlIjoiZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6ODI0M1wvdG9rZW4iLCJrZXl0eXBlIjoiUFJPRFVDVElPTiIsInN1YnNjcmliZWRBUElzIjpbeyJuYW1lIjoiTWljcm9UZXN0IiwiY29udGV4dCI6IlwvbWljcm9cLzEuMC4wIiwidmVyc2lvbiI6IjEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJzdWJzY3JpcHRpb25UaWVyIjoiVW5saW1pdGVkIiwic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciJ9XSwiZXhwIjoxNTM2ODIxNDA2MDU5LCJpYXQiOjE1MzY4MjE0MDcwNTksImp0aSI6IjhiZmI3ZWE0LWUxMTctNDVlMS1iNTFmLTU4MmE0NzA1MTMxNiJ9.KTX_tACgedZmcmDCHHVXvibPrxZOfHbHYQ5ZEM_jQuh_W_J7PjLW-XS08HDXn9Nsyi-RoXMWgkM7_yUSHqc4rzLGnuEPWJUYiG-aPWnqOmWbsR51C7bln4IQUD8cy8sTY70zq0PCWGD4g2y2ys0E3XYO7KPKIFn7Yt5sdhjLzGkmOzS0566wtpyjlCfHaKXTyVX2WuEz7enYTxZWqv9472qMTLIt7uvY3zKv1otyJHonX4Kc1Cx_zJTB6ol0uSRjvEed49_uvLLSKxTFJT41_aXBTw22xBjmSQ7h6K4DeRjgAXHtCWfUISCB-1ivM6PbVeqCHm-cn3m_9DPGoJf3TQ==","refresh_token":"b6452410-2ee8-3899-abb0-ba7339bed3b3","scope":"default","token_type":"Bearer","expires_in":3600}
+
+
+
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IlVCX0JReTJIRlYzRU1UZ3E2NFEtMVZpdFliRSJ9.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJkYXZpZCIsImFwcGxpY2F0aW9uIjp7ImlkIjo3LCJuYW1lIjoibWljcm9BUElBcHAiLCJ0aWVyIjoiVW5saW1pdGVkIn0sInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6ODI0M1wvdG9rZW4iLCJrZXl0eXBlIjoiUFJPRFVDVElPTiIsInN1YnNjcmliZWRBUElzIjpbeyJuYW1lIjoiTWljcm9UZXN0IiwiY29udGV4dCI6IlwvbWljcm9cLzEuMC4wIiwidmVyc2lvbiI6IjEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJzdWJzY3JpcHRpb25UaWVyIjoiVW5saW1pdGVkIiwic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciJ9XSwiZXhwIjoxNTM3NDI1MDU2MDA2LCJpYXQiOjE1Mzc0MjE0NTYwMDYsImp0aSI6IjlkMGQwY2IxLTUzMGMtNGQxNC1iNDJkLTE5NmFkMjNlZTI4YiJ9.ScjuxjslINJckolGSG7kj_xkiIwLrqQUjUW4GzlfoK78RVYWqzGqkJu17cFp1yEn8CcEo4HeKgItEVjNvv1xSUjoCopmyuPFgMLLuDbam6sJ-4aEESs9o1a9oJH9hC7D-q4I-9yheohKj-Rt1qdQe84SDSL9kRJwLOtQLJ1q_Am3gVo1yVNozilJ0ZCy2AQlp-Af-RKrlsUbgi-MrKkXozXzfLpNvQzyPGIxer0VKWMGUaWtcw7T8DD25wPD7Xb71aka2w8DHejvLYjdh42PSQutH9K0ffHLjclA2TfLkgEDW19wJifwYkyypFtF3gIH6pVE0BmYG1SNhwIAslA-aQ==
+
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IlVCX0JReTJIRlYzRU1UZ3E2NFEtMVZpdFliRSJ9.eyJhdWQiOiJodHRwOlwvXC9vcmcud3NvMi5hcGltZ3RcL2dhdGV3YXkiLCJzdWIiOiJkYXZpZCIsImFwcGxpY2F0aW9uIjp7ImlkIjo3LCJuYW1lIjoibWljcm9BUElBcHAiLCJ0aWVyIjoiVW5saW1pdGVkIn0sInNjb3BlIjoiYW1fYXBwbGljYXRpb25fc2NvcGUgZGVmYXVsdCIsImlzcyI6Imh0dHBzOlwvXC9sb2NhbGhvc3Q6ODI0M1wvdG9rZW4iLCJrZXl0eXBlIjoiUFJPRFVDVElPTiIsInN1YnNjcmliZWRBUElzIjpbeyJuYW1lIjoiTWljcm9UZXN0IiwiY29udGV4dCI6IlwvbWljcm9cLzEuMC4wIiwidmVyc2lvbiI6IjEuMC4wIiwicHVibGlzaGVyIjoiYWRtaW4iLCJzdWJzY3JpcHRpb25UaWVyIjoiVW5saW1pdGVkIiwic3Vic2NyaWJlclRlbmFudERvbWFpbiI6ImNhcmJvbi5zdXBlciJ9XSwiZXhwIjoxNTM2ODI0Njg3Mjg2LCJpYXQiOjE1MzY4MjEwODcyODYsImp0aSI6IjE0OTc1MDA3LWQ3ZTItNGVhYS1iNmNkLTYzNjZjNGRkZjdlYiJ9.kFQdkETQrwMJv9Ukg9deF8kCnBKMFaTgSjtNHVnrPZf57uAy8GsbeNwAWPQaeHWZeo3BnYjRnMuqEQC6tLG0io1_M-K9xwaDpQgbJ-Vh8kfRkmv6fLbTtmLvalhSokqh2ullpvBn8wF_iM7jTzak0plGEEPBWE9mQEzES5R0kkD1pzacscwvhTVWiK2OaVOomw79-63ssnPz8ASiTu9EP00xFMfCOYHym2RoEY_oQugiAExGjc5adgzzgyxESqCfaBbwWTO9t8Nzme8QPge5kWgJwhcNzrCRDz65qDV7tMmpxx27X3EU2nfv42GUrZZieAKql97chaCC88igfUWqWg==
+
+
+Micro Integrator
+----------------------------
+
+curl http://localhost:8290/account/info/123
+curl -v http://localhost:8290/healthcare/querydoctor/surgery
+
+
+curl https://wso2demo4574-madewell-order-service.wso2apps.com/orderservice/order/pending
+
+curl https://wso2demo4574-ceppublish.wso2apps.com/ceppublish
+
+
+
+CI/CD cloud
+
+Cloud API
+
+curl -c /tmp/cookie -X POST -k "https://integration.cloud.wso2.com/appmgt/site/blocks/user/login/ajax/login.jag" -d "action=login&userName=your_cloud_tenant_username&password=your_pawd"
+
+// Get the hash ID of the application
+
+curl -b /tmp/cookie -X POST "https://integration.cloud.wso2.com/appmgt/site/blocks/application/application.jag" -d "action=getApplication&applicationName=CepPublish" |jq -r .hashId
+
+4772094674610114897
+
+// Delete an application based on an ID
+curl -b /tmp/cookie -X POST https://integration.cloud.wso2.com/appmgt/site/blocks/application/application.jag -F action=deleteApplication -F applicationKey=4772094674610114897
+
+// This uploads a 2.6.2 runtime MSF4J
+curl -b /tmp/cookie -X POST https://integration.cloud.wso2.com/appmgt/site/blocks/application/application.jag -F action=createApplication -F applicationName=CepPublish -F applicationDescription=SampleMicroservice -F appTypeName=mss -F applicationRevision=1.0.0 -F uploadedFileName=cepTest-0.1-SNAPSHOT.jar -F runtimeProperties=[] -F tags=[] -F fileupload=@/home/shazni/ProjectFiles/Git/Shazni/samples/SampleMicroService/cepTest/target/cepTest-0.1-SNAPSHOT.jar -F isFileAttached=true -F conSpec=2 -F isNewVersion=false -F appCreationMethod=default -F setDefaultVersion=true -F runtime=27
+
+
+
+
+
+
