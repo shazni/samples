@@ -1,0 +1,87 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<maven2-moduleset plugin="maven-plugin@3.1.2">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.10">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/shazni/IntegrationDemo.git</url>
+        <credentialsId>36690655-b9bc-4813-a0a9-ebf9a9380922</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <rootModule>
+    <groupId>com.wso2.integration.demo</groupId>
+    <artifactId>IntegrationDemo</artifactId>
+  </rootModule>
+  <goals>clean install -Dmicroservice.host.port=&quot;https://wso2demo4574-ceppublish.wso2apps.com&quot; -Daccountdetails.host.port=&quot;https://wso2demo4574-integrationdemo.wso2apps.com/accountinfo&quot;</goals>
+  <aggregatorStyleBuild>true</aggregatorStyleBuild>
+  <incrementalBuild>false</incrementalBuild>
+  <ignoreUpstremChanges>false</ignoreUpstremChanges>
+  <ignoreUnsuccessfulUpstreams>false</ignoreUnsuccessfulUpstreams>
+  <archivingDisabled>false</archivingDisabled>
+  <siteArchivingDisabled>false</siteArchivingDisabled>
+  <fingerprintingDisabled>false</fingerprintingDisabled>
+  <resolveDependencies>false</resolveDependencies>
+  <processPlugins>false</processPlugins>
+  <mavenValidationLevel>-1</mavenValidationLevel>
+  <runHeadless>false</runHeadless>
+  <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+  <blockTriggerWhenBuilding>true</blockTriggerWhenBuilding>
+  <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+  <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+  <reporters/>
+  <publishers/>
+  <buildWrappers/>
+  <prebuilders/>
+  <postbuilders>
+    <hudson.tasks.Shell>
+      <command>echo &quot;login to integration cloud&quot;
+curl -c /tmp/cookie -X POST -k &quot;https://integration.cloud.wso2.com/appmgt/site/blocks/user/login/ajax/login.jag&quot; -d &quot;action=login&amp;userName=shazni@wso2.com@wso2demo4574&amp;password=20071558_Shazni&quot;
+
+appStatusCode=$(curl -w &quot;%{http_code}&quot; -b /tmp/cookie -X POST &quot;https://integration.cloud.wso2.com/appmgt/site/blocks/application/application.jag&quot; -d &quot;action=getApplication&amp;applicationName=IntegrationDemo&quot;)
+
+if [[ $appStatusCode = *&quot;200&quot;* ]]; then
+echo &quot;application already exists&quot;
+appHashId=$(curl -b /tmp/cookie -X POST &quot;https://integration.cloud.wso2.com/appmgt/site/blocks/application/application.jag&quot; -d &quot;action=getApplication&amp;applicationName=IntegrationDemo&quot; |jq -r .hashId)
+echo $appHashId
+if [[ ! -z $appHashId ]] 
+then
+echo &quot;deleting exisitng application&quot;
+ curl -b /tmp/cookie -X POST https://integration.cloud.wso2.com/appmgt/site/blocks/application/application.jag -F action=deleteApplication -F applicationKey=$appHashId
+fi
+fi
+
+echo &quot;deploy backend service to integration cloud&quot;
+curl -b /tmp/cookie -X POST https://integration.cloud.wso2.com/appmgt/site/blocks/application/application.jag -F action=createApplication -F applicationName=IntegrationDemo -F applicationDescription=IntegrationDemo -F appTypeName=wso2esb -F applicationRevision=1.0.0 -F uploadedFileName=IntegrationESBCompositeApp_1.0.0.car -F runtimeProperties=[] -F tags=[] -F fileupload=@${WORKSPACE}/../../jobs/IntegrationDemoCloud/modules/com.wso2.Integration.demo.esb.car\$IntegrationESBCompositeApp/builds/${BUILD_ID}/archive/com.wso2.Integration.demo.esb.car/IntegrationESBCompositeApp/1.0.0/IntegrationESBCompositeApp-1.0.0.car -F isFileAttached=true -F conSpec=5 -F isNewVersion=false -F appCreationMethod=default -F setDefaultVersion=true -F runtime=24
+echo &quot;application was successfully deployed&quot;</command>
+    </hudson.tasks.Shell>
+  </postbuilders>
+  <runPostStepsIfResult>
+    <name>FAILURE</name>
+    <ordinal>2</ordinal>
+    <color>RED</color>
+    <completeBuild>true</completeBuild>
+  </runPostStepsIfResult>
+</maven2-moduleset>

@@ -1,0 +1,125 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.10">
+      <gitLabConnection></gitLabConnection>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.python.Python plugin="python@1.3">
+      <command>import requests
+import logging
+import json
+import re
+from base64 import b64encode
+
+logFile = &apos;sync_api.log&apos;
+logging.basicConfig(filename=logFile, level=logging.DEBUG,
+        format=&apos;%(asctime)s - %(name)-18s - line %(lineno)-5d - %(message)s&apos;)
+logger = logging.getLogger(&quot;syc_accounts&quot;)
+logger.setLevel(logging.DEBUG)
+
+token = &apos;a73d0dd1-15d2-3d71-93e1-aca6f1331839&apos;
+apim_api_base_url = &apos;https://localhost:9443&apos;
+# governance_swagger_base_url = &apos;https://nginx.wso2.governance.com//governance/swaggers&apos;
+governance_swagger_base_url = &apos;https://internal.sandbox-governance.wso2.com//governance/swaggers&apos;
+
+ADMIN_USER_NAME = &apos;admin&apos;
+# ADMIN_PWD = &apos;admin&apos;
+ADMIN_PWD = &apos;ws02sa123&apos;
+
+def get_accept_content_type_headers():
+    return {
+        &apos;Accept&apos;: &apos;application/json&apos;,
+        &apos;Content-Type&apos;: &apos;application/json&apos;
+    }
+
+def get_authentication_headers(username, password):
+    authentication_headers = get_accept_content_type_headers()
+    authentication_headers[&apos;Authorization&apos;] = \
+        &apos;Basic &apos; + b64encode((username + &apos;:&apos; + password).encode(&apos;utf-8&apos;)).decode(&apos;utf-8&apos;)
+    return authentication_headers
+
+def get_all_apis():
+    # Note we are only fetching 25 here
+    all_apis = requests.get(url = apim_api_base_url + &apos;/api/am/publisher/v1.0/apis?limit=25&amp;offset=0&apos;, 
+        headers=get_authentication_headers(&apos;admin&apos;, &apos;admin&apos;), verify=False)
+    return all_apis
+
+def get_api_detail(id):
+    detail_api = requests.get(url = apim_api_base_url + &apos;/api/am/publisher/v1.0/apis/&apos; + id, 
+        headers=get_authentication_headers(&apos;admin&apos;, &apos;admin&apos;), verify=False)
+    
+    return detail_api
+
+def get_swagger(id):
+    api_swagger = requests.get(url = apim_api_base_url + &apos;/api/am/publisher/v1.0/apis/&apos; + id + &apos;/swagger&apos;, 
+        headers=get_authentication_headers(&apos;admin&apos;, &apos;admin&apos;), verify=False)
+    return api_swagger
+
+def create_new_swagger_in_greg(swagger_payload):
+    create_swagger_response = requests.post(url = governance_swagger_base_url, 
+        headers=get_authentication_headers(&apos;admin&apos;, ADMIN_PWD), 
+        data=json.dumps(swagger_payload), verify=False)
+
+    print(&quot;Create SWAGGER RESPONSE = &quot; + str(create_swagger_response.status_code))
+
+def sync_apis():
+    all_api = get_all_apis()
+    all_api_json = all_api.json()
+    print(all_api_json)
+
+    if len(all_api_json[&apos;list&apos;]) &gt; 0:
+        for api_obj in all_api_json[&apos;list&apos;]:
+            api_id = api_obj[&apos;id&apos;]
+            api_name = api_obj[&apos;name&apos;]
+            api_context = api_obj[&apos;context&apos;]
+            api_version = api_obj[&apos;version&apos;]
+
+            print(&quot;Fetching API with id&quot; + api_id)
+            api_detail = get_api_detail(api_id)
+            api_detail_json_obj = api_detail.json()
+            print(api_detail_json_obj)
+
+            if api_detail_json_obj[&apos;type&apos;] == &quot;HTTP&quot;:
+                print(&quot;API is of HTTP type, fetching the Swagger&quot;)
+
+                api_swagger = get_swagger(api_id).json()
+
+                print(&quot;######## SWAGGER ##########&quot;)
+                print(api_swagger)
+
+                if api_swagger.get(&apos;openapi&apos;) != None:
+                    api_swagger.pop(&apos;openapi&apos;)
+                    if api_swagger.get(&apos;swagger&apos;) == None:
+                        api_swagger[&apos;swagger&apos;] = &apos;2.0&apos;
+
+                print(&quot;Let&apos;s create it in G-Reg&quot;)
+
+                greg_swagger_payload = {}
+                greg_swagger_payload[&apos;name&apos;] = api_name + &apos;.json&apos;
+                greg_swagger_payload[&apos;type&apos;] = &apos;swagger&apos;
+                greg_swagger_payload[&apos;overview_version&apos;] = api_version
+                greg_swagger_payload[&apos;asset_content&apos;] = json.dumps(api_swagger)
+
+                create_new_swagger_in_greg(greg_swagger_payload)
+
+if __name__ == &apos;__main__&apos;:
+    logger.info(&quot;Staring sync...&quot;)
+    sync_apis()
+    logger.info(&quot;Syncing successfully completed&quot;)</command>
+    </hudson.plugins.python.Python>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
