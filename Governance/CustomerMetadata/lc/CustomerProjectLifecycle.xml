@@ -1,0 +1,35 @@
+<aspect name="CustomerProjectLifecycle" class="org.wso2.carbon.governance.registry.extensions.aspects.DefaultLifeCycle">
+    <configuration type="literal">
+        <lifecycle>
+            <scxml xmlns="http://www.w3.org/2005/07/scxml"
+                   version="1.0"
+                   initialstate="Planning">
+
+                <state id="Planning">
+                    <transition event="Started development" target="Development"/>
+                </state>
+                <state id="Development">
+                    <transition event="Started testing" target="Testing"/>
+                    <transition event="Re-planning" target="Planning"/>
+                </state>
+                <state id="Testing">
+                    <transition event="Deployed to production" target="Production"/>
+                    <transition event="Re-development" target="Development"/>
+                    <transition event="Re-planning" target="Planning"/>
+                </state>
+                <state id="Production">
+                    <transition event="Serving Live" target="Live"/>
+                    <transition event="Re-testing" target="Testing"/>
+                    <transition event="Re-development" target="Development"/>
+                    <transition event="Re-planning" target="Planning"/>
+                </state>
+                <state id="Live">
+                    <transition event="Demoted to production" target="Production"/>
+                    <transition event="Re-testing" target="Testing"/>
+                    <transition event="Re-development" target="Development"/>
+                    <transition event="Re-planning" target="Planning"/>
+                </state>
+            </scxml>
+        </lifecycle>
+    </configuration>
+</aspect>

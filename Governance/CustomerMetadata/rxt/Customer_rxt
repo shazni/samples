@@ -1,0 +1,701 @@
+<artifactType type="application/vnd.wso2-customer+xml" shortName="customer" singularLabel="Customer" pluralLabel="Customers" hasNamespace="false" iconSet="9">
+    <storagePath>/customers/@{name}</storagePath>
+	<nameAttribute>overview_name</nameAttribute>
+	<lifecycle>CustomerLifeCycle</lifecycle>
+		<taxonomies>
+   <taxonomy name="arr" />
+   <taxonomy name="deployment" />
+   <taxonomy name="infrastructure" />
+   <taxonomy name="domain" />
+</taxonomies>
+    <ui>
+        <list>
+            <column name="Name">
+                <data type="path" value="overview_name" href="/applications/@{name}"/>
+            </column>
+        </list>
+    </ui>
+    <content>
+        <table name="Overview">
+            <field type="text" required="true">
+                <name>Name</name>
+            </field>
+            <field type="text" url="true">
+                <name>SFDC link</name>
+            </field>
+            <field type="text-area">
+                <name>Description</name>
+            </field>
+        </table>
+        <table name="Ownership">
+            <field type="options">
+                <name label="Primary Technical Owner">Primary Technical Owner</name>
+                <values>
+                    <value>--- none ---</value>
+                    <value>ajanthan@wso2.com</value>
+                    <value>amanda@wso2.com</value>
+                    <value>chaamini@wso2.com</value>
+                    <value>chanakaf@wso2.com</value>
+                    <value>chathura@wso2.com</value>
+                    <value>chathurak@wso2.com</value>
+                    <value>chintana@wso2.com</value>
+                    <value>christopherd@wso2.com</value>
+                    <value>dassana@wso2.com</value>
+                    <value>dunith@wso2.com</value>
+                    <value>fabio@wso2.com</value>
+                    <value>glennon@wso2.com</value>
+                    <value>gokul@wso2.com</value>
+                    <value>himashag@wso2.com</value>
+                    <value>ishara@wso2.com</value>
+                    <value>jaminda@wso2.com</value>
+                    <value>joao@wso2.com</value>
+                    <value>johann@wso2.com</value>
+                    <value>joy@wso2.com</value>
+                    <value>krishnia@wso2.com</value>
+                    <value>lakshikap@wso2.com</value>
+                    <value>lakshmanan@wso2.com</value>
+                    <value>laslo@wso2.com</value>
+                    <value>mauro@wso2.com</value>
+                    <value>mifan@wso2.com</value>
+                    <value>nadeesha@wso2.com</value>
+                    <value>natasha@wso2.com</value>
+                    <value>nirmal@wso2.com</value>
+                    <value>nuwan@wso2.com</value>
+                    <value>pamod@wso2.com</value>
+                    <value>randikan@wso2.com</value>
+                    <value>roberto@wso2.com</value>
+                    <value>rohithal@wso2.com</value>
+                    <value>shazni@wso2.com</value>
+                    <value>shiro@wso2.com</value>
+                    <value>stefano@wso2.com</value>
+                    <value>vanji@wso2.com</value>
+                    <value>vidura@wso2.com</value>
+                </values>
+            </field>
+
+            <field type="options">
+                <name label="Secondary Technical Owner">Secondary Technical Owner</name>
+                <values>
+                    <value>--- none ---</value>
+                    <value>ajanthan@wso2.com</value>
+                    <value>amanda@wso2.com</value>
+                    <value>chaamini@wso2.com</value>
+                    <value>chanakaf@wso2.com</value>
+                    <value>chathura@wso2.com</value>
+                    <value>chathurak@wso2.com</value>
+                    <value>chintana@wso2.com</value>
+                    <value>christopherd@wso2.com</value>
+                    <value>dassana@wso2.com</value>
+                    <value>dunith@wso2.com</value>
+                    <value>fabio@wso2.com</value>
+                    <value>glennon@wso2.com</value>
+                    <value>gokul@wso2.com</value>
+                    <value>himashag@wso2.com</value>
+                    <value>ishara@wso2.com</value>
+                    <value>jaminda@wso2.com</value>
+                    <value>joao@wso2.com</value>
+                    <value>johann@wso2.com</value>
+                    <value>joy@wso2.com</value>
+                    <value>krishnia@wso2.com</value>
+                    <value>lakshikap@wso2.com</value>
+                    <value>lakshmanan@wso2.com</value>
+                    <value>laslo@wso2.com</value>
+                    <value>mauro@wso2.com</value>
+                    <value>mifan@wso2.com</value>
+                    <value>nadeesha@wso2.com</value>
+                    <value>natasha@wso2.com</value>
+                    <value>nirmal@wso2.com</value>
+                    <value>nuwan@wso2.com</value>
+                    <value>pamod@wso2.com</value>
+                    <value>randikan@wso2.com</value>
+                    <value>roberto@wso2.com</value>
+                    <value>rohithal@wso2.com</value>
+                    <value>shazni@wso2.com</value>
+                    <value>shiro@wso2.com</value>
+                    <value>stefano@wso2.com</value>
+                    <value>vanji@wso2.com</value>
+                    <value>vidura@wso2.com</value>
+                </values>
+            </field>
+        </table>
+        
+        <table name="Sales">
+	        <field type="options">
+	            <name label="region">Region</name>
+	            <values>
+	                <value>NA</value>
+                    <value>LATAM</value>
+	                <value>EMEA</value>
+	                <value>APAC</value>
+	                </values>
+	        </field>
+	    
+	    	<field type="options">
+	            <name label="pod">POD</name>
+	            <values>
+	                <value>NA - SOUTH</value>
+	                <value>NA - EAST</value>
+	                <value>NA - WEST</value>
+	                <value>NA - PACIFIC</value>
+	                <value>LATAM</value>
+	                <value>ME</value>
+                    <value>AFRICA</value>
+	                <value>EU 1</value>
+	                <value>EU 2</value>
+	                <value>APAC</value>
+                    <value>ANZ</value>
+	            </values>
+	        </field>
+	        
+	        <field type="options">
+	            <name label="Country">Country</name>
+	            <values>
+                    <value>Afghanistan</value>
+                    <value>Albania</value>
+                    <value>Algeria</value>
+                    <value>Andorra</value>
+                    <value>Angola</value>
+                    <value>Antigua and Barbuda</value>
+                    <value>Argentina</value>
+                    <value>Armenia</value>
+                    <value>Australia</value>
+                    <value>Austria</value>
+                    <value>Azerbaijan</value>
+                    <value>Bahamas</value>
+                    <value>Bahrain</value>
+                    <value>Bangladesh</value>
+                    <value>Barbados</value>
+                    <value>Belarus</value>
+                    <value>Belgium</value>
+                    <value>Belize</value>
+                    <value>Benin</value>
+                    <value>Bhutan</value>
+                    <value>Bolivia</value>
+                    <value>Bosnia and Herzegovina</value>
+                    <value>Botswana</value>
+                    <value>Brazil</value>
+                    <value>Brunei</value>
+                    <value>Bulgaria</value>
+                    <value>Burkina Faso</value>
+                    <value>Burundi</value>
+                    <value>Cote dIvoire</value>
+                    <value>Cabo Verde</value>
+                    <value>Cambodia</value>
+                    <value>Cameroon</value>
+                    <value>Canada</value>
+                    <value>Central African Republic</value>
+                    <value>Chad</value>
+                    <value>Chile</value>
+                    <value>China</value>
+                    <value>Colombia</value>
+                    <value>Comoros</value>
+                    <value>Congo (Congo-Brazzaville)</value>
+                    <value>Costa Rica</value>
+                    <value>Croatia</value>
+                    <value>Cuba</value>
+                    <value>Cyprus</value>
+                    <value>Czechia (Czech Republic)</value>
+                    <value>Democratic Republic of the Congo</value>
+                    <value>Denmark</value>
+                    <value>Djibouti</value>
+                    <value>Dominica</value>
+                    <value>Dominican Republic</value>
+                    <value>Ecuador</value>
+                    <value>Egypt</value>
+                    <value>El Salvador</value>
+                    <value>Equatorial Guinea</value>
+                    <value>Eritrea</value>
+                    <value>Estonia</value>
+                    <value>Eswatini (fmr. "Swaziland")</value>
+                    <value>Ethiopia</value>
+                    <value>Fiji</value>
+                    <value>Finland</value>
+                    <value>France</value>
+                    <value>Gabon</value>
+                    <value>Gambia</value>
+                    <value>Georgia</value>
+                    <value>Germany</value>
+                    <value>Ghana</value>
+                    <value>Greece</value>
+                    <value>Grenada</value>
+                    <value>Guatemala</value>
+                    <value>Guinea</value>
+                    <value>Guinea-Bissau</value>
+                    <value>Guyana</value>
+                    <value>Haiti</value>
+                    <value>Holy See</value>
+                    <value>Honduras</value>
+                    <value>Hungary</value>
+                    <value>Iceland</value>
+                    <value>India</value>
+                    <value>Indonesia</value>
+                    <value>Iran</value>
+                    <value>Iraq</value>
+                    <value>Ireland</value>
+                    <value>Israel</value>
+                    <value>Italy</value>
+                    <value>Jamaica</value>
+                    <value>Japan</value>
+                    <value>Jordan</value>
+                    <value>Kazakhstan</value>
+                    <value>Kenya</value>
+                    <value>Kiribati</value>
+                    <value>Kuwait</value>
+                    <value>Kyrgyzstan</value>
+                    <value>Laos</value>
+                    <value>Latvia</value>
+                    <value>Lebanon</value>
+                    <value>Lesotho</value>
+                    <value>Liberia</value>
+                    <value>Libya</value>
+                    <value>Liechtenstein</value>
+                    <value>Lithuania</value>
+                    <value>Luxembourg</value>
+                    <value>Madagascar</value>
+                    <value>Malawi</value>
+                    <value>Malaysia</value>
+                    <value>Maldives</value>
+                    <value>Mali</value>
+                    <value>Malta</value>
+                    <value>Marshall Islands</value>
+                    <value>Mauritania</value>
+                    <value>Mauritius</value>
+                    <value>Mexico</value>
+                    <value>Micronesia</value>
+                    <value>Moldova</value>
+                    <value>Monaco</value>
+                    <value>Mongolia</value>
+                    <value>Montenegro</value>
+                    <value>Morocco</value>
+                    <value>Mozambique</value>
+                    <value>Myanmar (formerly Burma)</value>
+                    <value>Namibia</value>
+                    <value>Nauru</value>
+                    <value>Nepal</value>
+                    <value>Netherlands</value>
+                    <value>New Zealand</value>
+                    <value>Nicaragua</value>
+                    <value>Niger</value>
+                    <value>Nigeria</value>
+                    <value>North Korea</value>
+                    <value>North Macedonia</value>
+                    <value>Norway</value>
+                    <value>Oman</value>
+                    <value>Pakistan</value>
+                    <value>Palau</value>
+                    <value>Palestine State</value>
+                    <value>Panama</value>
+                    <value>Papua New Guinea</value>
+                    <value>Paraguay</value>
+                    <value>Peru</value>
+                    <value>Philippines</value>
+                    <value>Poland</value>
+                    <value>Portugal</value>
+                    <value>Qatar</value>
+                    <value>Romania</value>
+                    <value>Russia</value>
+                    <value>Rwanda</value>
+                    <value>Saint Kitts and Nevis</value>
+                    <value>Saint Lucia</value>
+                    <value>Saint Vincent and the Grenadines</value>
+                    <value>Samoa</value>
+                    <value>San Marino</value>
+                    <value>Sao Tome and Principe</value>
+                    <value>Saudi Arabia</value>
+                    <value>Senegal</value>
+                    <value>Serbia</value>
+                    <value>Seychelles</value>
+                    <value>Sierra Leone</value>
+                    <value>Singapore</value>
+                    <value>Slovakia</value>
+                    <value>Slovenia</value>
+                    <value>Solomon Islands</value>
+                    <value>Somalia</value>
+                    <value>South Africa</value>
+                    <value>South Korea</value>
+                    <value>South Sudan</value>
+                    <value>Spain</value>
+                    <value>Sri Lanka</value>
+                    <value>Sudan</value>
+                    <value>Suriname</value>
+                    <value>Sweden</value>
+                    <value>Switzerland</value>
+                    <value>Syria</value>
+                    <value>Tajikistan</value>
+                    <value>Tanzania</value>
+                    <value>Thailand</value>
+                    <value>Timor-Leste</value>
+                    <value>Togo</value>
+                    <value>Tonga</value>
+                    <value>Trinidad and Tobago</value>
+                    <value>Tunisia</value>
+                    <value>Turkey</value>
+                    <value>Turkmenistan</value>
+                    <value>Tuvalu</value>
+                    <value>Uganda</value>
+                    <value>Ukraine</value>
+                    <value>United Arab Emirates</value>
+                    <value>United Kingdom</value>
+                    <value>United States</value>
+                    <value>Uruguay</value>
+                    <value>Uzbekistan</value>
+                    <value>Vanuatu</value>
+                    <value>Venezuela</value>
+                    <value>Vietnam</value>
+                    <value>Yemen</value>
+                    <value>Zambia</value>
+                    <value>Zimbabwe</value>
+	            </values>
+	        </field>
+
+            <field type="options">
+	            <name label="AM">AM</name>
+	            <values>
+                    <value>--- none ---</value>
+                    <value>amanda@wso2.com</value>
+                    <value>anchana@wso2.com</value>
+                    <value>andrew@wso2.com</value>
+                    <value>anushiya@wso2.com</value>
+                    <value>charndika@wso2.com</value>
+                    <value>crystal@wso2.com</value>
+                    <value>david@wso2.com</value>
+                    <value>derek@wso2.com</value>
+                    <value>deshanf@wso2.com</value>
+                    <value>devaka@wso2.com</value>
+                    <value>dexter@wso2.com</value>
+                    <value>dilani@wso2.com</value>
+                    <value>dilshanko@wso2.com</value>
+                    <value>dinal@wso2.com</value>
+                    <value>emilya@wso2.com</value>
+                    <value>fernando@wso2.com</value>
+                    <value>geethika@wso2.com</value>
+                    <value>hasinim@wso2.com</value>
+                    <value>henry@wso2.com</value>
+                    <value>imranz@wso2.com</value>
+                    <value>ivan@wso2.com</value>
+                    <value>jehan@wso2.com</value>
+                    <value>lakminik@wso2.com</value>
+                    <value>lakshikag@wso2.com</value>
+                    <value>laura@wso2.com</value>
+                    <value>laurap@wso2.com</value>
+                    <value>lehan@wso2.com</value>
+                    <value>lorraine@wso2.com</value>
+                    <value>luiza@wso2.com</value>
+                    <value>mevanp@wso2.com</value>
+                    <value>piyumi@wso2.com</value>
+                    <value>pradeeshan@wso2.com</value>
+                    <value>pramukh@wso2.com</value>
+                    <value>pulasthis@wso2.com</value>
+                    <value>rakitha@wso2.com</value>
+                    <value>ramal@wso2.com</value>
+                    <value>ricardod@wso2.com</value>
+                    <value>rodrigo@wso2.com</value>
+                    <value>ruvindi@wso2.com</value>
+                    <value>ruwanthi@wso2.com</value>
+                    <value>sameena@wso2.com</value>
+                    <value>sanjeewaw@wso2.com</value>
+                    <value>savin@wso2.com</value>
+                    <value>shaveen@wso2.com</value>
+                    <value>shehand@wso2.com</value>
+                    <value>shenal@wso2.com</value>
+                    <value>shiven@wso2.com</value>
+                    <value>sithalka@wso2.com</value>
+                    <value>stephan@wso2.com</value>
+                    <value>sulakshana@wso2.com</value>
+                    <value>sulthana@wso2.com</value>
+                    <value>taniya@wso2.com</value>
+                    <value>tharindab@wso2.com</value>
+                    <value>tissaka@wso2.com</value>
+                    <value>traveena@wso2.com</value>
+                    <value>urmila@wso2.com</value>
+                    <value>wasantha@wso2.com</value>
+                    <value>wishwa@wso2.com</value>
+	            </values>
+	        </field>
+
+            <field type="options">
+	            <name label="Pricing currency">Pricing currency</name>
+	            <values>
+	                <value>USD</value>
+	                <value>GBP</value>
+	                <value>EUR</value>
+	            </values>
+	        </field>
+
+            <field type="text">
+                <name>ARR</name>
+            </field>
+
+            <field type="options">
+	            <name label="Pricing option">Pricing</name>
+	            <values>
+                    <value>--- none ---</value>
+	                <value>Instance based</value>
+	                <value>Core based</value>
+	                <value>Transaction based</value>
+	            </values>
+	        </field>
+
+            <field type="options">
+	            <name label="Business Domain">Business domain</name>
+	            <values>
+                    <value>Agriculture</value>
+                    <value>Automotive</value>
+                    <value>Banking</value>
+                    <value>Biotechnology</value>
+                    <value>Broadcast Media</value>
+                    <value>Chemicals</value>
+                    <value>Communication Carriers</value>
+                    <value>Communications Equipment</value>
+                    <value>Computer services/consulting</value>
+                    <value>Computer Software</value>
+                    <value>Computers  and  Electronics</value>
+                    <value>Construction</value>
+                    <value>Consulting</value>
+                    <value>Consumer Goods</value>
+                    <value>Consumer Products</value>
+                    <value>Defense</value>
+                    <value>Education</value>
+                    <value>Electric and Gas Utilities</value>
+                    <value>Electronics Manufacturing</value>
+                    <value>Energy / Utilities</value>
+                    <value>Energy, Chemical, Utilities</value>
+                    <value>Energy</value>
+                    <value>Entertainment</value>
+                    <value>Environmental</value>
+                    <value>Federal</value>
+                    <value>Finance</value>
+                    <value>Financial Services - Other</value>
+                    <value>Financial Services</value>
+                    <value>Food and Beverage</value>
+                    <value>Government - Federal</value>
+                    <value>Government - State and Local</value>
+                    <value>Government - State/Regional</value>
+                    <value>Government</value>
+                    <value>Health Insurance</value>
+                    <value>Healthcare</value>
+                    <value>High Tech - Other</value>
+                    <value>Higher Ed</value>
+                    <value>Hospitality and Travel</value>
+                    <value>Hospitals / Health Care</value>
+                    <value>Insurance</value>
+                    <value>IT Services</value>
+                    <value>Life Sciences</value>
+                    <value>Lodging</value>
+                    <value>Logistics / Transportation</value>
+                    <value>Managed Service Providers</value>
+                    <value>Management Consulting</value>
+                    <value>Manufacturing - Durables</value>
+                    <value>Manufacturing - Non-Durables</value>
+                    <value>Manufacturing</value>
+                    <value>Marketing  and  Advertising</value>
+                    <value>Media  and  Entertainment</value>
+                    <value>Media and Entertainment</value>
+                    <value>Media</value>
+                    <value>Medical Devices</value>
+                    <value>Medical, Pharma, Biotech</value>
+                    <value>Not For Profit</value>
+                    <value>Oil and Gas</value>
+                    <value>Other</value>
+                    <value>Pharmaceuticals</value>
+                    <value>Power and Utilities</value>
+                    <value>Professional Services</value>
+                    <value>Real Estate  and  Construction</value>
+                    <value>Recreation</value>
+                    <value>Restaurants</value>
+                    <value>Retail</value>
+                    <value>Securities and Invest</value>
+                    <value>Semiconductors</value>
+                    <value>Shipping</value>
+                    <value>Software  and  Internet</value>
+                    <value>Software - Finance</value>
+                    <value>Software - Healthcare</value>
+                    <value>Software - Other</value>
+                    <value>Software and Internet</value>
+                    <value>Software and Internet</value>
+                    <value>Software</value>
+                    <value>State</value>
+                    <value>Technology - Software and Services</value>
+                    <value>Technology</value>
+                    <value>Telecom</value>
+                    <value>Telecommunications</value>
+                    <value>Transportation  and  Logistics</value>
+                    <value>Transportation</value>
+                    <value>Travel</value>
+                    <value>Utility</value>
+                    <value>VAR/Systems Integrator</value>
+                    <value>Wholesale  and  Distribution</value>
+                    <value>Wholesale</value>
+	            </values>
+	        </field>
+
+            <field type="options">
+	            <name label="Is an OEM deal">OEM</name>
+	            <values>
+	                <value>No</value>
+	                <value>Yes</value>
+	            </values>
+	        </field>
+
+            <field type="options">
+	            <name label="partner">Partner</name>
+	            <values>
+                    <value>--- none ---</value>
+	                <value>EmCrey</value>
+	                <value>Chakray</value>
+                    <value>DeArx</value>
+                    <value>GFI</value>
+                    <value>Mitrai</value>
+                    <value>Virtusa</value>
+                    <value>Yenlo</value>
+	            </values>
+	        </field>
+	    </table>
+	
+	<table name="Deployment">
+            <field type="options">
+                <name label="Deployment Option">Deployment Option</name>
+                <values>
+                    <value>On-premise</value>
+                    <value>Managed Cloud</value>
+                    <value>Public Cloud</value>
+                    <value>Private Cloud</value>
+                    <value>Hybrid</value>
+                </values>
+            </field>
+            <field type="text" url="true">
+                <name>Google drive link of proposal</name>
+            </field>
+            <field type="text" url="true">
+                <name>Lucid chart link of deployemt architecture</name>
+            </field>
+        </table>
+        
+        <table name="Infrastructure" columns="5" maxoccurs="unbounded">
+            <subheading>
+                <heading>Product</heading>
+                <heading>Version</heading>
+                <heading>Deployed In</heading>
+                <heading>In MC</heading>
+                <heading>Number of instances</heading>
+            </subheading>
+
+	    <field type="options">
+                <name label="Product">Product</name>
+                <values>
+		            <value>API-M all-in-one</value>
+                    <value>API-M gateway</value>
+                    <value>API-M publisher</value>
+                    <value>API-M store</value>
+                    <value>API-M key manager</value>
+                    <value>API-M traffic manager</value>
+                    <value>API-M all-in-one except gateway</value>
+                    <value>API-M publisher+store</value>
+                    <value>API-M analytics</value>
+                    <value>API-M microgateway</value>
+                    <value>Identity Server</value>
+                    <value>Enterprise Integrator</value>
+                    <value>EI - Message Broker</value>
+                    <value>EI - Business Process Profile</value>
+                    <value>EI analytics</value>
+                    <value>Message Broker</value>
+                    <value>Business Process Server</value>
+                    <value>Governance Registry</value>
+                    <value>Micro Integrator</value>
+                    <value>Streaming Integrator</value>
+                    <value>Streaming Processor</value>
+                    <value>CEP</value>
+                    <value>OB API-M</value>
+                    <value>OB IS</value>
+                    <value>OB EI</value>
+                    <value>OB Analytics</value>
+                    <value>OBBI</value>
+                </values>
+            </field>
+            <field type="text">
+                <name label="Version">Version</name>
+            </field>
+            <field type="options">
+                <name label="Deployed In">Deployed In</name>
+                <values>
+                    <value>On-premise</value>
+                    <value>WSO2 Public cloud</value>
+                    <value>AWS</value>
+                    <value>Azure</value>
+                    <value>GCP</value>
+                    <value>On-premise k8s</value>
+                    <value>AWS EKS</value>
+                    <value>Azure AKS</value>
+                    <value>Google GKE</value>
+                </values>
+            </field>
+            <field type="options">
+                <name label="In MC">In MC</name>
+                <values>
+                    <value>No</value>
+                    <value>Yes</value>
+                </values>
+            </field>
+            <field type="text">
+                <name label="Number of instances">Number of instances</name>
+            </field>
+           
+        </table>
+
+        <table name="Services" columns="2" maxoccurs="unbounded">
+            <subheading>
+                <heading>Service type</heading>
+                <heading>Document URL</heading>
+            </subheading>
+
+            <field type="options">
+                <name label="Service type">Service Type</name>
+                <values>
+                    <value>QSP</value>
+                    <value>PoC</value>
+                    <value>Architecture Review</value>
+                    <value>Development Services</value>
+                    <value>Scoping</value>
+                </values>
+            </field>
+
+            <field type="text" url="true">
+                <name label="Document URL">Document URL</name>
+            </field>
+        </table>
+        
+        <table name="Support" columns="3" maxoccurs="unbounded">
+            <subheading>
+                <heading>Support type</heading>
+                <heading>Jira URL</heading>
+                <heading>Support Owner</heading>
+            </subheading>
+
+            <field type="options">
+                <name label="Support type">Support Type</name>
+                <values>
+                    <value>Production support</value>
+                    <value>Development support</value>
+                </values>
+            </field>
+
+            <field type="text">
+                <name label="Jira URL">Jira</name>
+            </field>
+
+            <field type="options">
+                <name label="Support owner">Support owner</name>
+                <values>
+                    <value>--- none ---</value>
+                    <value>asela@wso2.com</value>
+                    <value>chamara@wso2.com</value>
+                    <value>chamath@wso2.com</value>
+                    <value>dinusha@wso2.com</value>
+                    <value>dushan@wso2.com</value>
+                    <value>shammi@wso2.com</value>
+                    <value>rushmin@wso2.com</value>
+                </values>
+            </field>
+        </table>
+    </content>
+</artifactType>

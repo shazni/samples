@@ -1,0 +1,127 @@
+<artifactType type="application/vnd.wso2-avroschema+xml" shortName="avroschema" singularLabel="AvroSchema" pluralLabel="AvroSchemas" hasNamespace="false" iconSet="9">
+   <storagePath>/trunk/avroschema/@{overview_version}/@{overview_name}</storagePath>
+	<nameAttribute>overview_name</nameAttribute>
+
+    <ui>
+        <list>
+            <column name="Name">
+                <data type="path" value="overview_name" href="@{storagePath}"/>
+            </column>
+            <column name="Version">
+                <data type="path" value="overview_version" href="@{storagePath}"/>
+            </column>
+        </list>
+    </ui>
+
+    <content>
+        <table name="Overview">
+            <field type="text" required="true">
+                <name>Name</name>
+            </field>
+            <field type="text" required="true" readonly="true">
+                <name>Version</name>
+            </field>
+            <field type="text">
+                <name>Namespace</name>
+            </field>
+            <field type="options">
+	            <name label="type">Type</name>
+	            <values>
+	                <value>record</value>
+	            </values>
+	        </field>
+            <field type="text-area">
+                <name>Description</name>
+            </field>
+        </table>
+
+        <table name="EnumTypes" columns="5" maxoccurs="unbounded">
+            <subheading>
+                <heading>Name</heading>
+                <heading>Type</heading>
+                <heading>Symbols</heading>
+            </subheading>
+
+            <field type="text">
+                <name label="Name">Name</name>
+            </field>
+            <field type="options">
+                <name label="Type">Type</name>
+                <values>
+                    <value>enum</value>
+                </values>
+            </field>
+            <field type="text">
+                <name label="Symbols">Symbols</name>
+            </field>
+        </table>
+
+        <table name="ArrayObjectType" columns="5" maxoccurs="unbounded">
+            <subheading>
+                <heading>Name</heading>
+                <heading>Item Type</heading>
+                <heading>Array Object</heading>
+                <heading>Record name</heading>
+                <heading>Default</heading>
+            </subheading>
+
+            <field type="text">
+                <name label="Name">Name</name>
+            </field>
+            <field type="options">
+                <name label="ItemType">Item Type</name>
+                <values>
+                    <value>string</value>
+                    <value>int</value>
+                    <value>record</value>
+                </values>
+            </field>
+            <field type="options">
+                <name label="ArrayObject">Array Object</name>
+                <values>
+                    <value>Yes</value>
+                    <value>No</value>
+                </values>
+            </field>
+            <field type="text">
+                <name label="recordname">Record Name</name>
+            </field>
+            <field type="text">
+                <name label="default">Default</name>
+            </field>
+        </table>
+        
+        <table name="RecordFields" columns="4" maxoccurs="unbounded">
+            <subheading>
+                <heading>Name</heading>
+                <heading>Type</heading>
+                <heading>Default Exists</heading>
+                <heading>Default</heading>
+            </subheading>
+
+            <field type="text">
+                <name label="Name">Name</name>
+            </field>
+            <field type="options">
+                <name label="Type">Type</name>
+                <values>
+                    <value>string</value>
+                    <value>int</value>
+                    <value>enum</value>
+                    <value>arrayobject</value>
+                    <value>record</value>
+                </values>
+            </field>
+            <field type="options">
+                <name label="DefaultExist">Default Exists</name>
+                <values>
+                    <value>yes</value>
+                    <value>no</value>
+                </values>
+            </field>
+            <field type="text">
+                <name label="Default">Default</name>
+            </field>
+        </table>
+     </content>
+</artifactType>

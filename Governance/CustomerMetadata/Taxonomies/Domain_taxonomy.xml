@@ -1,0 +1,73 @@
+<taxonomy id="domain" name="domain">
+	<root id="business_domain" displayName="Business Domain">
+		<node id="retail" displayName="Retail"></node>
+
+		<node id="banking_finance" displayName="Banking and Finance">
+            <node id="open_banking" displayName="Open Banking"></node>
+            <node id="banking" displayName="General Banking"></node>
+            <node id="finance" displayName="Finance"></node>
+            <node id="securities_and_invest" displayName="Securities and Invest"></node>
+        </node>
+
+		<node id="telecommunication" displayName="Telecommunication"></node>
+        <node id="government" displayName="Government"></node>
+        <node id="transport_logistic" displayName="Transport and Logistics"></node>
+        <node id="technology" displayName="Technology"></node>
+        <node id="media" displayName="Media"></node>
+        <node id="education" displayName="Education"></node>
+        <node id="insurance" displayName="Insurance"></node>
+        <node id="manufacturing" displayName="Manufacturing"></node>
+        <node id="not_for_profit" displayName="Not For Profit"></node>
+        <node id="automotive" displayName="Automotive"></node>
+        <node id="agriculture" displayName="Agriculture"></node>
+        <node id="entertainment" displayName="Entertainment"></node>
+        <node id="food_and_beverage" displayName="Food and Beverage"></node>
+        <node id="hostpitality_travel" displayName="Hospitality and Travel"></node>
+        <node id="recreation" displayName="Recreation"></node>
+        <node id="biotechnology" displayName="Biotechnology"></node>
+        <node id="environmental" displayName="Environmental"></node>
+        <node id="communication_carriers" displayName="Communication Carriers"></node>
+        <node id="construction" displayName="Construction"></node>
+        <node id="chemicals" displayName="Chemicals"></node>
+        <node id="defense" displayName="Defense"></node>
+        
+        <node id="software" displayName="Software">
+            <node id="IT_Services" displayName="IT Services"></node>
+            <node id="software_healthcare" displayName="Healthcare"></node>
+            <node id="software_finance" displayName="Finance"></node>
+            <node id="software_system_integrator" displayName="System Integrator"></node>
+            <node id="computer_services_consulting" displayName="Computer services and consulting"></node>
+        </node>
+
+        <node id="healthcare" displayName="Healthcare">
+            <node id="pharmaceuticals" displayName="Pharmaceuticals"></node>
+            <node id="hospitals" displayName="Hospitals"></node>
+            <node id="medical_biotechnology" displayName="Medical Biotechnology"></node>
+            <node id="health_nsurance" displayName="Health Insurance"></node>
+            <node id="medical_devices" displayName="Medical Devices"></node>
+        </node>
+
+        <node id="energy" displayName="Energy">
+            <node id="energy_utilities" displayName="Energy Utilities"></node>
+            <node id="oil_and_gas" displayName="Oil and Gas"></node>
+            <node id="electric_and_gas_utilities" displayName="Electric and Gas Utilities"></node>
+            <node id="power_and_utilities" displayName="Power and Utilities"></node>
+        </node>
+
+        <node id="communications_equipment" displayName="Communications Equipment"></node>
+        <node id="restaurants" displayName="Restaurants"></node>
+        <node id="consumer_products" displayName="Consumer Products"></node>
+        <node id="professional_services" displayName="Professional Services"></node>
+        <node id="semiconductors" displayName="Semiconductors"></node>
+        <node id="lodging" displayName="Lodging"></node>
+        <node id="electronics_manufacturing" displayName="Electronics Manufacturing"></node>
+        <node id="life_sciences" displayName="Life Sciences"></node>
+        <node id="management_consulting" displayName="Management Consulting"></node>
+        <node id="real_estate_and_construction" displayName="Real Estate and Construction"></node>
+        <node id="wholesale_and_distribution" displayName="Wholesale and Distribution"></node>
+        <node id="consumer_goods" displayName="Consumer Goods"></node>
+        <node id="marketing_and_advertising" displayName="Marketing and Advertising"></node>
+        <node id="computers_and_electronics" displayName="Computers and Electronics"></node>
+        <node id="other" displayName="Other"></node>
+	</root>
+</taxonomy>

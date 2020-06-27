@@ -1,0 +1,364 @@
+<taxonomy id="infrastructure" name="infrastructure">
+	<root id="deployment_infrastructure" displayName="infrastructure">
+        <node id="vms" displayName="Virtual Machine">
+            <node id="os" displayName="Operating System">
+				<node id="windows" displayName="Windows">
+                    <node id="apim" displayName="API Manager">
+                        <node id="all_in_one" displayName="All-in-One"></node>
+                        <node id="fully_distributed" displayName="Fully Distributed"></node>
+                        <node id="partially_distributed" displayName="Partially Distributed"></node>
+                    </node>
+                    <node id="apimgw" displayName="API Microgateway"></node>
+                    <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                    <node id="ei" displayName="Enterprise Integrator"></node>
+                    <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                    <node id="mi" displayName="Micro Integrator"></node>
+                    <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                    <node id="is" displayName="Identity Server"></node>
+                    <node id="is_analytics" displayName="IS + Analytics"></node>
+                    <node id="apim_ei" displayName="API-M + EI"></node>
+                    <node id="apim_is" displayName="API-M + IS"></node>
+                    <node id="ei_is" displayName="EI + IS"></node>
+                    <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                    <node id="ob_apim" displayName="OB API-M"></node>
+                    <node id="ob_is" displayName="OB IS"></node>
+                    <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                    <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                    <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                    <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                    <node id="message_broker" displayName="Message Broker"></node>
+                    <node id="business_process_server" displayName="Business Process Server"></node>
+                    <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                    <node id="governance_registry" displayName="Governance Registry"></node>
+                    <node id="cep" displayName="Complex Event Processor"></node>
+                    <node id="stream_processor" displayName="Stream Processor"></node>
+                    <node id="si" displayName="Streaming Integrator"></node>
+                </node>
+                <node id="linux" displayName="Linux">
+                    <node id="apim" displayName="API Manager">
+                        <node id="all_in_one" displayName="All-in-One"></node>
+                        <node id="fully_distributed" displayName="Fully Distributed"></node>
+                        <node id="partially_distributed" displayName="Partially Distributed"></node>
+                    </node>
+                    <node id="apimgw" displayName="API Microgateway"></node>
+                    <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                    <node id="ei" displayName="Enterprise Integrator"></node>
+                    <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                    <node id="mi" displayName="Micro Integrator"></node>
+                    <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                    <node id="is" displayName="Identity Server"></node>
+                    <node id="is_analytics" displayName="IS + Analytics"></node>
+                    <node id="apim_ei" displayName="API-M + EI"></node>
+                    <node id="apim_is" displayName="API-M + IS"></node>
+                    <node id="ei_is" displayName="EI + IS"></node>
+                    <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                    <node id="ob_apim" displayName="OB API-M"></node>
+                    <node id="ob_is" displayName="OB IS"></node>
+                    <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                    <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                    <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                    <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                    <node id="message_broker" displayName="Message Broker"></node>
+                    <node id="business_process_server" displayName="Business Process Server"></node>
+                    <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                    <node id="governance_registry" displayName="Governance Registry"></node>
+                    <node id="cep" displayName="Complex Event Processor"></node>
+                    <node id="stream_processor" displayName="Stream Processor"></node>
+                    <node id="si" displayName="Streaming Integrator"></node>
+                </node>
+            </node>
+        </node>
+        <node id="containers" displayName="Containers">
+            <node id="openshift" displayName="OpenShift">
+                <node id="apim" displayName="API Manager">
+                    <node id="all_in_one" displayName="All-in-One"></node>
+                    <node id="fully_distributed" displayName="Fully Distributed"></node>
+                    <node id="partially_distributed" displayName="Partially Distributed"></node>
+                </node>
+                <node id="apimgw" displayName="API Microgateway"></node>
+                <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                <node id="ei" displayName="Enterprise Integrator"></node>
+                <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                <node id="mi" displayName="Micro Integrator"></node>
+                <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                <node id="is" displayName="Identity Server"></node>
+                <node id="is_analytics" displayName="IS + Analytics"></node>
+                <node id="apim_ei" displayName="API-M + EI"></node>
+                <node id="apim_is" displayName="API-M + IS"></node>
+                <node id="ei_is" displayName="EI + IS"></node>
+                <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                <node id="ob_apim" displayName="OB API-M"></node>
+                <node id="ob_is" displayName="OB IS"></node>
+                <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                <node id="message_broker" displayName="Message Broker"></node>
+                <node id="business_process_server" displayName="Business Process Server"></node>
+                <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                <node id="governance_registry" displayName="Governance Registry"></node>
+                <node id="cep" displayName="Complex Event Processor"></node>
+                <node id="stream_processor" displayName="Stream Processor"></node>
+                <node id="si" displayName="Streaming Integrator"></node>
+            </node>
+            <node id="docker" displayName="Docker">
+                <node id="apim" displayName="API Manager">
+                    <node id="all_in_one" displayName="All-in-One"></node>
+                    <node id="fully_distributed" displayName="Fully Distributed"></node>
+                    <node id="partially_distributed" displayName="Partially Distributed"></node>
+                </node>
+                <node id="apimgw" displayName="API Microgateway"></node>
+                <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                <node id="ei" displayName="Enterprise Integrator"></node>
+                <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                <node id="mi" displayName="Micro Integrator"></node>
+                <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                <node id="is" displayName="Identity Server"></node>
+                <node id="is_analytics" displayName="IS + Analytics"></node>
+                <node id="apim_ei" displayName="API-M + EI"></node>
+                <node id="apim_is" displayName="API-M + IS"></node>
+                <node id="ei_is" displayName="EI + IS"></node>
+                <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                <node id="ob_apim" displayName="OB API-M"></node>
+                <node id="ob_is" displayName="OB IS"></node>
+                <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                <node id="message_broker" displayName="Message Broker"></node>
+                <node id="business_process_server" displayName="Business Process Server"></node>
+                <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                <node id="governance_registry" displayName="Governance Registry"></node>
+                <node id="cep" displayName="Complex Event Processor"></node>
+                <node id="stream_processor" displayName="Stream Processor"></node>
+                <node id="si" displayName="Streaming Integrator"></node>
+            </node>
+            <node id="k8s" displayName="Kubernetes">
+                <node id="apim" displayName="API Manager">
+                    <node id="all_in_one" displayName="All-in-One"></node>
+                    <node id="fully_distributed" displayName="Fully Distributed"></node>
+                    <node id="partially_distributed" displayName="Partially Distributed"></node>
+                </node>
+                <node id="apimgw" displayName="API Microgateway"></node>
+                <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                <node id="ei" displayName="Enterprise Integrator"></node>
+                <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                <node id="mi" displayName="Micro Integrator"></node>
+                <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                <node id="is" displayName="Identity Server"></node>
+                <node id="is_analytics" displayName="IS + Analytics"></node>
+                <node id="apim_ei" displayName="API-M + EI"></node>
+                <node id="apim_is" displayName="API-M + IS"></node>
+                <node id="ei_is" displayName="EI + IS"></node>
+                <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                <node id="ob_apim" displayName="OB API-M"></node>
+                <node id="ob_is" displayName="OB IS"></node>
+                <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                <node id="message_broker" displayName="Message Broker"></node>
+                <node id="business_process_server" displayName="Business Process Server"></node>
+                <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                <node id="governance_registry" displayName="Governance Registry"></node>
+                <node id="cep" displayName="Complex Event Processor"></node>
+                <node id="stream_processor" displayName="Stream Processor"></node>
+                <node id="si" displayName="Streaming Integrator"></node>
+            </node>
+            <node id="swarm" displayName="Swarm">
+                <node id="apim" displayName="API Manager">
+                    <node id="all_in_one" displayName="All-in-One"></node>
+                    <node id="fully_distributed" displayName="Fully Distributed"></node>
+                    <node id="partially_distributed" displayName="Partially Distributed"></node>
+                </node>
+                <node id="apimgw" displayName="API Microgateway"></node>
+                <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                <node id="ei" displayName="Enterprise Integrator"></node>
+                <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                <node id="mi" displayName="Micro Integrator"></node>
+                <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                <node id="is" displayName="Identity Server"></node>
+                <node id="is_analytics" displayName="IS + Analytics"></node>
+                <node id="apim_ei" displayName="API-M + EI"></node>
+                <node id="apim_is" displayName="API-M + IS"></node>
+                <node id="ei_is" displayName="EI + IS"></node>
+                <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                <node id="ob_apim" displayName="OB API-M"></node>
+                <node id="ob_is" displayName="OB IS"></node>
+                <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                <node id="message_broker" displayName="Message Broker"></node>
+                <node id="business_process_server" displayName="Business Process Server"></node>
+                <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                <node id="governance_registry" displayName="Governance Registry"></node>
+                <node id="cep" displayName="Complex Event Processor"></node>
+                <node id="stream_processor" displayName="Stream Processor"></node>
+                <node id="si" displayName="Streaming Integrator"></node>
+            </node>
+            <node id="mesos" displayName="Mesos">
+                <node id="apim" displayName="API Manager">
+                    <node id="all_in_one" displayName="All-in-One"></node>
+                    <node id="fully_distributed" displayName="Fully Distributed"></node>
+                    <node id="partially_distributed" displayName="Partially Distributed"></node>
+                </node>
+                <node id="apimgw" displayName="API Microgateway"></node>
+                <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                <node id="ei" displayName="Enterprise Integrator"></node>
+                <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                <node id="mi" displayName="Micro Integrator"></node>
+                <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                <node id="is" displayName="Identity Server"></node>
+                <node id="is_analytics" displayName="IS + Analytics"></node>
+                <node id="apim_ei" displayName="API-M + EI"></node>
+                <node id="apim_is" displayName="API-M + IS"></node>
+                <node id="ei_is" displayName="EI + IS"></node>
+                <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                <node id="ob_apim" displayName="OB API-M"></node>
+                <node id="ob_is" displayName="OB IS"></node>
+                <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                <node id="message_broker" displayName="Message Broker"></node>
+                <node id="business_process_server" displayName="Business Process Server"></node>
+                <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                <node id="governance_registry" displayName="Governance Registry"></node>
+                <node id="cep" displayName="Complex Event Processor"></node>
+                <node id="stream_processor" displayName="Stream Processor"></node>
+                <node id="si" displayName="Streaming Integrator"></node>
+            </node>
+        </node>
+        <node id="private_cloud" displayName="Private Cloud">
+            <node id="aws" displayName="AWS">
+                <node id="apim" displayName="API Manager">
+                    <node id="all_in_one" displayName="All-in-One"></node>
+                    <node id="fully_distributed" displayName="Fully Distributed"></node>
+                    <node id="partially_distributed" displayName="Partially Distributed"></node>
+                </node>
+                <node id="apimgw" displayName="API Microgateway"></node>
+                <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                <node id="ei" displayName="Enterprise Integrator"></node>
+                <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                <node id="mi" displayName="Micro Integrator"></node>
+                <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                <node id="is" displayName="Identity Server"></node>
+                <node id="is_analytics" displayName="IS + Analytics"></node>
+                <node id="apim_ei" displayName="API-M + EI"></node>
+                <node id="apim_is" displayName="API-M + IS"></node>
+                <node id="ei_is" displayName="EI + IS"></node>
+                <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                <node id="ob_apim" displayName="OB API-M"></node>
+                <node id="ob_is" displayName="OB IS"></node>
+                <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                <node id="message_broker" displayName="Message Broker"></node>
+                <node id="business_process_server" displayName="Business Process Server"></node>
+                <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                <node id="governance_registry" displayName="Governance Registry"></node>
+                <node id="cep" displayName="Complex Event Processor"></node>
+                <node id="stream_processor" displayName="Stream Processor"></node>
+                <node id="si" displayName="Streaming Integrator"></node>
+            </node>
+            <node id="azure" displayName="Azure">
+                <node id="apim" displayName="API Manager">
+                    <node id="all_in_one" displayName="All-in-One"></node>
+                    <node id="fully_distributed" displayName="Fully Distributed"></node>
+                    <node id="partially_distributed" displayName="Partially Distributed"></node>
+                </node>
+                <node id="apimgw" displayName="API Microgateway"></node>
+                <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                <node id="ei" displayName="Enterprise Integrator"></node>
+                <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                <node id="mi" displayName="Micro Integrator"></node>
+                <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                <node id="is" displayName="Identity Server"></node>
+                <node id="is_analytics" displayName="IS + Analytics"></node>
+                <node id="apim_ei" displayName="API-M + EI"></node>
+                <node id="apim_is" displayName="API-M + IS"></node>
+                <node id="ei_is" displayName="EI + IS"></node>
+                <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                <node id="ob_apim" displayName="OB API-M"></node>
+                <node id="ob_is" displayName="OB IS"></node>
+                <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                <node id="message_broker" displayName="Message Broker"></node>
+                <node id="business_process_server" displayName="Business Process Server"></node>
+                <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                <node id="governance_registry" displayName="Governance Registry"></node>
+                <node id="cep" displayName="Complex Event Processor"></node>
+                <node id="stream_processor" displayName="Stream Processor"></node>
+                <node id="si" displayName="Streaming Integrator"></node>
+            </node>
+            <node id="gcp" displayName="GCP">
+                <node id="apim" displayName="API Manager">
+                    <node id="all_in_one" displayName="All-in-One"></node>
+                    <node id="fully_distributed" displayName="Fully Distributed"></node>
+                    <node id="partially_distributed" displayName="Partially Distributed"></node>
+                </node>
+                <node id="apimgw" displayName="API Microgateway"></node>
+                <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                <node id="ei" displayName="Enterprise Integrator"></node>
+                <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                <node id="mi" displayName="Micro Integrator"></node>
+                <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                <node id="is" displayName="Identity Server"></node>
+                <node id="is_analytics" displayName="IS + Analytics"></node>
+                <node id="apim_ei" displayName="API-M + EI"></node>
+                <node id="apim_is" displayName="API-M + IS"></node>
+                <node id="ei_is" displayName="EI + IS"></node>
+                <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                <node id="ob_apim" displayName="OB API-M"></node>
+                <node id="ob_is" displayName="OB IS"></node>
+                <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                <node id="message_broker" displayName="Message Broker"></node>
+                <node id="business_process_server" displayName="Business Process Server"></node>
+                <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                <node id="governance_registry" displayName="Governance Registry"></node>
+                <node id="cep" displayName="Complex Event Processor"></node>
+                <node id="stream_processor" displayName="Stream Processor"></node>
+                <node id="si" displayName="Streaming Integrator"></node>
+            </node>
+            <node id="ibm_cloud" displayName="IBM Cloud">
+                <node id="apim" displayName="API Manager">
+                    <node id="all_in_one" displayName="All-in-One"></node>
+                    <node id="fully_distributed" displayName="Fully Distributed"></node>
+                    <node id="partially_distributed" displayName="Partially Distributed"></node>
+                </node>
+                <node id="apimgw" displayName="API Microgateway"></node>
+                <node id="apim+api_analytics" displayName="API-M + Analytics"></node>
+                <node id="ei" displayName="Enterprise Integrator"></node>
+                <node id="ei_analytics" displayName="EI + EI Analytics"></node>
+                <node id="mi" displayName="Micro Integrator"></node>
+                <node id="mi_analytics" displayName="Micro Integrator + Analytics"></node>
+                <node id="is" displayName="Identity Server"></node>
+                <node id="is_analytics" displayName="IS + Analytics"></node>
+                <node id="apim_ei" displayName="API-M + EI"></node>
+                <node id="apim_is" displayName="API-M + IS"></node>
+                <node id="ei_is" displayName="EI + IS"></node>
+                <node id="apim_ei_is" displayName="API-M + EI + IS"></node>
+                <node id="ob_apim" displayName="OB API-M"></node>
+                <node id="ob_is" displayName="OB IS"></node>
+                <node id="ob_apim_is" displayName="OB API-M + IS"></node>
+                <node id="ob_apim_is_ei" displayName="OB API-M + IS + EI"></node>
+                <node id="ob_apim_is_bi" displayName="OB API-M + IS + BI"></node>
+                <node id="ob_apim_is_ei_bi" displayName="OB API-M + IS + EI + BI"></node>
+                <node id="message_broker" displayName="Message Broker"></node>
+                <node id="business_process_server" displayName="Business Process Server"></node>
+                <node id="ei+message_broker" displayName="EI + Message Broker"></node>
+                <node id="governance_registry" displayName="Governance Registry"></node>
+                <node id="cep" displayName="Complex Event Processor"></node>
+                <node id="stream_processor" displayName="Stream Processor"></node>
+                <node id="si" displayName="Streaming Integrator"></node>
+            </node>
+        </node>
+	</root>
+</taxonomy>

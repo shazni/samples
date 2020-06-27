@@ -1,0 +1,11 @@
+<taxonomy id="arr" name="arr">
+	<root id="AnnualRecurringRevenue" displayName="arr">
+		<node id="1m" displayName="1M+"></node>
+		<node id="750k-1m" displayName="750k - 1M"></node>
+		<node id="500k-750k" displayName="500k - 750k"></node>
+        <node id="250k-500k" displayName="250k - 500k"></node>
+        <node id="100k-250k" displayName="100k - 250k"></node>
+        <node id="50k-100k" displayName="50k - 100k"></node>
+        <node id="0k-50k" displayName="0k - 50k"></node>
+	</root>
+</taxonomy>
