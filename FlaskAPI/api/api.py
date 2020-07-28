@@ -2,7 +2,7 @@ from flask import Flask
 from flask_restful import abort, Api, fields, marshal_with, reqparse, Resource
 from datetime import datetime
 from models import ProductModel
-import status
+import status, socket
 from pytz import utc
 
 # import time
@@ -58,7 +58,7 @@ class Company(Resource):
 	def get(self):
 		count = 1
 		# count = get_product_count()
-		return 'Company ProductMasters has {} products.'.format(count)
+		return 'Company ProductMasters has {} products'.format(count)
 
 class Product(Resource):
 	def abort_if_product_doesnt_exist(self, id):
@@ -123,11 +123,16 @@ class ProductList(Resource):
 		product_manager.insert_message(product)
 		return product, status.HTTP_201_CREATED
 
+class Host(Resource):
+	def get(self):
+		return 'Hostname = {}'.format(socket.gethostname())
+
 app = Flask(__name__)
 api = Api(app)
 api.add_resource(ProductList, '/api/products/')
 api.add_resource(Company, '/api/company')
 api.add_resource(Product, '/api/products/<int:id>', endpoint='product_endpoint')
+api.add_resource(Host, '/api/host')
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', debug=True)
