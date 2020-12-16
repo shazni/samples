@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_restful import abort, Api, fields, marshal_with, reqparse, Resource
 from datetime import datetime
 from models import ProductModel
@@ -107,12 +107,26 @@ class ProductList(Resource):
 
 	@marshal_with(product_fields)
 	def post(self):
+		print("Post request received");
+		print(self)
+		print(dir(self))
+		print(dir(request))
+		print("------------------------")
+		print(request.url)
+		print(request.headers)
+		print(request.get_data())
+		print(request.json)
+		print(request.content_type)
+		print(request.content_length)
+		request_dict = request.get_json()
+		print(request_dict)
 		parser = reqparse.RequestParser()
 		parser.add_argument('name', type=str, required=True, help='Name cannot be blank!')
 		parser.add_argument('durability', type=int, required=True, help='Durability cannot be blank!')
 		parser.add_argument('category', type=str, required=True, help='Product category cannot be blank!')
-
+		print("parser arguments added")
 		args = parser.parse_args()
+		print(args)
 		product = ProductModel(
 			name=args['name'],
 			durability=args['durability'],
