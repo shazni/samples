@@ -1,0 +1,262 @@
+<!--
+ ~ Copyright (c) 2016, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ ~
+ ~ Licensed under the Apache License, Version 2.0 (the "License");
+ ~ you may not use this file except in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~      http://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing, software
+ ~ distributed under the License is distributed on an "AS IS" BASIS,
+ ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ ~ See the License for the specific language governing permissions and
+ ~ limitations under the License.
+-->
+<artifactType type="application/vnd.wso2-api+xml" shortName="api" singularLabel="API" pluralLabel="APIs" hasNamespace="false" iconSet="7">
+	<storagePath>/trunk/apis/@{overview_provider}/@{overview_version}/@{overview_name}</storagePath>
+	<nameAttribute>overview_name</nameAttribute>
+	<lifecycle>APILifeCycle</lifecycle>
+	<ui>
+        <list>
+            <column name="Provider">
+                <data type="path" value="overview_provider" href="@{storagePath}"/>
+            </column>
+            <column name="Name">
+                <data type="path" value="overview_name" href="@{storagePath}"/>
+            </column>
+            <column name="Version">
+                <data type="path" value="overview_version" href="@{storagePath}"/>
+            </column>
+        </list>
+	</ui>
+	<content>
+    <table name="Overview">
+        <field type="text" required="true">
+            <name>Provider</name>
+        </field>
+        <field type="text" required="true">
+            <name>Name</name>
+        </field>
+        <field type="text" required="true">
+            <name>Context</name>
+        </field>
+        <field type="text" required="true">
+            <name>Version</name>
+        </field>
+        <field type="text-area">
+            <name>Description</name>
+        </field>
+     </table>
+     <table name="Implement">
+	<field type="options">
+            <name label="Endpoint Type">Endpoint Type</name>
+            <values>
+                <value>HTTP Endpoint</value>
+                <value>Address Endpoint</value>
+		<value>Failover Endpoint</value>
+		<value>Loadbalanced Endpoint</value>
+		<value>Default Endpoint</value>             
+            </values>
+        </field>
+        <field type="text" url="true">
+            <name>Endpoint URL</name>
+        </field>
+        <field type="text" url="true">
+            <name>Sandbox URL</name>
+        </field>
+        <field type="checkbox">
+            <name>Enable Message Mediation Flow</name>
+        </field>
+        <field type="options">
+            <name label="In Flow">In Flow</name>
+            <values>
+                <value>None</value>
+                <value>json_to_xml_in_message</value>   
+                <value>log_in_message</value> 
+                <value>preserve_accept_header</value> 
+                <value>xml_to_json_in_message</value>           
+            </values>
+        </field>
+        <field type="options">
+            <name label="Out Flow">Out Flow</name>
+            <values>
+                <value>None</value>
+                <value>apply_accept_header</value>   
+                <value>json_to_xml_out_message</value> 
+                <value>log_out_message</value> 
+                <value>xml_to_json_out_message</value>           
+            </values>
+        </field>
+        <field type="options">
+            <name label="Fault Flow">Fault Flow</name>
+            <values>
+                <value>None</value>
+                <value>json_fault</value>           
+            </values>
+        </field>
+     </table>
+     <table name="Manage">
+        <field type="checkbox">
+            <name>Make this the default version</name>
+        </field>
+        <field type="options">
+            <name label="Response Caching">Response Caching</name>
+            <values>
+                <value>Enabled</value>
+                <value>Disabled</value>             
+            </values>
+        </field>
+        <field type="text">
+            <name>Thumbnail</name>
+        </field>
+        <field type="checkbox">
+            <name>Enable HTTP</name>
+        </field>
+        <field type="checkbox">
+            <name>Enable HTTPS</name>
+        </field>
+        <field type="options">
+            <name label="Visibility">Visibility</name>
+            <values>
+                <value>Public</value>
+                <value>Restricted</value>
+            </values>
+        </field>
+        <field type="text">
+            <name>Visible Roles</name>
+        </field>
+	<field type="text">
+            <name>Visible Tenants</name>
+        </field>
+        <field type="checkbox">
+            <name>Enable hard throttling limits</name>
+        </field>
+        <field type="options">
+            <name label="IsLatest">Is Latest</name>
+            <values>
+                <value>false</value>
+                <value>true</value>
+            </values>
+        </field>
+    </table>
+    <table name="Tier Availability">
+        <field type="checkbox">
+            <name>Unlimited</name>
+        </field>
+        <field type="checkbox">
+            <name>Gold</name>
+        </field>
+        <field type="checkbox">
+            <name>Silver</name>
+        </field>
+        <field type="checkbox">
+            <name>Bronze</name>
+        </field>
+    </table>
+    <table name="Business Information">
+        <field type="text">
+            <name>Technical Owner</name>
+        </field>
+        <field type="text">
+            <name>Technical Owner Email</name>
+        </field>
+        <field type="text">
+            <name>Business Owner</name>
+        </field>
+        <field type="text">
+            <name>Business Owner Email</name>
+        </field>
+    </table>
+    <table name="Scopes" columns="4"  maxoccurs="unbounded">
+	<subheading>
+	    <heading>Scope Key</heading>
+	    <heading>Scope Name</heading>
+	    <heading>Roles</heading>
+	    <heading>Description</heading>
+	</subheading>
+	<field type="text" url="true">
+	    <name label="Scope Key">Scope Key</name>
+	</field>
+	<field type="text" url="true">
+	    <name label="Scope Name">Scope Name</name>
+	</field>
+	<field type="text" url="true">
+	    <name label="Roles">Roles</name>
+	</field>
+	<field type="text-area" url="true">
+	    <name label="Description">Description</name>
+	</field>
+    </table>
+    <table name="API Definition" columns="5"  maxoccurs="unbounded">
+	<subheading>
+	    <heading>Method</heading>
+	    <heading>URL Pattern</heading>
+	    <heading>Auth type</heading>
+	    <heading>Throttling</heading>
+	    <heading>Scope Name</heading>
+	</subheading>
+        <field type="options">
+            <name label="Method">Method</name>
+            <values>
+                <value>GET</value>
+                <value>POST</value>
+                <value>PUT</value>
+                <value>DELETE</value>
+                <value>PATCH</value>
+                <value>HEAD</value>
+            </values>
+        </field>
+	    <field type="text" url="true">
+	        <name label="URL">URL</name>
+	    </field>
+        <field type="options">
+            <name label="Auth type">Auth type</name>
+            <values>
+                <value>None</value>
+                <value>Application</value>
+                <value>Application User</value>
+                <value>Application and Application User</value>
+            </values>
+        </field>
+        <field type="options">
+            <name label="Throttling">Throttling</name>
+            <values>
+                <value>Unlimited</value>
+                <value>Ultimate</value>
+                <value>Plus</value>
+                <value>Basic</value>
+            </values>
+        </field>
+	<field type="text" url="true">
+	    <name label="Scope Name">Scope Name</name>
+	</field>
+    </table>
+        <table name="Documents" columns="4"  maxoccurs="unbounded">
+	<subheading>
+	    <heading>Name</heading>
+	    <heading>Summary</heading>
+	    <heading>Type</heading>
+	    <heading>Source URL</heading>
+	</subheading>
+	<field type="text">
+	    <name label="Name">Name</name>
+	</field>
+	<field type="text-area">
+	    <name label="Summary">Summary</name>
+	</field>
+        <field type="options">
+            <name label="Type">Type</name>
+            <values>
+                <value>How To</value>
+                <value>Sample and SDK</value>
+                <value>Public Forum</value>
+                <value>Support Forum</value>
+            </values>
+        </field>
+	<field type="text" url="true">
+	    <name label="Source URL">Source URL</name>
+	</field>
+    </table>
+</content>
+</artifactType>
