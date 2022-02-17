@@ -13,10 +13,11 @@ logger.setLevel(logging.DEBUG)
 token = '681a468c-eed1-3883-b88f-b70af6a60a09'
 apim_api_base_url = 'https://localhost:9443'
 # governance_swagger_base_url = 'https://nginx.wso2.governance.com//governance/swaggers'
-governance_swagger_base_url = 'https://nginx.wso2.governance.com/governance/swaggers'
+governance_swagger_base_url = 'https://wso2.governance.com/governance/swaggers'
 # governance_swagger_base_url = 'https://internal.sandbox-governance.wso2.com//governance/swaggers'
 # apim_api_context = '/api/am/publisher/v1.0/apis?limit=25&offset=0'
-apim_api_context = '/api/am/publisher/v1/apis?limit=25&offset=0'
+# apim_api_context = '/api/am/publisher/v1/apis?limit=25&offset=0'
+apim_api_context = '/api/am/publisher/v2/apis'    # Use this fot API-M 4.0.0
 
 ADMIN_USER_NAME = 'admin'
 ADMIN_PWD = 'admin'
@@ -36,20 +37,20 @@ def get_authentication_headers(username, password):
 
 def get_all_apis():
     # Note we are only fetching 25 here
-    all_apis = requests.get(url = apim_api_base_url + apim_api_context, 
+    all_apis = requests.get(url = apim_api_base_url + apim_api_context + '?limit=25&offset=0', 
         headers=get_authentication_headers('admin', 'admin'), verify=False)
     return all_apis
 
 def get_api_detail(id):
     #detail_api = requests.get(url = apim_api_base_url + '/api/am/publisher/v1.0/apis/' + id, 
-    detail_api = requests.get(url = apim_api_base_url + '/api/am/publisher/v1/apis/' + id, 
+    detail_api = requests.get(url = apim_api_base_url + apim_api_context + '/' + id, 
         headers=get_authentication_headers('admin', 'admin'), verify=False)
     
     return detail_api
 
 def get_swagger(id):
     #api_swagger = requests.get(url = apim_api_base_url + '/api/am/publisher/v1.0/apis/' + id + '/swagger', 
-    api_swagger = requests.get(url = apim_api_base_url + '/api/am/publisher/v1/apis/' + id + '/swagger', 
+    api_swagger = requests.get(url = apim_api_base_url + apim_api_context + '/' + id + '/swagger', 
         headers=get_authentication_headers('admin', 'admin'), verify=False)
     return api_swagger
 
