@@ -1,0 +1,28 @@
+<APIManagement>
+	<enableAPIMSync>false</enableAPIMSync>
+
+	<environments>
+		<environment name="DEV">
+			<userName>admin</userName>
+			<password>admin</password>
+			<secretAlias>wso2.apim.auth.user</secretAlias>
+
+			<tokenEndpoint>https://localhost:8243/token</tokenEndpoint>
+			<publishingEndpoint>https://localhost:9443/api/am/publisher/v0.9/apis/</publishingEndpoint>
+
+			<clientRegistration>
+				<clientRegistrationEndpoint>https://localhost:9443/client-registration/v0.9/register</clientRegistrationEndpoint>
+				<callBackURL>www.wso2.com</callBackURL>
+				<clientName>wso2gregclient</clientName>
+				<tokenScope>Production</tokenScope>
+				<owner>admin</owner>
+				<grantType>password refresh_token</grantType>
+				<saasApp>true</saasApp>
+			</clientRegistration>
+		</environment>
+	</environments>
+
+	<loadBalance enabled="false">
+		<port>443</port>
+	</loadBalance>
+</APIManagement>
