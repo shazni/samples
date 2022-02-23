@@ -125,7 +125,7 @@
     <properties>
         <jdk.version>1.8</jdk.version>
         <carbon.kernel.version>4.5.3</carbon.kernel.version>
-        <commons-beanutils.version>1.8.0</commons-beanutils.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <commons-collections.version>3.2</commons-collections.version>
         <orbit.version.axis2>1.6.1-wso2v40</orbit.version.axis2>
         <carbon.mediation.version>4.7.30</carbon.mediation.version>
