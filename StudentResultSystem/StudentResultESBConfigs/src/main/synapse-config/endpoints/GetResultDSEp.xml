@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="GetResultDSEp" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="get" uri-template="http://localhost:8290/services/GetResultsDataService/get_result?student_id={uri.var.student_id}&amp;semester={uri.var.semester}">
+        <suspendOnFailure>
+            <initialDuration>-1</initialDuration>
+            <progressionFactor>1.0</progressionFactor>
+        </suspendOnFailure>
+        <markForSuspension>
+            <retriesBeforeSuspension>0</retriesBeforeSuspension>
+        </markForSuspension>
+    </http>
+</endpoint>

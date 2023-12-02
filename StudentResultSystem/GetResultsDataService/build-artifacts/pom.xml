@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.student.results.data.service</groupId>
+    <artifactId>GetResultsDataService</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.student.results.data.service</groupId>
+  <artifactId>GetResultsDataService_module</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>GetResultsDataService_module</name>
+  <description>GetResultsDataService_module</description>
+  <modules>
+    <module>dataservice/GetResultsDataService</module>
+    <module>dataservice/StudentDataService</module>
+    <module>dataservice/UpdateResultDataService</module>
+    <module>dataservice/GetAllStudents</module>
+  </modules>
+</project>

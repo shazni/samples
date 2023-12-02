@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="ResultPublishingProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <log>
+                <property expression="$body" name="RECEIVED_PAYLOAD ==> MOE Result Proxy"/>
+            </log>
+            <property description="Initiate asynchronous mediation flow" name="OUT_ONLY" scope="default" type="STRING" value="true"/>
+            <property description="Generate 202 response from mediation flow" name="FORCE_SC_ACCEPTED" scope="axis2" type="STRING" value="true"/>
+            <send description="Publish request payload to JMS endpoint">
+                <endpoint key="ResultJMSQueueEp"/>
+            </send>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+    <publishWSDL preservePolicy="true">
+        <wsdl:definitions name="Result" targetNamespace="http://moe.com/xsd/Result/" xmlns:ns="http://moe.com/xsd/Result" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://moe.com/xsd/Result/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <wsdl:types>
+                <xsd:schema targetNamespace="http://moe.com/xsd/Result/">
+                    <xsd:element name="ResultPublishMessage" type="tns:ResultReqMsgType"/>
+                    <xsd:complexType name="ResultReqMsgType">
+                        <xsd:sequence>
+                            <xsd:element minOccurs="1" name="student_id" nillable="false" type="xsd:string"/>
+                            <xsd:element minOccurs="1" name="subject" nillable="false" type="xsd:string"/>
+                            <xsd:element minOccurs="1" name="grade" nillable="false" type="xsd:string"/>
+                            <xsd:element minOccurs="1" name="semester" nillable="false" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                    <xsd:element name="ResultResponseMessage" type="tns:ResultResMsgType"/>
+                    <xsd:complexType name="ResultResMsgType">
+                        <xsd:sequence/>
+                    </xsd:complexType>
+                </xsd:schema>
+            </wsdl:types>
+            <wsdl:message name="ResultPublishMessage">
+                <wsdl:part element="tns:ResultPublishMessage" name="ResultPublishMessage"/>
+            </wsdl:message>
+            <wsdl:message name="ResultResponseMessage">
+                <wsdl:part element="tns:ResultResponseMessage" name="ResultResponseMessage"/>
+            </wsdl:message>
+            <wsdl:portType name="Result">
+                <wsdl:operation name="Result">
+                    <wsdl:input message="tns:ResultPublishMessage"/>
+                    <wsdl:output message="tns:ResultResponseMessage"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <wsdl:binding name="ResultSOAP" type="tns:Result">
+                <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+                <wsdl:operation name="Result">
+                    <soap:operation soapAction="http://moe.com/xsd/Result"/>
+                    <wsdl:input>
+                        <soap:body use="literal"/>
+                    </wsdl:input>
+                    <wsdl:output>
+                        <soap:body use="literal"/>
+                    </wsdl:output>
+                </wsdl:operation>
+            </wsdl:binding>
+            <wsdl:service name="ResultPublishService">
+                <wsdl:port binding="tns:ResultSOAP" name="ResultSOAP">
+                    <soap:address location="https://HostName_URL/services/Result"/>
+                </wsdl:port>
+            </wsdl:service>
+        </wsdl:definitions>
+    </publishWSDL>
+</proxy>

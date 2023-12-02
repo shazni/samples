@@ -1,0 +1,30 @@
+<data name="UpdateResultDataService" serviceNamespace="" serviceGroup="" transports="http https">
+  <description />
+  <config id="MOEDataSource">
+    <property name="carbon_datasource_name">StudentDataSource</property>
+  </config>
+  <query id="UpdateResultQuery" useConfig="MOEDataSource">
+    <sql>INSERT INTO Result (student_id, subject, grade, semester) VALUES (:student_id, :subject, :grade, :semester)</sql>
+    <param name="student_id" paramType="SCALAR" sqlType="INTEGER" defaultValue="1" type="IN" optional="false" />
+    <param name="subject" paramType="SCALAR" sqlType="STRING" type="IN" optional="false" />
+    <param name="grade" paramType="SCALAR" sqlType="STRING" type="IN" optional="false" />
+    <param name="semester" paramType="SCALAR" sqlType="STRING" type="IN" optional="false" />
+  </query>
+  <operation name="UpdateResultOperation">
+    <call-query href="UpdateResultQuery">
+      <with-param name="student_id" query-param="student_id" />
+      <with-param name="subject" query-param="subject" />
+      <with-param name="grade" query-param="grade" />
+      <with-param name="semester" query-param="semester" />
+    </call-query>
+  </operation>
+  <resource method="POST" path="/update_result">
+    <description />
+    <call-query href="UpdateResultQuery">
+      <with-param name="student_id" query-param="student_id" />
+      <with-param name="subject" query-param="subject" />
+      <with-param name="grade" query-param="grade" />
+      <with-param name="semester" query-param="semester" />
+    </call-query>
+  </resource>
+</data>

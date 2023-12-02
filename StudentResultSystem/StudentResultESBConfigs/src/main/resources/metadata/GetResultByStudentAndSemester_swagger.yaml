@@ -1,0 +1,28 @@
+openapi: 3.0.1
+info:
+  title: GetResultByStudentAndSemester
+  description: API Definition of GetResultByStudentAndSemester
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/getResult
+paths:
+  /result/{student_id}/{semester}:
+    get:
+      parameters:
+      - name: student_id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: semester
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response

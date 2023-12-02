@@ -1,0 +1,10 @@
+---
+key: "ResultPublishingProxy_proxy-1.0.0"
+name : "ResultPublishingProxy"
+displayName : "ResultPublishingProxy"
+description: "Sample Proxy Service"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/services/ResultPublishingProxy"
+definitionType: "WSDL1"
+securityType: "BASIC"
+mutualSSLEnabled: false

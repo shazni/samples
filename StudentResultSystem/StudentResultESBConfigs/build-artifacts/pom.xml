@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.student.result.esb.config</groupId>
+    <artifactId>StudentResultESBConfigs</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.student.result.esb.config</groupId>
+  <artifactId>StudentResultESBConfigs_module</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>StudentResultESBConfigs_module</name>
+  <description>StudentResultESBConfigs_module</description>
+  <modules>
+    <module>endpoints/GetResultDSEp</module>
+    <module>endpoints/GetStudentDSEp</module>
+    <module>endpoints/UpdateResultDSEp</module>
+    <module>endpoints/ResultJMSQueueEp</module>
+    <module>api/GetResultByStudentAndSemester</module>
+    <module>metadata/GetResultByStudentAndSemester_swagger</module>
+    <module>metadata/GetResultByStudentAndSemester_metadata</module>
+    <module>api/GetResultTest</module>
+    <module>metadata/GetResultTest_swagger</module>
+    <module>metadata/GetResultTest_metadata</module>
+    <module>sequences/ResultProcessingErrorSequence</module>
+    <module>inbound-endpoints/ResultProcessingInboundEndpoint</module>
+    <module>sequences/ResultProcessingSequence</module>
+    <module>proxy-services/ResultPublishingProxy</module>
+    <module>metadata/ResultPublishingProxy_proxy_metadata</module>
+    <module>templates/SendEmailTemplate</module>
+    <module>local-entries/SFTP_LOCATION</module>
+  </modules>
+</project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/getResultTest" name="GetResultTest" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/result">
+        <inSequence>
+            <property name="uri.var.student_id" scope="default" type="STRING" value="1"/>
+            <property name="uri.var.semester" scope="default" type="STRING" value="4"/>
+            <property action="remove" name="Content-Type" scope="transport"/>
+            <call>
+                <endpoint key="GetResultDSEp"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

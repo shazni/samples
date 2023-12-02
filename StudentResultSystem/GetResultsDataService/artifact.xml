@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="GetResultsDataService" groupId="com.student.results.data.service.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/GetResultsDataService.dbs</file>
+    </artifact>
+    <artifact name="StudentDataService" groupId="com.student.results.data.service.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/StudentDataService.dbs</file>
+    </artifact>
+    <artifact name="UpdateResultDataService" groupId="com.student.results.data.service.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/UpdateResultDataService.dbs</file>
+    </artifact>
+    <artifact name="GetAllStudents" groupId="com.student.results.data.service.dataservice" version="1.0.0" type="service/dataservice" serverRole="DataServicesServer">
+        <file>dataservice/GetAllStudents.dbs</file>
+    </artifact>
+</artifacts>

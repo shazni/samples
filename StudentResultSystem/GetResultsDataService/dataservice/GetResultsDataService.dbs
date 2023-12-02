@@ -1,0 +1,30 @@
+<data name="GetResultsDataService" serviceNamespace="" serviceGroup="" transports="http https">
+  <description />
+  <config id="MOEDataSource">
+    <property name="carbon_datasource_name">StudentDataSource</property>
+  </config>
+  <query id="GetResultQuery" useConfig="MOEDataSource">
+    <sql>SELECT student_id, subject, grade, semester from Result where student_id = :student_id and semester = :semester</sql>
+    <param name="semester" paramType="SCALAR" sqlType="STRING" type="IN" optional="false" />
+    <param name="student_id" paramType="SCALAR" sqlType="INTEGER" defaultValue="1" type="IN" optional="false" />
+    <result element="Result" rowName="subject_result">
+      <element name="student_id" column="student_id" xsdType="string" requiredRoles="" />
+      <element name="subject" column="subject" xsdType="string" requiredRoles="" />
+      <element name="grade" column="grade" xsdType="string" requiredRoles="" />
+      <element name="semester" column="semester" xsdType="string" requiredRoles="" />
+    </result>
+  </query>
+  <operation name="GetResultOperation">
+    <call-query href="GetResultQuery">
+      <with-param name="semester" query-param="semester" />
+      <with-param name="student_id" query-param="student_id" />
+    </call-query>
+  </operation>
+  <resource method="GET" path="/get_result">
+    <description />
+    <call-query href="GetResultQuery">
+      <with-param name="semester" query-param="semester" />
+      <with-param name="student_id" query-param="student_id" />
+    </call-query>
+  </resource>
+</data>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="GetResultDSEp" groupId="com.student.result.esb.config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetResultDSEp.xml</file>
+    </artifact>
+    <artifact name="GetStudentDSEp" groupId="com.student.result.esb.config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/GetStudentDSEp.xml</file>
+    </artifact>
+    <artifact name="UpdateResultDSEp" groupId="com.student.result.esb.config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/UpdateResultDSEp.xml</file>
+    </artifact>
+    <artifact name="ResultJMSQueueEp" groupId="com.student.result.esb.config.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/ResultJMSQueueEp.xml</file>
+    </artifact>
+    <artifact name="GetResultByStudentAndSemester" groupId="com.student.result.esb.config.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/GetResultByStudentAndSemester.xml</file>
+    </artifact>
+    <artifact name="GetResultByStudentAndSemester_swagger" groupId="com.student.result.esb.config.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/GetResultByStudentAndSemester_swagger.yaml</file>
+    </artifact>
+    <artifact name="GetResultByStudentAndSemester_metadata" groupId="com.student.result.esb.config.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/GetResultByStudentAndSemester_metadata.yaml</file>
+    </artifact>
+    <artifact name="GetResultTest" groupId="com.student.result.esb.config.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/GetResultTest.xml</file>
+    </artifact>
+    <artifact name="GetResultTest_swagger" groupId="com.student.result.esb.config.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/GetResultTest_swagger.yaml</file>
+    </artifact>
+    <artifact name="GetResultTest_metadata" groupId="com.student.result.esb.config.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/GetResultTest_metadata.yaml</file>
+    </artifact>
+    <artifact name="ResultProcessingErrorSequence" groupId="com.student.result.esb.config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ResultProcessingErrorSequence.xml</file>
+    </artifact>
+    <artifact name="ResultProcessingInboundEndpoint" groupId="com.student.result.esb.config.inbound-endpoint" version="1.0.0" type="synapse/inbound-endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/inbound-endpoints/ResultProcessingInboundEndpoint.xml</file>
+    </artifact>
+    <artifact name="ResultProcessingSequence" groupId="com.student.result.esb.config.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ResultProcessingSequence.xml</file>
+    </artifact>
+    <artifact name="ResultPublishingProxy" groupId="com.student.result.esb.config.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/ResultPublishingProxy.xml</file>
+    </artifact>
+    <artifact name="ResultPublishingProxy_proxy_metadata" groupId="com.student.result.esb.config.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ResultPublishingProxy_proxy_metadata.yaml</file>
+    </artifact>
+    <artifact name="SendEmailTemplate" groupId="com.student.result.esb.config.template" version="1.0.0" type="synapse/sequenceTemplate" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/templates/SendEmailTemplate.xml</file>
+    </artifact>
+    <artifact name="SFTP_LOCATION" groupId="com.student.result.esb.config.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/SFTP_LOCATION.xml</file>
+    </artifact>
+</artifacts>

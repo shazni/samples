@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ResultProcessingSequence" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log description="Print the body" level="custom">
+        <property expression="$body" name="BODY"/>
+    </log>
+    <payloadFactory media-type="json">
+        <format>{
+                  "_postupdate_result": {
+                    "student_id" : $1,
+                    "subject": "$2",
+                    "grade": "$3",
+                    "semester": "$4"
+                  }
+                }</format>
+        <args>
+            <arg evaluator="xml" expression="//student_id/text()" xmlns:res="http://moe.com/xsd/Result/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"/>
+            <arg evaluator="xml" expression="//subject/text()" xmlns:res="http://moe.com/xsd/Result/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"/>
+            <arg evaluator="xml" expression="//grade/text()" xmlns:res="http://moe.com/xsd/Result/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"/>
+            <arg evaluator="xml" expression="//semester/text()" xmlns:res="http://moe.com/xsd/Result/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"/>
+        </args>
+    </payloadFactory>
+    <property name="ContentType" scope="axis2" type="STRING" value="application/json"/>
+    <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+    <log description="Print the body" level="custom">
+        <property expression="json-eval($)" name="BODY_AFTER_ASSIGNMENT"/>
+    </log>
+    <call>
+        <endpoint key="UpdateResultDSEp"/>
+    </call>
+</sequence>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template name="SendEmailTemplate" xmlns="http://ws.apache.org/ns/synapse">
+    <parameter defaultValue="" isMandatory="false" name="subject"/>
+    <parameter defaultValue="" isMandatory="false" name="to_Address"/>
+    <parameter defaultValue="" isMandatory="false" name="send_email"/>
+    <sequence>
+        <property expression="$func:to_Address" name="toAddress" scope="default" type="STRING"/>
+        <property expression="$func:subject" name="Subject" scope="default" type="STRING"/>
+        <log>
+            <property expression="$ctx:toAddress" name="TO_ADDRESS"/>
+            <property expression="$ctx:Subject" name="SUBJECT"/>
+        </log>
+        <property expression="$ctx:Subject" name="Subject" scope="transport" type="STRING"/>
+        <property name="ContentType" scope="axis2" type="STRING" value="text/html"/>
+        <property name="messageType" scope="axis2" type="STRING" value="text/html"/>
+        <property name="OUT_ONLY" scope="default" type="STRING" value="true"/>
+        <property name="FORCE_SC_ACCEPTED" scope="axis2" type="STRING" value="true"/>
+        <property expression="fn:concat('mailto:',$ctx:toAddress)" name="emailEP" scope="default" type="STRING"/>
+        <header expression="get-property('emailEP')" name="To" scope="default"/>
+        <filter regex="true" source="$func:send_email">
+            <then>
+                <call>
+                    <endpoint>
+                        <default>
+                            <suspendOnFailure>
+                                <initialDuration>-1</initialDuration>
+                                <progressionFactor>1</progressionFactor>
+                            </suspendOnFailure>
+                            <markForSuspension>
+                                <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                            </markForSuspension>
+                        </default>
+                    </endpoint>
+                </call>
+            </then>
+            <else/>
+        </filter>
+    </sequence>
+</template>

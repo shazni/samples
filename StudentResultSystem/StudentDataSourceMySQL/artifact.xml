@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="mysql_datasource" groupId="com.student.datasource.mysql.datasource" version="5.2.44" type="datasource/datasource" serverRole="DataServicesServer">
+        <file>datasource/mysql_datasource.xml</file>
+    </artifact>
+</artifacts>

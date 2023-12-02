@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/getResult" name="GetResultByStudentAndSemester" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/result/{student_id}/{semester}">
+        <inSequence>
+            <property expression="$ctx:uri.var.student_id" name="uri.var.student_id" scope="default" type="STRING"/>
+            <property expression="$ctx:uri.var.semester" name="uri.var.semester" scope="default" type="STRING"/>
+            <log>
+                <property expression="$ctx:uri.var.student_id" name="uri.var.student_id"/>
+                <property expression="$ctx:uri.var.semester" name="uri.var.semester"/>
+            </log>
+            <property name="result_info" scope="default">
+                <StudentResulktInfo/>
+            </property>
+            <clone id="student_result">
+                <target>
+                    <sequence>
+                        <call>
+                            <endpoint key="GetResultDSEp"/>
+                        </call>
+                        <log level="full"/>
+                    </sequence>
+                </target>
+                <target>
+                    <sequence>
+                        <call>
+                            <endpoint key="GetStudentDSEp"/>
+                        </call>
+                        <log level="full"/>
+                    </sequence>
+                </target>
+            </clone>
+            <aggregate id="student_result">
+                <completeCondition>
+                    <messageCount max="-1" min="-1"/>
+                </completeCondition>
+                <onComplete aggregateElementType="root" enclosingElementProperty="result_info" expression="$body/*[1]">
+                    <clone continueParent="true" id="transform_to_email_teamplate">
+                        <target>
+                            <sequence>
+                                <xslt key="gov:xslts/result_email_template.xslt"/>
+                                <log>
+                                    <property name="AFTER XSLT" value="######"/>
+                                </log>
+                                <log level="full"/>
+                                <call-template target="SendEmailTemplate">
+                                    <with-param name="subject" value="Result Sheet"/>
+                                    <with-param name="to_Address" value="testusershazni@gmail.com"/>
+                                    <with-param name="send_email" value="true"/>
+                                </call-template>
+                            </sequence>
+                        </target>
+                        <target>
+                            <sequence>
+                                <property expression="//*[local-name() = 'first_name']" name="first_name" scope="default" type="STRING"/>
+                                <property expression="fn:concat('/moe/results/', get-property('first_name'))" name="file_path" scope="default" type="STRING"/>
+                                <log>
+                                    <property expression="$ctx:first_name" name="first_name"/>
+                                    <property expression="$ctx:file_path" name="file_path"/>
+                                </log>
+                                <xslt key="gov:xslts/result_file_template.xslt"/>
+                                <property expression="$body" name="BODY" scope="default" type="STRING"/>
+                                <file.write>
+                                    <filePath>{$ctx:file_path}</filePath>
+                                    <contentOrExpression>{$ctx:BODY}</contentOrExpression>
+                                    <mimeType>text/plain</mimeType>
+                                    <compress>false</compress>
+                                    <writeMode>Overwrite</writeMode>
+                                    <enableStreaming>false</enableStreaming>
+                                    <appendNewLine>false</appendNewLine>
+                                    <enableLock>false</enableLock>
+                                    <includeResultTo>Message Body</includeResultTo>
+                                </file.write>
+                            </sequence>
+                        </target>
+                    </clone>
+                    <send/>
+                </onComplete>
+            </aggregate>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

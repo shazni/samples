@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="SFTP_LOCATION" xmlns="http://ws.apache.org/ns/synapse">
+    <file.init>
+        <strictHostKeyChecking>false</strictHostKeyChecking>
+        <connectionType>SFTP</connectionType>
+        <password>replace_your_pwd</password>
+        <host>ftp.replace.real.domain.com</host>
+        <fileLockScheme>Local</fileLockScheme>
+        <sftpConnectionTimeout>100000</sftpConnectionTimeout>
+        <userDirIsRoot>false</userDirIsRoot>
+        <privateKeyPassword>private_key_pwd</privateKeyPassword>
+        <port>22</port>
+        <name>SFTP_LOCATION</name>
+        <sftpSessionTimeout>150000</sftpSessionTimeout>
+        <privateKeyFilePath>/Users/username/Desktop/id_rsa</privateKeyFilePath>
+        <username>moe</username>
+    </file.init>
+</localEntry>

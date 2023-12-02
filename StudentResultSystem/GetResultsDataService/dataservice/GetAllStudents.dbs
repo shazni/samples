@@ -1,0 +1,25 @@
+<data name="GetAllStudents" serviceNamespace="" serviceGroup="" transports="http https">
+  <description />
+  <config id="GetAllStudentsId">
+    <property name="carbon_datasource_name">StudentDataSource</property>
+  </config>
+  <query id="GetAllStudentQuery" useConfig="GetAllStudentsId">
+    <sql>select id, first_name, last_name, date_of_birth, institute, address, degree from Student</sql>
+    <result element="students" rowName="student">
+      <element name="id" column="id" xsdType="string" requiredRoles="" />
+      <element name="first_name" column="first_name" xsdType="string" requiredRoles="" />
+      <element name="last_name" column="last_name" xsdType="string" requiredRoles="" />
+      <element name="date_of_birth" column="date_of_birth" xsdType="string" requiredRoles="" />
+      <element name="institute" column="institute" xsdType="string" requiredRoles="" />
+      <element name="address" column="address" xsdType="string" requiredRoles="" />
+      <element name="degree" column="degree" xsdType="string" requiredRoles="" />
+    </result>
+  </query>
+  <operation name="GetAllStudentOperation">
+    <call-query href="GetAllStudentQuery" />
+  </operation>
+  <resource method="GET" path="/getAllStudents">
+    <description />
+    <call-query href="GetAllStudentQuery" />
+  </resource>
+</data>
