@@ -7,12 +7,12 @@
     <artifactId>StudentResultSystem</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <groupId>com.student.result.capp</groupId>
-  <artifactId>StudentResultsCApp</artifactId>
+  <groupId>com.example</groupId>
+  <artifactId>StudentCarbonApplication</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>carbon/application</packaging>
-  <name>StudentResultsCApp</name>
-  <description>StudentResultsCApp</description>
+  <name>StudentCarbonApplication</name>
+  <description>StudentCarbonApplication</description>
   <properties>
     <com.student.result.esb.config.sequence_._ResultProcessingSequence>capp/EnterpriseServiceBus</com.student.result.esb.config.sequence_._ResultProcessingSequence>
     <com.student.result.esb.config.endpoint_._ResultJMSQueueEp>capp/EnterpriseServiceBus</com.student.result.esb.config.endpoint_._ResultJMSQueueEp>
@@ -29,6 +29,7 @@
     <com.student.result.esb.config.metadata_._GetResultTest_metadata>capp/EnterpriseServiceBus</com.student.result.esb.config.metadata_._GetResultTest_metadata>
     <com.student.result.esb.config.endpoint_._GetStudentDSEp>capp/EnterpriseServiceBus</com.student.result.esb.config.endpoint_._GetStudentDSEp>
     <com.student.result.esb.config.endpoint_._GetResultDSEp>capp/EnterpriseServiceBus</com.student.result.esb.config.endpoint_._GetResultDSEp>
+    <com.wso2.connector.exporter.lib_._file-connector>capp/EnterpriseServiceBus</com.wso2.connector.exporter.lib_._file-connector>
     <com.student.results.data.service.dataservice_._GetResultsDataService>capp/DataServicesServer</com.student.results.data.service.dataservice_._GetResultsDataService>
     <com.student.result.esb.config.metadata_._ResultPublishingProxy_proxy_metadata>capp/EnterpriseServiceBus</com.student.result.esb.config.metadata_._ResultPublishingProxy_proxy_metadata>
     <com.student.datasource.mysql.datasource_._mysql_datasource>capp/DataServicesServer</com.student.datasource.mysql.datasource_._mysql_datasource>
@@ -66,28 +67,10 @@
       <type>yaml</type>
     </dependency>
     <dependency>
-      <groupId>com.student.results.data.service.dataservice</groupId>
-      <artifactId>GetResultsDataService</artifactId>
-      <version>1.0.0</version>
-      <type>dbs</type>
-    </dependency>
-    <dependency>
       <groupId>com.student.result.registry.resource.resource</groupId>
       <artifactId>result_email_template</artifactId>
       <version>1.0.0</version>
       <type>zip</type>
-    </dependency>
-    <dependency>
-      <groupId>com.student.datasource.mysql.datasource</groupId>
-      <artifactId>mysql_datasource</artifactId>
-      <version>5.2.44</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.student.result.esb.config.metadata</groupId>
-      <artifactId>ResultPublishingProxy_proxy_metadata</artifactId>
-      <version>1.0.0</version>
-      <type>yaml</type>
     </dependency>
     <dependency>
       <groupId>com.student.result.esb.config.metadata</groupId>
@@ -96,28 +79,10 @@
       <type>yaml</type>
     </dependency>
     <dependency>
-      <groupId>com.student.result.esb.config.api</groupId>
-      <artifactId>GetResultTest</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>com.student.results.data.service.dataservice</groupId>
       <artifactId>GetAllStudents</artifactId>
       <version>1.0.0</version>
       <type>dbs</type>
-    </dependency>
-    <dependency>
-      <groupId>com.student.results.data.service.dataservice</groupId>
-      <artifactId>StudentDataService</artifactId>
-      <version>1.0.0</version>
-      <type>dbs</type>
-    </dependency>
-    <dependency>
-      <groupId>com.student.result.esb.config.proxy-service</groupId>
-      <artifactId>ResultPublishingProxy</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.student.result.esb.config.sequence</groupId>
@@ -130,12 +95,6 @@
       <artifactId>result_file_template</artifactId>
       <version>1.0.0</version>
       <type>zip</type>
-    </dependency>
-    <dependency>
-      <groupId>com.student.results.data.service.dataservice</groupId>
-      <artifactId>UpdateResultDataService</artifactId>
-      <version>1.0.0</version>
-      <type>dbs</type>
     </dependency>
     <dependency>
       <groupId>com.student.result.esb.config.endpoint</groupId>
@@ -156,22 +115,10 @@
       <type>xml</type>
     </dependency>
     <dependency>
-      <groupId>com.student.result.esb.config.template</groupId>
-      <artifactId>SendEmailTemplate</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
       <groupId>com.student.result.esb.config.metadata</groupId>
       <artifactId>GetResultTest_metadata</artifactId>
       <version>1.0.0</version>
       <type>yaml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.student.result.esb.config.local-entry</groupId>
-      <artifactId>SFTP_LOCATION</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.student.result.esb.config.endpoint</groupId>
@@ -182,6 +129,66 @@
     <dependency>
       <groupId>com.student.result.esb.config.endpoint</groupId>
       <artifactId>GetResultDSEp</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.wso2.connector.exporter.lib</groupId>
+      <artifactId>file-connector</artifactId>
+      <version>4.0.16</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.student.results.data.service.dataservice</groupId>
+      <artifactId>GetResultsDataService</artifactId>
+      <version>1.0.0</version>
+      <type>dbs</type>
+    </dependency>
+    <dependency>
+      <groupId>com.student.result.esb.config.metadata</groupId>
+      <artifactId>ResultPublishingProxy_proxy_metadata</artifactId>
+      <version>1.0.0</version>
+      <type>yaml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.student.datasource.mysql.datasource</groupId>
+      <artifactId>mysql_datasource</artifactId>
+      <version>5.2.44</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.student.result.esb.config.api</groupId>
+      <artifactId>GetResultTest</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.student.results.data.service.dataservice</groupId>
+      <artifactId>StudentDataService</artifactId>
+      <version>1.0.0</version>
+      <type>dbs</type>
+    </dependency>
+    <dependency>
+      <groupId>com.student.result.esb.config.proxy-service</groupId>
+      <artifactId>ResultPublishingProxy</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.student.results.data.service.dataservice</groupId>
+      <artifactId>UpdateResultDataService</artifactId>
+      <version>1.0.0</version>
+      <type>dbs</type>
+    </dependency>
+    <dependency>
+      <groupId>com.student.result.esb.config.template</groupId>
+      <artifactId>SendEmailTemplate</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.student.result.esb.config.local-entry</groupId>
+      <artifactId>SFTP_LOCATION</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>

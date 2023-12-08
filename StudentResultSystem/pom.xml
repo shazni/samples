@@ -10,10 +10,11 @@
   <description>StudentResultSystem</description>
   <modules>
     <module>StudentResultRegistryResources</module>
+    <module>StudentConnectorExporter</module>
     <module>StudentDataSourceMySQL</module>
     <module>GetResultsDataService</module>
     <module>StudentResultESBConfigs</module>
-    <module>StudentResultsCApp</module>
+    <module>StudentCarbonApplication</module>
   </modules>
   <scm>
     <connection>scm:git:https://github.com/username/repository.git</connection>
